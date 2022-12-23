@@ -28,18 +28,18 @@ Project directories are automatically mounted or unmounted via NFS on an "as-nee
 
 ## Home Directories: /home
 
-/home directories are mounted as `/home/<username>`. Home directories are hosted under the user's initial /project directory. Quotas in /home are included as a part of the quota of that project's storage allocation. 
+/home directories are mounted as `/home/$USER`. Home directories are hosted under the user's initial /project directory. Quotas in /home are included as a part of the quota of that project's storage allocation. 
 
 ## Scratch Space: /scratch/username and /scratch/username/jobid
 
 For users who also have Eagle allocations, please be aware that scratch space on Swift behaves differently, so adjustments to job scripts may be necessary. 
 
-The scratch directory on each Swift compute node is a 1.8TB spinning disk, and is accessible only on that node. The default writable path for scratch use is `/scratch/<username>`. There is no global, network-accessible `/scratch` space. `/projects` and `/home` are both network-accessible, and may be used as /scratch-style working space instead.
+The scratch directory on each Swift compute node is a 1.8TB spinning disk, and is accessible only on that node. The default writable path for scratch use is `/scratch/$USER`. There is no global, network-accessible `/scratch` space. `/projects` and `/home` are both network-accessible, and may be used as /scratch-style working space instead.
 
 
 ## Temporary space: $TMPDIR 
 
-When a job starts, the environment variable `$TMPDIR` is set to `/scratch/<username>/<jobid>` for the duration of the job. This is temporary space only, and should be purged when your job is complete. Please be sure to use this path instead of /tmp for your tempfiles.
+When a job starts, the environment variable `$TMPDIR` is set to `/scratch/$USER/<jobid>` for the duration of the job. This is temporary space only, and should be purged when your job is complete. Please be sure to use this path instead of /tmp for your tempfiles.
 
 There is no expectation of data longevity in scratch space, and it is subject to purging once the node is idle. If desired data is stored here during the job, please be sure to copy it to a /projects directory as part of the job script before the job finishes.
 

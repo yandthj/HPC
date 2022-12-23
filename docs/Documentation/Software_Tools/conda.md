@@ -64,7 +64,7 @@ When finished with this programming session, deactivate your environment with:
 
 ## Creating Environments by Location
 
-Creating environments by location is especially helpful when working on the Eagle HPC, as the default location is your `/home/<username>/` directory, which is limited to 50 GB.  To create a Conda environment somewhere besides the default location, use the `--prefix` flag (or the shortened `-p`) instead of `--name` when creating.
+Creating environments by location is especially helpful when working on the Eagle HPC, as the default location is your `/home/$USER/` directory, which is limited to 50 GB.  To create a Conda environment somewhere besides the default location, use the `--prefix` flag (or the shortened `-p`) instead of `--name` when creating.
 
 `conda create --prefix /path/to/mypy python=3.7 numpy`
 

@@ -14,7 +14,7 @@ Eagle has three primary file systems available for compute nodes. Understanding 
     * Quota of 50 GB
     * Used to hold scripts, source code, executables
 * **Lustre parallel file system**: Accessiblle across all nodes. When using this file system please familiarize yourself with the [best practices section](Lustre/lustrebestpractices.md) 
-    * /scratch/username
+    * /scratch/$USER
     * /projects
     * /shared-projects
     * /datasets

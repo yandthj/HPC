@@ -126,7 +126,7 @@ Yes... please see our advanced Jupyter documentation.
 
 `ssh eagle.hpc.nrel.gov`
 
-`[user@el1:]$ srun -A <account> -t 02:00:00 --pty /bin/bash`
+`[$user@el1:]$ srun -A <account> -t 02:00:00 --pty /bin/bash`
 
 
 
@@ -134,7 +134,7 @@ Yes... please see our advanced Jupyter documentation.
 
 ### When the job starts on the compute node:
 
-`[user@r2i7n35]$ module load conda`
+`[$user@r2i7n35]$ module load conda`
 
 `source activate myjupenv`
 
