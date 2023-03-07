@@ -50,7 +50,7 @@ nav:
                - Spack: Documentation/Environment/Customization/spack.md
                - Anaconda: Documentation/Environment/Customization/anaconda.md
                - Containers: Documentation/Environment/Customization/containers.md
-          - Modulefiles creation: Documentation/Environment/modulefiles.md
+          - Modulefiles Creation: Documentation/Environment/modulefiles.md
       - Applications:
           - ANSYS CFD : Documentation/Applications/ansys.md
           - Avizo:      Documentation/Applications/avizo.md
@@ -62,11 +62,11 @@ nav:
           - LAMMPS:     Documentation/Applications/lammps.md
           - MATLAB:     Documentation/Applications/matlab.md
           - Paraview:   Documentation/Applications/paraview.md
-          - Q-chem:     Documentation/Applications/qchem.md
+          - Q-Chem:     Documentation/Applications/qchem.md
           - STAR-CCM+:  Documentation/Applications/starccm.md
           - VASP:       Documentation/Applications/vasp.md
-          - Visit:      Documentation/Applications/visit.md
-          - Wrf:        Documentation/Applications/wrf.md
+          - VisIt:      Documentation/Applications/visit.md
+          - WRF:        Documentation/Applications/wrf.md
       - Development:
          - Languages:
              - Julia:   Documentation/Development/Languages/julia.md
@@ -97,11 +97,14 @@ nav:
               - AOCC : Documentation/Development/Compilers/aocc.md
               - Cray : Documentation/Development/Compilers/cray.md
          - Build Tools:
-              - Documentation/Development/Build_Tools/index.md
-              - Config Make Install : Documentation/Development/Build_Tools/config_make_install.md
-              - CMAKE : Documentation/Development/Build_Tools/cmake.md
-              - spack : Documentation/Development/Build_Tools/spack.md
-              - GIT :   Documentation/Development/Build_Tools/git.md
+              - Building your own Module:
+                - Documentation/Development/Build_Tools/Building_Packages/index.md
+                - Documentation/Development/Build_Tools/Building_Packages/acquire.md
+                - Documentation/Development/Build_Tools/Building_Packages/config_make_install.md
+                - Documentation/Development/Build_Tools/Building_Packages/modules.md
+              - CMake: Documentation/Development/Build_Tools/cmake.md
+              - Spack: Documentation/Development/Build_Tools/spack.md
+              - Git:   Documentation/Development/Build_Tools/git.md
          - Libraries:
               - Documentation/Development/Libraries/index.md
               - FFTW:   Documentation/Development/Libraries/fftw.md
@@ -113,13 +116,13 @@ nav:
               - PETSc:  Documentation/Development/Libraries/petsc.md
          - Performance Tools:
              - Documentation/Development/Tools/Performance/index.md
-             - ARM Performance-Reports:
+             - ARM Performance Reports:
                -  Documentation/Development/Tools/Performance/Arm/index.md
                - MAP :  Documentation/Development/Tools/Performance/Arm/map.md
-               - Performance reports :  Documentation/Development/Tools/Performance/Arm/performance_rep.md
+               - Performance Reports :  Documentation/Development/Tools/Performance/Arm/performance_rep.md
              - Intel Parallel Studio:
                -  Documentation/Development/Tools/Performance/Intel/index.md
-               - Trace Analyser :  Documentation/Development/Tools/Performance/Intel/trace.md
+               - Trace Analyzer :  Documentation/Development/Tools/Performance/Intel/trace.md
                - VTune :  Documentation/Development/Tools/Performance/Intel/vtune.md
              - CrayPat: Documentation/Development/Tools/Performance/craypat.md
              - HPCToolkit: Documentation/Development/Tools/Performance/hpctoolkit.md
@@ -132,11 +135,12 @@ nav:
              - Inspector: Documentation/Development/Tools/Debug/inspector.md
              - Valgrind:  Documentation/Development/Tools/Debug/valgrind.md
          - Containers:
-             - Documentation/Development/Containers/index.md
-             - Documentation/Development/Containers/singularity.md
+            - Documentation/Development/Containers/index.md
+            - Documentation/Development/Containers/registres.md
+            - Documentation/Development/Containers/singularity.md
       - Visualization and Analytics:
          - Documentation/Viz_analytics/index.md
-         - VirtualGL and FastX : Documentation/Viz_analytics/virtualgl_fastx.md 
+         - VirtualGL and FastX : Documentation/Viz_analytics/virtualgl_fastx.md
       - Machine Learning:
            - Reinforcement Learning:
              - Documentation/MachineLearning/ReinforcementLearning/index.md
