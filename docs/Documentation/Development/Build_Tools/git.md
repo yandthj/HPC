@@ -4,9 +4,14 @@ title: Git
 has_children: true
 ---
 
-# Git
+# Using Git Revision Control 
 
-To begin, let's start by clearing up some common misconceptions about git. You probably have heard of git through the popular git-repository hosting web-service [GitHub](https://github.com). GitHub (the hosting service) is to git (the open-source version control software) what the internet is to computers&mdash;git is used locally to track incremental development and modifications to a collection of files, and GitHub gets those changes to serve as a synchronized, common access point. GitHub also has social aspects, like tracking who changed what and why. There are other git hosting services like [GitLab](https://gitlab.com) which are similar to GitHub but offer slightly different features.
+*Learn how to set up and use the Git software tool for development*
+
+
+ The system installation (i.e., /usr/bin/git) is version 1.8.3. To access more up-to-date versions, access git via Anaconda.
+## Git Introduction
+[Git is a distributed revision control system](https://en.wikipedia.org/wiki/Distributed_version_control). You probably have heard of git through the popular git-repository hosting web-service [GitHub](https://github.com). GitHub (the hosting service) is to git (the open-source version control software) what the internet is to computers&mdash;git is used locally to track incremental development and modifications to a collection of files, and GitHub gets those changes to serve as a synchronized, common access point. GitHub also has social aspects, like tracking who changed what and why. There are other git hosting services like [GitLab](https://gitlab.com) which are similar to GitHub but offer slightly different features.
 
 The git workflow has some pretty colorful vocabulary, so let's define some of the terms to avoid confusion going forward:
 * **Repository/repo**: A git repository is an independent grouping of files to be tracked. A git repo has a "root" which is the directory that it sits in, and tracks further directory nesting from that. A single repo is often thought of as a complete project or application, though it's not uncommon to nest modules of an application as child repositories to isolate the development history of those submodules.
@@ -21,3 +26,20 @@ The git workflow has some pretty colorful vocabulary, so let's define some of th
 
 * **Push**: Pushing refers to sending your committed changes to a remote repository, such as a repository hosted on GitHub. For instance, if you change something locally, you'd want to then push those changes so that others may access them.
 
+## Tool Set Up
+For using the git tool, learn how to:
+Install on OS X
+Set up on Linux
+Set up on Windows
+
+## Day to Day Tool Use
+
+## Advanced Tool Use
+!!! abstract Make a branch
+!!! abstract Delete a branch
+!!! abstract Git diff tricks
+!!! abstract Tags
+!!! abstract Unmodify a modified file
+!!! abstract Point your repo to a different remote server
+!!! abstract Send someone a current copy of your code
+!!! abstract Set up not to need password all the time
