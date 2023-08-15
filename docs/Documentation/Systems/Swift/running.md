@@ -371,65 +371,6 @@ task    thread             node name  first task    # on node  core
 ```
 
 
-## Running VASP
-
-The batch script given above can be modified to run VASP. To do so, load the VASP module, as well:
-
-```bash
-ml vasp
-```
-
-This will give you:
-
-```bash
-
-[nrmc2l@swift-login-1 ~ example]$ which vasp_gam
-/nopt/nrel/apps/210728a/level02/gcc-9.4.0/vasp-6.1.1/bin/vasp_gam
-[nrmc2l@swift-login-1 ~ example]$ which vasp_ncl
-/nopt/nrel/apps/210728a/level02/gcc-9.4.0/vasp-6.1.1/bin/vasp_ncl
-[nrmc2l@swift-login-1 ~ example]$ which vasp_std
-/nopt/nrel/apps/210728a/level02/gcc-9.4.0/vasp-6.1.1/bin/vasp_std
-[nrmc2l@swift-login-1 ~ example]$ 
-```
-
-Note the directory might be different.
-
-Then you need to add calls in your script to set up / point do your data files. So your final script will look something like the following. Here we use data downloaded from NREL's benchmark repository:
-
-```bash
-#!/bin/bash
-#SBATCH --job-name=b2_4
-#SBATCH --nodes=1
-#SBATCH --time=4:00:00
-##SBATCH --error=std.err
-##SBATCH --output=std.out
-#SBATCH --partition=debug
-#SBATCH --exclusive
-
-cat $0
-
-hostname
-
-module purge
-ml openmpi gcc vasp 
-
-#### get input and set it up
-#### This is from an old benchmark test
-#### see https://github.nrel.gov/ESIF-Benchmarks/VASP/tree/master/bench2
-
-mkdir $SLURM_JOB_ID
-cp input/* $SLURM_JOB_ID
-cd $SLURM_JOB_ID
-
-
-
-srun   -n 16 vasp_std > vasp.$SLURM_JOB_ID
-
-```
-This will run a version of Vasp built with openmpi and gfortran/gcc. You can run a version of Vasp built with the Intel toolchain replacing the *ml* line with the following module load:
-
- ```ml vaspintel intel-oneapi-mpi intel-oneapi-compilers intel-oneapi-mkl```
-
 
 ## Running Jupyter / Jupyter-lab
 
