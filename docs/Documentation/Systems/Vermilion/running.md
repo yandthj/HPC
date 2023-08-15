@@ -21,20 +21,28 @@ Vermilion's home directories are shared across all nodes.  There is also /scratc
 
 Partitions are flexible and fluid on Vermilion.  A list of partitions can be found by running the `sinfo` command.  Here are the partitions as of 10/20/2022.
 
-| Partition Name                          | Qty | RAM    | Cores/node | /var/scratch <br>1K-blocks |
-| :--:                               | --: | --:    | --:             | --:   |                    
-| gpu<br>*1 x NVIDIA Tesla A100*      |  17  | 114 GB |   30            |  6,240,805,336|        
-| lg                                 | 39  | 229 GB |   60            |   1,031,070,000| 
-| std                                | 60  | 114 GB |   30            |     515,010,816| 
-| sm                                 | 28  |  61 GB |   16            |     256,981,000| 
-| t                                  | 15  |  16 GB |   4             |      61,665,000| 
+| Partition Name                          | Qty | RAM    | Cores/node | /var/scratch <br>1K-blocks | AU Charge Factor | 
+| :--:                               | :--: | :--:    | :--:             | :--:   | :--: |                         
+| gpu<br>*1 x NVIDIA Tesla A100*      |  17  | 114 GB |   30            |  6,240,805,336| 12 |       
+| lg                                 | 39  | 229 GB |   60            |   1,031,070,000| 7 |
+| std                                | 60  | 114 GB |   30            |     515,010,816| 3.5 |
+| sm                                 | 28  |  61 GB |   16            |     256,981,000| 0.875 |
+| t                                  | 15  |  16 GB |   4             |      61,665,000| 0.4375 |
 
+## Allocation Unit (AU) Charges
+The equation for calculating the AU cost of a job on Vermilion is: 
+
+```AU cost = (Walltime in hours * Number of Nodes * Charge Factor)```
+
+The Walltime is the actual length of time that the job runs, in hours or fractions thereof.
+
+The **Charge Factor** for each partition is listed in the table above. 
 ## Operating Software
 The Vermilion HPC cluster runs fairly current versions of OpenHPC and SLURM on top of OpenStack.
 
 
-## Example
-Environments are provided with a number of commonly used compilers, common build tools, specific optimized libraries, and some analysis tools. Environments must be enabled before modules can be seen.  This is discussed in detail on the page [Modules](./modules.md)
+## Software Environments and Example Files
+Environments are provided with a number of commonly used compilers, common build tools, specific optimized libraries, and some analysis tools. Environments must be enabled before modules can be seen.  This is discussed in detail on the page [Modules](./modules.md).
 
 You can use the "standard" environment by running the command:
 
@@ -55,7 +63,10 @@ cd ~/example
 
 ## Simple batch script
 
-Here is a sample batch script, *runopenmpi*, for running the hello world examples .  **NOTE: You must build the applications before running this script.**   Please see **Building hello world first** below.
+Here is a sample batch script, *runopenmpi*, for running the hello world examples. 
+
+!!! warning "Note"
+    You must build the applications before running this script. Please see [Building hello world first](running.md#building-hello-world-first) below.
 
 ```
 #!/bin/bash
@@ -118,7 +129,7 @@ make
 
 ## Full procedure screen dump
 
-```
+```bash
 [joeuser@vs-login-1 ~]$ cp -r /nopt/nrel/apps/210929a/example ~/example
 [joeuser@vs-login-1 ~]$ cd example/
 [joeuser@vs-login-1 example]$ source /nopt/nrel/apps/210929a/myenv.2110041605
@@ -153,7 +164,7 @@ Submitted batch job 50031771
 
 ### Results
 
-```
+```bash
 [joeuser@vs example]$ cat slurm-187.out
 [joeuser@vs-login-1 example]$ cat slurm-50031771.out
 #!/bin/bash
@@ -210,7 +221,7 @@ ml intel-oneapi-compilers
 
 Then we can set the variables *OMPI_FC=ifort* and *OMPI_CC=icc*.  Then recompile.
 
-```
+```bash
 [joeuser@vs example]$ export OMPI_FC=ifort
 [joeuser@vs example]$ export OMPI_CC=icc
 [joeuser@vs example]$ mpif90 -fopenmp fhostone.f90 -o fhostone
@@ -218,9 +229,9 @@ Then we can set the variables *OMPI_FC=ifort* and *OMPI_CC=icc*.  Then recompile
 
 ```
 
-If you do a *ls -l* on the executable files you will note the size of the files change with different compiler versions.  You can also see the difference by running the commands
+If you do a ```ls -l``` on the executable files, you will note the size of the files change with different compiler versions.  You can also see the difference by running the commands
 
-```
+```bash
 nm fhostone | grep intel | wc
 nm phostone | grep intel | wc
 ```
@@ -232,7 +243,7 @@ on the two versions of the program.  It will show how many calls to Intel routin
 
 We can build with the Intel versions of MPI and with icc and ifort as the backend compilers.  We load the modules:
 
-```
+```bash
 ml gcc
 ml intel-oneapi-compilers
 ml intel-oneapi-mpi
@@ -240,28 +251,28 @@ ml intel-oneapi-mpi
 
 Then, building and running the same example as above:
 
-```
+```bash
 make clean
 make PFC=mpiifort PCC=mpiicc
 ```
 
 The actual compile lines produced by make are:
 
-```
+```bash
 mpiifort -g -fopenmp fhostone.f90  -o fhostone 
 mpiicc   -g -fopenmp phostone.c    -o phostone
 ```
 
 For running, we need to make some changes to our batch script.  Replace the load of openmpi with:
 
-```
+```bash
 ml intel-oneapi-compilers
 ml intel-oneapi-mpi
 ```
 
 Launch with the srun command:
 
-```
+```bash
 
 srun --mpi=pmi2  ./a.out -F
 
@@ -270,7 +281,7 @@ srun --mpi=pmi2  ./a.out -F
 Our IntelMPI batch script is:
 
 
-```
+```bash
 [joeuser@vs-login-1 example]$ cat runintel 
 #!/bin/bash
 #SBATCH --job-name="install"
@@ -292,7 +303,7 @@ srun --mpi=pmi2 -n 2 ./phostone -F
 
 ```
 
-With output
+With output:
 
 ```
 MPI Version:Intel(R) MPI Library 2021.3 for Linux* OS
@@ -314,17 +325,17 @@ task    thread             node name  first task    # on node  core
 
 ## Linking Intel's MKL library.
 
-The environment defined by sourcing the file /nopt/nrel/apps/210929a/myenv.2110041605
+The environment defined by sourcing the file ```/nopt/nrel/apps/210929a/myenv.2110041605```
 enables loading of many other modules, including one for Intel's MKL 
 library. Then to build against MKL using the Intel compilers
-icc or ifort you normally just need to add the flag **-mkl**.
+icc or ifort you normally just need to add the flag ```-mkl```.
 
-There are examples in the directory /nopt/nrel/apps/210929a/example/mkl.
+There are examples in the directory ```/nopt/nrel/apps/210929a/example/mkl```.
 There is a Readme.md file that explains in a bit more detail.
 
-Assuming you copied the example directory to you home directory the mkl examples will be in ~example/mkl
+Assuming you copied the example directory to your home directory the mkl examples will be in ~/example/mkl
 
-The short version is that you can:
+The short version is that you can:  
 
 ```
 [joeuser@vs-login-1 mkl]$ cd ~/example/mkl
@@ -359,9 +370,7 @@ There is a NREL report that discuss running the this test case and also a smalle
 
 ### Running multi-node VASP jobs on Vermilion
 
-VASP runs faster on 1 node than on 2 nodes. In some cases, VASP runtimes on 2 nodes have been observed to be double (or more) the run times on a single node. Many issues have been reported for running VASP on multiple nodes, especially when requesting all available cores in each node. In order for MPI to work reliably on Vermilion, it is necessary to specify the interconnect network that Vermilion should use to communicate between nodes. This is documented in each of the scripts below. Different solutions exists for Open MPI and Intel MPI. The documented recommendations for setting the interconnect network have been shown to work well for multi-node jobs on 2 nodes, but aren't guaranteed to produce succesful multi-node runs on 4 nodes. 
-
-If many cores are needed for your VASP calcualtion, it is recommended to run VASP on a singe node in the lg partition (60 cores/node), which provides the largest numbers of cores per node. 
+Note: Covered in VASP page
 
 ### Setting up VASP sbatch scripts
 
