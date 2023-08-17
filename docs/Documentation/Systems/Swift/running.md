@@ -422,7 +422,8 @@ ssh -t -L 8888:localhost:8888 swift-login-1.hpc.nrel.gov
 replacing 8888 with the number in the URL if it is different.
 
 Then in a web browser window, paste the URL to bring up a new notebook.
-
+## Running VASP 
+Please see the [VASP page](../../Applications/vasp.md) for detailed information and recommendations for running VASP on Swift. 
 ## Running Jupyter / Jupyter-lab on a compute node
 
 You can get an interactive session on a compute node with the salloc command, as in the following example:

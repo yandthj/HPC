@@ -355,4 +355,6 @@ or to build and run the examples using make instead directly calling icc and ifo
 make run
 ```
 
+## Running VASP on Vermilion
 
+Please see the [VASP page](../../Applications/vasp.md) for detailed information and recommendations for running VASP on Vermilion. 
