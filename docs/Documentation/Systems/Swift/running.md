@@ -370,7 +370,8 @@ task    thread             node name  first task    # on node  core
 0001      0001                 c1-32        0000         0001  0099
 ```
 
-
+## Running VASP 
+Please see the [VASP page](../../Applications/vasp.md) for detailed information and recommendations for running VASP on Swift.
 
 ## Running Jupyter / Jupyter-lab
 
@@ -422,8 +423,7 @@ ssh -t -L 8888:localhost:8888 swift-login-1.hpc.nrel.gov
 replacing 8888 with the number in the URL if it is different.
 
 Then in a web browser window, paste the URL to bring up a new notebook.
-## Running VASP 
-Please see the [VASP page](../../Applications/vasp.md) for detailed information and recommendations for running VASP on Swift. 
+ 
 ## Running Jupyter / Jupyter-lab on a compute node
 
 You can get an interactive session on a compute node with the salloc command, as in the following example:
@@ -479,21 +479,6 @@ replacing *8888* with the value in the URL if needed and c1-28 with the name of 
 
 Julia is also available via a module.  
 
-```bash
-[nrmc2l@swift-login-1:~ ] $ module spider julia
-...
-     Versions:
-        julia/1.6.2-ocsfign
-        julia/1.7.2-gdp7a25
-...
-[nrmc2l@swift-login-1:~ ] $ 
-
-[nrmc2l@swift-login-1:~/examples/spack ] $ module load julia/1.7.2-gdp7a25 
-[nrmc2l@swift-login-1:~/examples/spack ] $ which julia
-/nopt/nrel/apps/210928a/level03/install/linux-rocky8-zen2/gcc-9.4.0/julia-1.7.2-gdp7a253nsglyzssybqknos2n5amkvqm/bin/julia
-[nrmc2l@swift-login-1:~/examples/spack ] $ 
-
-```
 Julia can be run in a Jupyter notebook as discussed above. However, before doing so you will need to run the following commands in each Julia version you are using:  
 
 ```bash
