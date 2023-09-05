@@ -477,7 +477,23 @@ replacing *8888* with the value in the URL if needed and c1-28 with the name of 
 
 ## Running Julia 
 
-Julia is also available via a module.  
+Julia is also available via a module.
+
+```bash
+[nrmc2l@swift-login-1:~ ] $ module spider julia
+...
+     Versions:
+        julia/1.6.2-ocsfign
+        julia/1.7.2-gdp7a25
+...
+[nrmc2l@swift-login-1:~ ] $ 
+
+[nrmc2l@swift-login-1:~/examples/spack ] $ module load julia/1.7.2-gdp7a25 
+[nrmc2l@swift-login-1:~/examples/spack ] $ which julia
+/nopt/nrel/apps/210928a/level03/install/linux-rocky8-zen2/gcc-9.4.0/julia-1.7.2-gdp7a253nsglyzssybqknos2n5amkvqm/bin/julia
+[nrmc2l@swift-login-1:~/examples/spack ] $ 
+
+```
 
 Julia can be run in a Jupyter notebook as discussed above. However, before doing so you will need to run the following commands in each Julia version you are using:  
 
