@@ -10,7 +10,7 @@ grand_parent: Systems
 # Vermilion Modules and Applications
 *This page describes how to activate and use the modules available on Vermilion. Modules are not available by default on the machine.  This page discusses how to enable them.*
 
-The page [Running on Vermilion](./running.md) describes running on Vermilion in more detail including a description of the hardware, partitions, and simple build and run scripts. For performance recommendations and sample scripts for running specific applications, please see the [Applications](../../Applications/) section. 
+The page [Running on Vermilion](./running.md) describes running on Vermilion in more detail including a description of the hardware, partitions, and simple build and run scripts. For performance recommendations and sample scripts for running specific applications, please see the [Applications](../../Applications/ansys.md) section. 
 
 The Vermilion HPC cluster marries traditional HPC deployments and modern cloud architectures, both using the OpenHPC infrastructure, and [Spack](https://spack.io). 
 
