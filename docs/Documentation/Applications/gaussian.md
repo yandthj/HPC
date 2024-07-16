@@ -28,7 +28,7 @@ This scratch space is set automatically by the example script below. The Gaussia
 
 ### Sample Job Scripts
 
-Gaussian may be configured to run on one or more physical nodes, with or without shared memory parallelism. Distributed memory, parallel setup is taken care of automatically based on settings in the SLURM script example below, which should work on Eagle, Swift, and Kestrel.
+Gaussian may be configured to run on one or more physical nodes, with or without shared memory parallelism. Distributed memory, parallel setup is taken care of automatically based on settings in the SLURM script example below, which should work on Swift and Kestrel.
 
 ??? example "Sample Submission Script"
 

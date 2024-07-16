@@ -9,7 +9,7 @@ licenses are checked out from the license server running on 1wv11lic02.nrel.gov.
 
 ## Running STAR-CCM+ in GUI
 
-STAR-CCM+ can be run interactively on both Eagle and Kestrel using X windows by running the following commands in the terminal of an X window.
+STAR-CCM+ can be run interactively on Kestrel using X windows by running the following commands in the terminal of an X window.
 
 ```bash
 module load starccm
@@ -34,7 +34,7 @@ Then you need to create a Slurm script `<your_scriptfile>` as shown below to sub
     #!/bin/bash -l
     #SBATCH --time=2:00:00             # walltime limit of 2 hours
     #SBATCH --nodes=2                  # number of nodes
-    #SBATCH --ntasks-per-node=36       # number of tasks per node (<=36 on Eagle, <=104 on Kestrel)
+    #SBATCH --ntasks-per-node=104       # number of tasks per node (<=104 on Kestrel)
     #SBATCH --ntasks=72                # total number of tasks
     #SBATCH --job-name=your_simulation # name of job
     #SBATCH --account=<allocation-id>  # name of project allocation
@@ -65,7 +65,7 @@ STAR-CCM+ comes with its own Intel MPI. To use the Intel MPI, the Slurm script s
     #!/bin/bash -l
     #SBATCH --time=2:00:00             # walltime limit of 2 hours
     #SBATCH --nodes=2                  # number of nodes
-    #SBATCH --ntasks-per-node=36       # number of tasks per node (<=36 on Eagle, <=104 on Kestrel)
+    #SBATCH --ntasks-per-node=104       # number of tasks per node (<=104 on Kestrel)
     #SBATCH --ntasks=72                # total number of tasks
     #SBATCH --job-name=your_simulation # name of job
     #SBATCH --account=<allocation-id>  # name of project allocation
@@ -99,7 +99,7 @@ STAR-CCM+ can run with Cray MPI. The following Slurm script submits STAR-CCM+ jo
     #!/bin/bash -l
     #SBATCH --time=2:00:00             # walltime limit of 2 hours
     #SBATCH --nodes=2                  # number of nodes
-    #SBATCH --ntasks-per-node=36       # number of tasks per node (<=36 on Eagle, <=104 on Kestrel)
+    #SBATCH --ntasks-per-node=104       # number of tasks per node (<=104 on Kestrel)
     #SBATCH --ntasks=72                # total number of tasks
     #SBATCH --job-name=your_simulation # name of job
     #SBATCH --account=<allocation-id>  # name of project allocation

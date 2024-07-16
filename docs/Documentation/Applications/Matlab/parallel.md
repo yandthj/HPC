@@ -157,7 +157,7 @@ solves the ODE using the ode15s function.
        This script samples a parameter of a stiff ODE and solves it both in
        serial and parallel (via parfor), comparing both the run times and the
        max absolute values of the computed solutions. The code -- especially the
-       serial part -- will take several minutes to run on Eagle.
+       serial part -- will take several minutes to run.
     %}
 
     % open the local cluster profile

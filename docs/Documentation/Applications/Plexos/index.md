@@ -11,13 +11,13 @@ Users can run PLEXOS models on NREL's computing clusters. However, users need to
 
 ## Available Modules
 
-| Kestrel         | Eagle           | Swift           | Vermilion |
-|:---------------:|:---------------:|:---------------:|:---------:|
-|                 | plexos/8.300R09 |                 ||                        
-|                 | plexos/9.000R07 |                 ||
-| plexos/9.000R09 | plexos/9.000R09 | plexos/9.000R09 ||
-|                 | plexos/9.200R05 |                 ||
-| plexos/9.200R06 ||||
+| Kestrel         | Swift           | Vermilion |
+|:---------------:|:---------------:|:---------:|
+|                 |                 |           |                        
+|                 |                 |           |
+| plexos/9.000R09 | plexos/9.000R09 |           |
+|                 |                 |           |
+| plexos/9.200R06 |                 |           |
 
 
 !!! info
