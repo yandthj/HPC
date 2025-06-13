@@ -7,14 +7,15 @@
 
 ### Compute hosts
 
-Gila is a collection of physical nodes with each regular node containing Dual AMD EPYC 7532 Rome CPUs.  However, each node is virtualized.  That is it is split up into virtual nodes with each virtual node having a portion of the cores and memory of the physical node.  Similar virtual nodes are then assigned slurm partitions as shown below.  
+Gila is a collection of physical nodes with each regular node containing <Dual AMD EPYC 7532 Rome CPUs>.  However, each node is virtualized.  That is it is split up into virtual nodes with each virtual node having a portion of the cores and memory of the physical node.  Similar virtual nodes are then assigned slurm partitions as shown below.  
 
 
-<!-- Move this info to filesystems page? -->
+*Move this info to filesystems page?*
 ### Shared file systems
 
 Gila's home directories are shared across all nodes. Each user has a quota of 5 GB. There is also /scratch/$USER and /projects spaces seen across all nodes.
 
+*Need to update*
 ### Partitions
 
 Partitions are flexible and fluid on Gila.  A list of partitions can be found by running the `sinfo` command.  Here are the partitions as of 3/27/2025.
@@ -37,7 +38,7 @@ The Walltime is the actual length of time that the job runs, in hours or fractio
 
 The **Charge Factor** for each partition is listed in the table above. 
 
-<!-- Add example AU calculation, like Swift page -->
+*Add example AU calculation, like Swift page*
 
 ### Operating Software
 
