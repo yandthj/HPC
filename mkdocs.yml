@@ -42,6 +42,11 @@ nav:
           - Documentation/Systems/Swift/running.md
           - Documentation/Systems/Swift/modules.md
           - Documentation/Systems/Swift/filesystems.md
+        - Gila:
+          - Documentation/Systems/Gila/index.md
+          - Documentation/Systems/Gila/running.md
+          - Documentation/Systems/Gila/modules.md
+          - Documentation/Systems/Gila/filesystem.md
         - Vermilion:
           - Documentation/Systems/Vermilion/index.md
           - Documentation/Systems/Vermilion/running.md
