@@ -1,6 +1,8 @@
 # Kestrel Release Notes
 
 *We will update this page with Kestrel release notes after major Kestrel upgrades.*
+## July, 1, 2025
+
 
 ## December 13, 2024
 
