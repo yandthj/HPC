@@ -16,7 +16,7 @@ It is recommended that you use the binaries provided by Kitware on your workstat
 To determine which version of ParaView is installed on the cluster, connect to Kestrel as you normally would, load the ParaView module with `module load paraview`, then check the version with `pvserver --version`.
 Download the ParaView client binary which matches the version displayed by the above command on the [ParaView website](https://www.paraview.org/download/). 
 
-
+## Connecting to Kestrel with ParaView
 1. Reserve Compute Nodes
 
     The first step is to reserve the computational resources on Kestrel that will be running the ParaView server.
