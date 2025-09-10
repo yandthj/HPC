@@ -74,9 +74,10 @@ Download the ParaView client binary which matches the version displayed by the a
     If the number of unstructured mesh cells was instead around 60 M, you'd want to aim for 120 to 240 processes, which means requesting a minimum of 2 Kestrel nodes.  
     Note that this 2-nodes request may remain in the queue longer while the scheduler looks for resources, so depending on your needs, it may be necessary to factor queue times into your optimal cells-per-process calculation.
     
-    Note: The `--server-port=<port>` option may be used with pvserver if you wish to use a port other than 11111 for Paraview. 
-    You'll need to adjust the port in the SSH tunnel and tell your Paraview client which port to use, as well. 
-    See the following sections for details.
+    !!! note "Port Selection"
+        The `--server-port=<port>` option may be used with pvserver if you wish to use a port other than 11111 for Paraview. You will need to adjust the port in the SSH tunnel and tell your Paraview client which port to use, as well. 
+        
+        See the following sections for details.
 
 3. Create SSH Tunnel
 
