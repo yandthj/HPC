@@ -81,9 +81,8 @@ Download the ParaView client binary which matches the version displayed by the a
 
 3. Create SSH Tunnel
 
-    Next, we'll create what's called an SSH tunnel to connect your local desktop to the compute node(s) you reserved in Step 1.  
-    This will allow your local installation of ParaView to interact with files stored remotely on Kestrel.  
-    **In a new terminal window**, execute the following line of code **on your own computer**:
+    Next, create an SSH tunnel to connect your local desktop to the compute node(s) you reserved in Step 1.   
+    Open a new local terminal window:
     
     ```bash
     ssh -L 11111:<node_name>:11111 <user_name>@kestrel.hpc.nrel.gov
@@ -91,17 +90,14 @@ Download the ParaView client binary which matches the version displayed by the a
     
     where `<node_name>` is the node name you copied in Step 1 and `<user_name>` is your HPC username.
     
-    Note that if you changed the default port to something other than 11111 (see the previous section) you'll need to change the port settings in your SSH tunnel, as well. 
-    The SSH command construct above follows the format of `<local_port>:<node_name>:<remote_port>`. 
-    The `<local_port>` is the "beginning" of the tunnel on your computer, and is often the same as the "end" port of the tunnel, though this is not required. 
-    You may set this to anything convenient to you, but you will need to tell your Paraview client the right port if you change it (see the next section for details.) <remote_port> is the port on the Kestrel compute node where pvserver is running. 
-    The default for pvserver is 11111, but if you changed this with pvserver `--server-port=` flag, you'll need to change <remote_port> in your ssh command to match.
+    If you have changed the port via the `--server-port=<port>` flag, note that you must change the above command from the default port 11111 to your selected port.
+
 
 4. Connect ParaView Client
 
     Now that the ParaView server is running on a compute node and your desktop is connected via the SSH tunnel, you can open ParaView as usual.  
     From here, click the "Connect" icon or `File > Connect`.  
-    Next, click the "Add Server" button and enter the following information.
+    Next, click the "Add Server" button and enter the following information. Again, note that if you changed the port before, you must reflect that change here.
     
     | Name        | Value         |
     |-------------|---------------|
