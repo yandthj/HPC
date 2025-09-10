@@ -30,7 +30,7 @@ Download the ParaView client binary which matches the version displayed by the a
     ```
     
     where `<alloc_name>` will be replaced with the allocation name you wish to charge your time to and `<time_limit>` is the amount of time you're reserving the nodes for. 
-    At this point, note or copy the name of the node that the Slurm scheduler assigns you (it is what follows your username and @ symbol where you input text, e.g., x1008c0s0b1n1) as we'll need it in Step 3.
+    At this point, note or copy the name of the node that the Slurm scheduler assigns you (it is what follows your username and "@" symbol where you input text, e.g., x1008c0s0b1n1) as we'll need it in Step 3.
     
     In the example above, we default to requesting only a single node which limits the maximum number of ParaView server processes we can launch to the maximum number of 104 cores on a single Kestrel node.  
     If you intend to launch more ParaView server processes than this, you'll need to request multiple nodes with your `salloc` command.
@@ -51,14 +51,18 @@ Download the ParaView client binary which matches the version displayed by the a
     module load paraview
     ```
     
-    Next, start the ParaView server with another call to the Slrum `srun` directive
+    Next, start the ParaView server with another call to the Slurm `srun` directive:
     
     ```bash
     srun -n 8 pvserver --force-offscreen-rendering
     ```
     
     In this example, the ParaView server will be started on 8 processes.  
-    The `--force-offscreen-rendering` option is present to ensure that, where possible, CPU-intensive filters and rendering calculations will be performed server-side (i.e., on the Kestrel compute nodes) and *not* on your local machine.  
+
+    !!! note "Headless Rendering"
+        The `--force-offscreen-rendering` option is present to ensure that, where possible, CPU-intensive filters and rendering calculations will be performed server-side (i.e., on the Kestrel compute nodes) and *not* on your local machine.
+    
+    
     Remember that the maximum number of ParaView server processes that can be launched is limited by the amount of nodes reserved in Step 1.  
     Although every dataset may be different, ParaView offers the following recommendations for balancing grid cells to processors.
     
