@@ -26,17 +26,17 @@ Download the ParaView client binary which matches the version displayed by the a
     To reserve the computational resources on Kestrel:
     
     ```bash
-    salloc -A <alloc_name> -t <time_limit>
+    salloc -A <allocation> -t <time_limit>
     ```
     
-    where `<alloc_name>` will be replaced with the allocation name you wish to charge your time to and `<time_limit>` is the amount of time you're reserving the nodes for. 
+    where `<allocation>` will be replaced with the allocation name you wish to charge your time to and `<time_limit>` is the amount of time you're reserving the nodes for. 
     At this point, copy the name of the node that the Slurm scheduler assigns you (it is what follows your username and "@" symbol where you input text, e.g., x1008c0s0b1n1) as we'll need it in Step 3.
     
     In the example above, we default to requesting only a single node which limits the maximum number of ParaView server processes we can launch to the maximum number of 104 cores on a single Kestrel node.  
     If you intend to launch more ParaView server processes than this, you'll need to request multiple nodes with your `salloc` command.
     
     ```bash
-    salloc -A <alloc_name> -t <time_limit> -N 2
+    salloc -A <allocation> -t <time_limit> -N 2
     ```
     
     where the `-N 2` option specifies that two nodes be reserved, which means the maximum number of ParaView servers that can be launched in Step 2 is  104 x 2 = 208.  
@@ -54,7 +54,7 @@ Download the ParaView client binary which matches the version displayed by the a
     Next, start the ParaView server with another call to the Slurm `srun` directive:
     
     ```bash
-    srun -n 8 pvserver --force-offscreen-rendering
+    srun -A <allocation> -n 8 pvserver --force-offscreen-rendering
     ```
     
     In this example, the ParaView server will be started on 8 processes.  
@@ -85,10 +85,10 @@ Download the ParaView client binary which matches the version displayed by the a
     Open a new local terminal window:
     
     ```bash
-    ssh -L 11111:<node_name>:11111 <user_name>@kestrel.hpc.nrel.gov
+    ssh -L 11111:<node_name>:11111 <username>@kestrel.hpc.nrel.gov
     ```
     
-    where `<node_name>` is the node name you copied in Step 1 and `<user_name>` is your HPC username.
+    where `<node_name>` is the node name you copied in Step 1 and `<username>` is your HPC username.
     
     If you have changed the port via the `--server-port=<port>` flag, note that you must change the above command from the default port 11111 to your selected port.
 
@@ -136,11 +136,15 @@ How to use ParaView in batch mode to generate single frames and animations on Ke
 
 1.  Begin by connecting to a Kestrel login node:
 
-        ssh {username}@kestrel.hpc.nrel.gov 
+    ```bash
+    ssh <username>@kestrel.hpc.nrel.gov
+    ```
 
 2.  Request an interactive compute session for 60 minutes):
 
-        salloc -A {allocation} -t 60
+    ```bash
+    salloc -A <allocation> -t 60`
+    ```
 
     Note: Slurm changes in January 2022 resulted in the need to use salloc to start your interactive session, since we'll be
     running pvbatch on the compute node using srun in a later step. This "srun-inside-an-salloc" supercedes
@@ -148,15 +152,18 @@ How to use ParaView in batch mode to generate single frames and animations on Ke
 
 3.  Once the session starts, load the appropriate modules:
 
-        module purge
-        module load paraview/osmesa
-
+    ```bash
+    module purge
+    module load paraview/osmesa
+    ```
     Note: In this case, we select the `paraview/server` module as opposed to the default ParaView build,
     as the server version is built for rendering using offscreen methods suitable for compute nodes.
 
 4.  and start your render job:
 
-        srun -n 1 pvbatch --force-offscreen-rendering render_sphere.py
+    ```bash
+    srun -n 1 pvbatch --force-offscreen-rendering render_sphere.py
+    ```
 
     where `render_sphere.py` is a simple ParaView Python script to add a sphere source and
     save an image.
@@ -171,7 +178,7 @@ you feel that your script is sufficiently automated, you can start submitting ba
 
         #!/bin/bash
 
-        #SBATCH --account={allocation}
+        #SBATCH --account=<allocation>
         #SBATCH --time=60:00
         #SBATCH --job-name=pvrender
         #SBATCH --nodes=2
