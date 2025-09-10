@@ -30,16 +30,16 @@ Download the ParaView client binary which matches the version displayed by the a
     ```
     
     where `<alloc_name>` will be replaced with the allocation name you wish to charge your time to and `<time_limit>` is the amount of time you're reserving the nodes for. 
-    At this point, you may want to copy the name of the node that the Slurm scheduler assigns you (it will look something like r1i0n10, r4i3n3, etc., and follow immediately after the "@" symbol at the command prompt ) as we'll need it in Step 3.
+    At this point, note or copy the name of the node that the Slurm scheduler assigns you (it is what follows your username and @ symbol where you input text, e.g., x1008c0s0b1n1) as we'll need it in Step 3.
     
-    In the example above, we default to requesting only a single node which limits the maximum number of ParaView server processes we can launch to the maximum number of cores on a single Kestrel node (on Kestrel, this is 104).  
+    In the example above, we default to requesting only a single node which limits the maximum number of ParaView server processes we can launch to the maximum number of 104 cores on a single Kestrel node.  
     If you intend to launch more ParaView server processes than this, you'll need to request multiple nodes with your `salloc` command.
     
     ```bash
     salloc -A <alloc_name> -t <time_limit> -N 2
     ```
     
-    where the `-N 2` option specifies that two nodes be reserved, which means the maximum number of ParaView servers that can be launched in Step 2 is  104 x 2 = 208 (Kestrel).  
+    where the `-N 2` option specifies that two nodes be reserved, which means the maximum number of ParaView servers that can be launched in Step 2 is  104 x 2 = 208.  
     Although this means you'll be granted multiple nodes with multiple names, the one to copy for Step 3 is still the one immediately following the "@" symbol.  
     See the table of recommended workload distributions in Step 2 for more insight regarding the number of nodes to request.
 
