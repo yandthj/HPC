@@ -45,7 +45,7 @@ Download the ParaView client binary which matches the version displayed by the a
 
 2. Start ParaView Server
 
-    After reserving the compute nodes, load the ParaView module with
+    After reserving the compute nodes, load the ParaView module with:
     
     ```bash
     module load paraview
@@ -63,17 +63,16 @@ Download the ParaView client binary which matches the version displayed by the a
         The `--force-offscreen-rendering` option is present to ensure that, where possible, CPU-intensive filters and rendering calculations will be performed server-side (i.e., on the Kestrel compute nodes) and *not* on your local machine.
     
     
-    Remember that the maximum number of ParaView server processes that can be launched is limited by the amount of nodes reserved in Step 1.  
-    Although every dataset may be different, ParaView offers the following recommendations for balancing grid cells to processors.
+    Although every dataset may be different, ParaView offers the following recommendations for balancing grid cells to processors:
     
     | Grid Type         | Target Cells/Process | Max Cells/Process |
     | ----------------- | -------------------- | ----------------- |
     | Structured Data   | 5-10 M               | 20 M              |
     | Unstructured Data | 250-500 K            | 1 M               |
     
-    So for example, if you have data stored in an unstructured mesh with 6 M cells, you'd want to aim for between 12 and 24 ParaView server processes, which easily fits on a single Kestrel node.  
+    For example, if you have data stored in an unstructured mesh with 6 M cells, you'd want to aim for between 12 and 24 ParaView server processes, which easily fits on a single Kestrel node.  
     If the number of unstructured mesh cells was instead around 60 M, you'd want to aim for 120 to 240 processes, which means requesting a minimum of 2 Kestrel nodes.  
-    Note, this 2-nodes request may remain in the queue longer while the scheduler looks for resources, so depending on your needs, it may be necessary to factor queue times into your optimal cells-per-process calculation.
+    Note that this 2-nodes request may remain in the queue longer while the scheduler looks for resources, so depending on your needs, it may be necessary to factor queue times into your optimal cells-per-process calculation.
     
     Note: The `--server-port=<port>` option may be used with pvserver if you wish to use a port other than 11111 for Paraview. 
     You'll need to adjust the port in the SSH tunnel and tell your Paraview client which port to use, as well. 
