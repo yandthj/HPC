@@ -54,7 +54,7 @@ Download the ParaView client binary which matches the version displayed by the a
     Next, start the ParaView server with another call to the Slurm `srun` directive:
     
     ```bash
-    srun -A <allocation> -n 8 pvserver --force-offscreen-rendering
+    srun -A <allocation> -t <time_limit> -n 8 pvserver --force-offscreen-rendering
     ```
     
     In this example, the ParaView server will be started on 8 processes.  
