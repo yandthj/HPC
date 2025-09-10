@@ -30,7 +30,7 @@ Download the ParaView client binary which matches the version displayed by the a
     ```
     
     where `<alloc_name>` will be replaced with the allocation name you wish to charge your time to and `<time_limit>` is the amount of time you're reserving the nodes for. 
-    At this point, note or copy the name of the node that the Slurm scheduler assigns you (it is what follows your username and "@" symbol where you input text, e.g., x1008c0s0b1n1) as we'll need it in Step 3.
+    At this point, copy the name of the node that the Slurm scheduler assigns you (it is what follows your username and "@" symbol where you input text, e.g., x1008c0s0b1n1) as we'll need it in Step 3.
     
     In the example above, we default to requesting only a single node which limits the maximum number of ParaView server processes we can launch to the maximum number of 104 cores on a single Kestrel node.  
     If you intend to launch more ParaView server processes than this, you'll need to request multiple nodes with your `salloc` command.
@@ -85,7 +85,6 @@ Download the ParaView client binary which matches the version displayed by the a
     This will allow your local installation of ParaView to interact with files stored remotely on Kestrel.  
     **In a new terminal window**, execute the following line of code **on your own computer**:
     
-    For Kestrel:
     ```bash
     ssh -L 11111:<node_name>:11111 <user_name>@kestrel.hpc.nrel.gov
     ```
