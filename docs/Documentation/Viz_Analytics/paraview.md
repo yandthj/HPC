@@ -209,16 +209,18 @@ Here are some useful components to add to your ParaView Python script.
             doframe = int(sys.argv[1])
         infile = "output%05d.dat" % doframe
 
-    Note that `pvbatch` will pass any arguments after the script name to the script itself. So you can do the following to render frame 45:
-
+    !!! note "Individual Frame Rendering"
+        Note that `pvbatch` will pass any arguments after the script name to the script itself. So you can do the following to render frame 45:
+        ```
         srun -n 1 pvbatch --force-offscreen-rendering render_sphere.py 45
-
-    You could programmatically change this value inside the `batch_render.sh` script, your script would needto iterate using something like:
-
+        ```
+        You could programmatically change this value inside the `batch_render.sh` script, your script would needto iterate using something like:
+        ```
         for frame in 45 46 47 48
         do
             srun -n 1 pvbatch --force-offscreen-rendering render_sphere.py $frame
         done
+        ```
 
 <!--     And you would need to submit the script as such:
 
