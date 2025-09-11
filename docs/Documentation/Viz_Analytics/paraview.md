@@ -146,9 +146,7 @@ How to use ParaView in batch mode to generate single frames and animations on Ke
     salloc -A <allocation> -t 60`
     ```
 
-    Note: Slurm changes in January 2022 resulted in the need to use salloc to start your interactive session, since we'll be
-    running pvbatch on the compute node using srun in a later step. This "srun-inside-an-salloc" supercedes
-    the previous Slurm behavior of "srun-inside-an-srun", which will no longer work.
+    Note: Slurm changes in January 2022 resulted in the need to use salloc to start your interactive session, since we'll be running pvbatch on the compute node using srun in a later step. This "srun-inside-an-salloc" supercedes the previous Slurm behavior of "srun-inside-an-srun", which will no longer work.
 
 3.  Once the session starts, load the appropriate modules:
 
@@ -156,8 +154,7 @@ How to use ParaView in batch mode to generate single frames and animations on Ke
     module purge
     module load paraview/osmesa
     ```
-    Note: In this case, we select the `paraview/server` module as opposed to the default ParaView build,
-    as the server version is built for rendering using offscreen methods suitable for compute nodes.
+    Note: In this case, we select the `paraview/server` module as opposed to the default ParaView build, as the server version is built for rendering using offscreen methods suitable for compute nodes.
 
 4.  and start your render job:
 
@@ -165,14 +162,11 @@ How to use ParaView in batch mode to generate single frames and animations on Ke
     srun -n 1 pvbatch --force-offscreen-rendering render_sphere.py
     ```
 
-    where `render_sphere.py` is a simple ParaView Python script to add a sphere source and
-    save an image.
+    where `render_sphere.py` is a simple ParaView Python script to add a sphere source and save an image.
 
 ###  Transitioning to Batch Post-Processing
 
-Tweaking the visualization options contained in the `pvrender.py` file inevitably requires some amount of trial
-and error and is most easily accomplished in an interactive compute session like the one outlined above.  Once
-you feel that your script is sufficiently automated, you can start submitting batch jobs that require no user interaction.
+Tweaking the visualization options contained in the `pvrender.py` file inevitably requires some amount of trial and error and is most easily accomplished in an interactive compute session like the one outlined above.  Once you feel that your script is sufficiently automated, you can start submitting batch jobs that require no user interaction.
 
 1.  Prepare your script for `sbatch`. A minimal example of a batch script named `batch_render.sh` could look like:
 
@@ -192,10 +186,7 @@ you feel that your script is sufficiently automated, you can start submitting ba
 
         wait
 
-    where we run multiple instances of our dummy sphere example, highlighting that different options can be
-    passed to each to post-process a large batch of simulated results on a single node.  Note also that for more
-    computationally intensize rendering or larger file sizes (e.g., tens of millions of cells) the option `-n 1`
-    option can be set as suggested in the [client-server guide](client_server_setup.md).
+    where we run multiple instances of our dummy sphere example, highlighting that different options can be passed to each to post-process a large batch of simulated results on a single node.  Note also that for more computationally intensize rendering or larger file sizes (e.g., tens of millions of cells) the option `-n 1` option can be set as suggested in the [client-server guide](client_server_setup.md).
 
 
 2.  Submit the job and wait:
@@ -205,18 +196,12 @@ you feel that your script is sufficiently automated, you can start submitting ba
 
 ###  Tips on Creating the PvBatch Python Script
 
-Your ParaView python script can be made in a number of ways. The easiest
-is to run a fresh session of ParaView (use version 5.x on your local
-machine) and select "Tools→Start Trace," then "OK". Perform all the
-actions you need to set your scene and save a screenshot. Then select
-"Tools → Stop Trace" and save the resulting python script (we will use
-`render_sphere.py` in these examples).
+The easiest way to create your ParaView Python script is to run a fresh session of ParaView (use version 5.x on your local machine) and select "Tools → Start Trace," then "OK". Perform all the actions you need to set your scene and save a screenshot. Then select "Tools → Stop Trace" and save the resulting python script (we will use `render_sphere.py` in these examples).
  
 
 Here are some useful components to add to your ParaView Python script.
 
--   Read the first command-line argument and use it to select a data
-    file to operate on.
+-   Read the first command-line argument and use it to select a data file to operate on.
 
         import sys
         doframe = 0
@@ -224,13 +209,11 @@ Here are some useful components to add to your ParaView Python script.
             doframe = int(sys.argv[1])
         infile = "output%05d.dat" % doframe
 
-    Note that `pvbatch` will pass any arguments after the script name to
-    the script itself. So you can do the following to render frame 45:
+    Note that `pvbatch` will pass any arguments after the script name to the script itself. So you can do the following to render frame 45:
 
         srun -n 1 pvbatch --force-offscreen-rendering render_sphere.py 45
 
-    You could programmatically change this value inside the `batch_render.sh` script, your script would need
-    to iterate using something like:
+    You could programmatically change this value inside the `batch_render.sh` script, your script would needto iterate using something like:
 
         for frame in 45 46 47 48
         do
