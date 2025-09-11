@@ -143,7 +143,7 @@ How to use ParaView in batch mode to generate single frames and animations on Ke
 2.  Request an interactive compute session for 60 minutes):
 
     ```bash
-    salloc -A <allocation> -t 60`
+    salloc -A <allocation> -t 60
     ```
 
     Note: Slurm changes in January 2022 resulted in the need to use salloc to start your interactive session, since we'll be running pvbatch on the compute node using srun in a later step. This "srun-inside-an-salloc" supercedes the previous Slurm behavior of "srun-inside-an-srun", which will no longer work.
@@ -170,28 +170,32 @@ Tweaking the visualization options contained in the `pvrender.py` file inevitabl
 
 1.  Prepare your script for `sbatch`. A minimal example of a batch script named `batch_render.sh` could look like:
 
-        #!/bin/bash
+    ```bash
+    #!/bin/bash
 
-        #SBATCH --account=<allocation>
-        #SBATCH --time=60:00
-        #SBATCH --job-name=pvrender
-        #SBATCH --nodes=2
+    #SBATCH --account=<allocation>
+    #SBATCH --time=60:00
+    #SBATCH --job-name=pvrender
+    #SBATCH --nodes=2
 
-        module purge
-        module load paraview/$version-server
+    module purge
+    module load paraview/$version-server
+    
+    srun -n 1 pvbatch --force-offscreen-rendering render_sphere.py 1 &
+    srun -n 1 pvbatch --force-offscreen-rendering render_sphere.py 2 &
+    srun -n 1 pvbatch --force-offscreen-rendering render_sphere.py 3 &
 
-        srun -n 1 pvbatch --force-offscreen-rendering render_sphere.py 1 &
-        srun -n 1 pvbatch --force-offscreen-rendering render_sphere.py 2 &
-        srun -n 1 pvbatch --force-offscreen-rendering render_sphere.py 3 &
-
-        wait
+    wait
+    ```
 
     where we run multiple instances of our dummy sphere example, highlighting that different options can be passed to each to post-process a large batch of simulated results on a single node.  Note also that for more computationally intensize rendering or larger file sizes (e.g., tens of millions of cells) the option `-n 1` option can be set as suggested in the [client-server guide](client_server_setup.md).
 
 
 2.  Submit the job and wait:
 
-        sbatch batch_render.sh
+    ```
+    sbatch batch_render.sh
+    ```
 
 
 ###  Tips on Creating the PvBatch Python Script
@@ -203,19 +207,21 @@ Here are some useful components to add to your ParaView Python script.
 
 -   Read the first command-line argument and use it to select a data file to operate on.
 
-        import sys
-        doframe = 0
-        if len(sys.argv) > 1:
-            doframe = int(sys.argv[1])
-        infile = "output%05d.dat" % doframe
+    ```python
+    import sys
+    doframe = 0
+    if len(sys.argv) > 1:
+        doframe = int(sys.argv[1])
+    infile = "output%05d.dat" % doframe
+    ```
 
     !!! note "Individual Frame Rendering"
         Note that `pvbatch` will pass any arguments after the script name to the script itself. So you can do the following to render frame 45:
-        ```
+        ```bash
         srun -n 1 pvbatch --force-offscreen-rendering render_sphere.py 45
         ```
         You could programmatically change this value inside the `batch_render.sh` script, your script would needto iterate using something like:
-        ```
+        ```bash
         for frame in 45 46 47 48
         do
             srun -n 1 pvbatch --force-offscreen-rendering render_sphere.py $frame
@@ -228,14 +234,17 @@ Here are some useful components to add to your ParaView Python script.
 
 -   Set the output image size to match FHD or UHD standards:
 
-        renderView1.ViewSize = [3840, 2160]
-        renderView1.ViewSize = [1920, 1080]
+    ```python
+    renderView1.ViewSize = [3840, 2160]
+    renderView1.ViewSize = [1920, 1080]
+    ```
 
 -   Don't forget to actually render the image!
 
-        pngname = "image%05d.png" % doframe
-        SaveScreenshot(pngname, renderView1)
-
+    ```python
+    pngname = "image%05d.png" % doframe
+    SaveScreenshot(pngname, renderView1)
+    ```
 
 ## Insight Center
 
