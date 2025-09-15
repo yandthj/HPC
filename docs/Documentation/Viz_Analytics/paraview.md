@@ -205,7 +205,7 @@ Tweaking the visualization options contained in the `pvrender.py` file inevitabl
 The easiest way to create your ParaView Python script is to run a fresh session of ParaView (use version 5.x on your local machine) and select "Tools → Start Trace," then "OK". Perform all the actions you need to set your scene and save a screenshot. Then select "Tools → Stop Trace" and save the resulting python script (we will use `render_sphere.py` in these examples).
  
 
-Here are some useful components to add to your ParaView Python script.
+Here are some useful components to add to your ParaView Python script:
 
 -   Read the first command-line argument and use it to select a data file to operate on.
 
