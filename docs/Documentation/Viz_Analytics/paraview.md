@@ -142,21 +142,21 @@ How to use ParaView in batch mode to generate single frames and animations on Ke
     ssh <username>@kestrel.hpc.nrel.gov
     ```
 
-2.  Request an interactive compute session for 60 minutes):
+2.  Request an interactive compute session for 60 minutes:
 
     ```bash
     salloc -A <allocation> -t 60
     ```
 
-    Note: Slurm changes in January 2022 resulted in the need to use salloc to start your interactive session, since we'll be running pvbatch on the compute node using srun in a later step. This "srun-inside-an-salloc" supercedes the previous Slurm behavior of "srun-inside-an-srun", which will no longer work.
-
 3.  Once the session starts, load the appropriate modules:
 
     ```bash
     module purge
-    module load paraview/osmesa
+    module load paraview/5.11.0-server
     ```
-    Note: In this case, we select the `paraview/server` module as opposed to the default ParaView build, as the server version is built for rendering using offscreen methods suitable for compute nodes.
+    
+    !!! note "paraview/5.11.0-server for Offscreen Rendering"
+        In this case, we select the `paraview/5.11.0-server` module as opposed to the default ParaView build, as the server version is built for rendering using offscreen methods suitable for compute nodes.
 
 4.  and start your render job:
 
