@@ -7,14 +7,16 @@ The following tutorials are meant for Kestrel supercomputer.
 
 ## Using ParaView in Client-Server Mode 
 
-Running ParaView interactively in client-server mode is a convenient workflow for researchers who have a large amount of remotely-stored data that they'd like to visualize using a locally-installed copy of ParaView.  
-In this model, the HPC does the heavy lifting of reading file data and applying filters, taking advantage of parallel processing when possible, then "serves" the rendered data to the ParaView client running locally on your desktop.  
-This allows you to interact with ParaView as you normally would with all your preferences and shortcuts intact without transferring data from the supercomputer to your desktop or relying on a remote desktop environment.
+Running ParaView in client-server mode is a convenient workflow for researchers who have a large amount of remotely-stored data that they'd like to visualize using a locally-installed copy of ParaView. 
 
-## Installation
-It is recommended that you use the binaries provided by Kitware on your workstation matching the NREL installed version, as this ensures client-server compatibility; the version number that you install must match the version installed at NREL. 
-To determine which version of ParaView is installed on the cluster, connect to Kestrel as you normally would, load the ParaView module with `module load paraview`, then check the version with `pvserver --version`.
-Download the ParaView client binary which matches the version displayed by the above command on the [ParaView website](https://www.paraview.org/download/). 
+In this model, the HPC does the I/O and computational work, then "serves" the rendered data to your local ParaView client. This means all of your preferences and shortcuts on your local client work without moving data from the HPC or using a remote desktop enviroment.
+
+!!! note "Client Installation"
+    It is required that you use binaries provided by Kitware locally that match the NREL installed version for compatibility.
+    
+    To determine which version of ParaView is installed on the cluster, connect to Kestrel, load the ParaView module with `module load paraview`, then check the version with `pvserver --version`.
+    
+    Download the ParaView client binary which matches the version on Kestrel on the [ParaView website](https://www.paraview.org/download/). 
 
 ## Connecting to Kestrel with ParaView
 1. Reserve Compute Nodes
