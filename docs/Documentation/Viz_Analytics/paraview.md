@@ -190,7 +190,7 @@ Tweaking the visualization options contained in the `pvrender.py` file inevitabl
     wait
     ```
 
-    where we run multiple instances of our dummy sphere example, highlighting that different options can be passed to each to post-process a large batch of simulated results on a single node.  Note also that for more computationally intensize rendering or larger file sizes (e.g., tens of millions of cells) the option `-n 1` option can be set as suggested in the [client-server guide](client_server_setup.md).
+    where we run multiple instances of our dummy sphere example, highlighting that different options can be passed to each to post-process a large batch of simulated results on a single node.  Note also that for more computationally intensize rendering or larger file sizes (e.g., tens of millions of cells) the option `-n 1` option can be set as suggested in the [client-server guide](./paraview.md#using-paraview-in-client-server-mode).
 
 
 2.  Submit the job and wait:
@@ -218,7 +218,7 @@ Here are some useful components to add to your ParaView Python script.
     ```
 
     !!! note "Individual Frame Rendering"
-        Note that `pvbatch` will pass any arguments after the script name to the script itself. So you can do the following to render frame 45:
+        Note that `pvbatch` will pass any arguments after the script name to the script itself, so you can do the following to render frame 45:
         ```bash
         srun -n 1 pvbatch --force-offscreen-rendering render_sphere.py 45
         ```
