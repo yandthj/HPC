@@ -81,6 +81,9 @@ In this model, the HPC does the I/O and computational work, then "serves" the re
 3. Create SSH Tunnel
 
     Next, create an SSH tunnel to connect your local desktop to the compute node(s) you reserved in Step 1.   
+    
+    If you have changed the port via the `--server-port=<port>` flag, you must change the above command from the default port 11111 to your selected port.
+    
     Open a new local terminal window:
     
     ```bash
@@ -88,8 +91,6 @@ In this model, the HPC does the I/O and computational work, then "serves" the re
     ```
     
     where `<node_name>` is the node name you copied in Step 1 and `<username>` is your HPC username.
-    
-    If you have changed the port via the `--server-port=<port>` flag, note that you must change the above command from the default port 11111 to your selected port.
 
 
 4. Connect ParaView Client
@@ -107,12 +108,14 @@ In this model, the HPC does the I/O and computational work, then "serves" the re
     
     Only the last three fields, Server Type, Host, and Port, are strictly necessary (and many of them will appear by default) while the Name field can be any recognizable string you wish to associate with this connection.  
     When these 4 fields have been entered, click "Configure" to move to the next screen, where we'll leave the Startup Type set to "Manual".  
-    Note that these setup steps only need to be completed the first time you connect to the ParaView server, future post-processing sessions will require only that you double click on this saved connection to launch it.
     
+    !!! note "Subsequent Connections"
+        While you will need to still perform the first 3 steps, once you have performed step 4 once and saved, you may simply double-click on the saved connection every following time.
+
     When finished, select the server just created and click "Connect".  
     The simplest way to confirm that the ParaView server is running as expected is to view the Memory Inspector toolbar (`View > Memory Inspector`) where you should see a ParaView server for each process started in Step 2 (e.g., if `-n 8` was specified, processes `0-7` should be visible).
     
-    That's it!  You can now `File > Open` your data files as you normally would, but instead of your local hard drive you'll be presented with a list of the files stored on Kestrel.
+    You can now `File > Open` your data files as you normally would, but instead of your local hard drive you'll be presented with a list of the files stored on Kestrel.
 
 ### General Tips
 
