@@ -222,7 +222,7 @@ Here are some useful components to add to your ParaView Python script.
         ```bash
         srun -n 1 pvbatch --force-offscreen-rendering render_sphere.py 45
         ```
-        You could programmatically change this value inside the `batch_render.sh` script, your script would needto iterate using something like:
+        You could programmatically change this value inside the `batch_render.sh` script, your script would need to iterate using something like:
         ```bash
         for frame in 45 46 47 48
         do
