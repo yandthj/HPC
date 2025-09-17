@@ -136,8 +136,6 @@ In this model, the HPC does the I/O and computational work, then "serves" the re
 
 How to use ParaView in batch mode to generate single frames and animations on Kestrel
 
-![](../../images/paraview.png)
-
 ###  Building PvBatch Scripts in Interactive Environments
 
 1.  Begin by connecting to a Kestrel login node:
