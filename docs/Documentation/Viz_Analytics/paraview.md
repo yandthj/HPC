@@ -70,7 +70,9 @@ In this model, the HPC does the I/O and computational work, then "serves" the re
     | Unstructured Data | 250-500 K            | 1 M               |
     
     For example, if you have data stored in an unstructured mesh with 6 M cells, you'd want to aim for between 12 and 24 ParaView server processes, which easily fits on a single Kestrel node.  
+    
     If the number of unstructured mesh cells was instead around 60 M, you'd want to aim for 120 to 240 processes, which means requesting a minimum of 2 Kestrel nodes.  
+    
     Note that this 2-nodes request may remain in the queue longer while the scheduler looks for resources, so depending on your needs, it may be necessary to factor queue times into your optimal cells-per-process calculation.
     
     !!! note "Port Selection"
@@ -107,12 +109,14 @@ In this model, the HPC does the I/O and computational work, then "serves" the re
     | Port        | 11111         |
     
     Only the last three fields, Server Type, Host, and Port, are strictly necessary (and many of them will appear by default) while the Name field can be any recognizable string you wish to associate with this connection.  
+    
     When these 4 fields have been entered, click "Configure" to move to the next screen, where we'll leave the Startup Type set to "Manual".  
     
     !!! note "Subsequent Connections"
         While you will need to still perform the first 3 steps, once you have performed step 4 once and saved, you may simply double-click on the saved connection every following time.
 
     When finished, select the server just created and click "Connect".  
+    
     The simplest way to confirm that the ParaView server is running as expected is to view the Memory Inspector toolbar (`View > Memory Inspector`) where you should see a ParaView server for each process started in Step 2 (e.g., if `-n 8` was specified, processes `0-7` should be visible).
     
     You can now `File > Open` your data files as you normally would, but instead of your local hard drive you'll be presented with a list of the files stored on Kestrel.
