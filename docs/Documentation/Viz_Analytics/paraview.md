@@ -158,7 +158,7 @@ How to use ParaView in batch mode to generate single frames and animations on Ke
     !!! note "paraview/5.11.0-server for Offscreen Rendering"
         In this case, we select the `paraview/5.11.0-server` module as opposed to the default ParaView build, as the server version is built for rendering using offscreen methods suitable for compute nodes.
 
-4.  and start your render job:
+4.  Start your render job:
 
     ```bash
     srun -n 1 pvbatch --force-offscreen-rendering render_sphere.py
