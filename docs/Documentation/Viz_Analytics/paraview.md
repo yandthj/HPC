@@ -50,10 +50,10 @@ In this model, the HPC does the I/O and computational work, then "serves" the re
     module load paraview
     ```
     
-    Next, start the ParaView server with another call to the Slurm `srun` directive:
+    Next, start the ParaView server with call to the Slurm `srun` directive:
     
     ```bash
-    srun -A <allocation> -t <time_limit> -n 8 pvserver --force-offscreen-rendering
+    srun -n 8 pvserver --force-offscreen-rendering
     ```
     
     In this example, the ParaView server will be started on 8 processes.  
