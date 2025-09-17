@@ -111,6 +111,38 @@ or using ```conda,```
 !!! Note
 	We recommend installing software for GPU jobs using the GPU nodes. There are two [GPU login nodes](../Systems/Kestrel/index.md) available on Kestrel. 
 
+### Installing PyTorch on Kestrel with multi-node and GPU support
+
+For training large datasets on multiple GPUs with NCCL and MPI support, please use our pre-built environment. The environment can be downloaded and installed in a directory of your choice by executing the following instructions after logging into a GPU node on Kestrel.
+
+??? example "Installing pre-built PyTorch MPI NCCL environment"
+	```
+       $ wget https://raw.githubusercontent.com/NREL/HPC/gh-pages/docs/Documentation/Machine_Learning/metadata/torch_MPI_NCCL.tar.gz 
+       $ mkdir -p my_torch_MPI_NCCL
+       $ tar -xzf torch_MPI_NCCL.tar.gz -C my_torch_MPI_NCCL
+       $ source my_torch_MPI_NCCL/bin/activate
+       $ conda-unpack
+    ```
+
+Once the environment has been installed, it can be tested with the following steps:
+
+??? example "Testing the pre-built PyTorch MPI NCCL environment"
+	```
+       $ wget https://raw.githubusercontent.com/NREL/HPC/gh-pages/docs/Documentation/Machine_Learning/metadata/testPytorchMPI.py
+       $ wget https://raw.githubusercontent.com/NREL/HPC/gh-pages/docs/Documentation/Machine_Learning/metadata/testNCCL.py
+       $ salloc -A <projectname> -t 00:15:00 --nodes=2 --ntasks-per-node=1 --gres=gpu:1
+       $ source my_torch_MPI_NCCL/bin/activate
+       $ srun -n 2 python testPytorchMPI.py
+       Hello from process 0 (out of 2)!
+       Hello from process 1 (out of 2)!
+       $ srun -n 2 python testNCCL.py
+       Successfully initialized process group with NCCL backend.
+       Successfully initialized process group with NCCL backend.
+    ```
+
+Users can also install additional packages on top of this environment. When installing additional packages, please be informed that this enviroment was produced by compiling ```pytorch v2.7.0``` from source using ```PrgEnv-gnu/8.5.0```, ```anaconda3/2024.06.1```, ```cuda/12.3```, ```gcc-native/11.2``` and the ```nccl/2.21.5``` modules. Loading these same modules before installing additional python packages is less likely to lead to conflicts. 
+
+
 ### Running a PyTorch or TensorFlow Batch Job on Kestrel - GPU
 
 ??? example "Sample job script: Kestrel - Shared (partial) GPU node"
