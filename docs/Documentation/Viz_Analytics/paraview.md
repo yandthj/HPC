@@ -99,6 +99,7 @@ In this model, the HPC does the I/O and computational work, then "serves" the re
 
     Now that the ParaView server is running on a compute node and your desktop is connected via the SSH tunnel, you can open ParaView as usual.  
     From here, click the "Connect" icon or `File > Connect`.  
+    
     Next, click the "Add Server" button and enter the following information. Again, note that if you changed the port before, you must reflect that change here.
     
     | Name        | Value         |
