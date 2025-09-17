@@ -142,6 +142,27 @@ Once the environment has been installed, it can be tested with the following ste
 
 Users can also install additional packages on top of this environment. When installing additional packages, please be informed that this enviroment was produced by compiling ```pytorch v2.7.0``` from source using ```PrgEnv-gnu/8.5.0```, ```anaconda3/2024.06.1```, ```cuda/12.3```, ```gcc-native/11.2``` and the ```nccl/2.21.5``` modules. Loading these same modules before installing additional python packages is less likely to lead to conflicts. 
 
+If another version of pytorch is desired, users may compile and install it on their own by using the following steps used in building v2.7.0 as a guideline:
+
+??? example "Building PyTorch MPI NCCL from source"
+	```
+       $ module load PrgEnv-gnu/8.5.0
+       $ module load cuda/12.3
+       $ module load anaconda3/2024.06.1
+       $ conda create --prefix ./torchMPI
+       $ conda activate ./torchMPI
+       $ module load gcc-native/11.2
+       $ conda install python
+       $ conda install yaml
+       $ conda install pyyaml
+       $ conda install typing_extensions
+       $ module load nccl
+       $ export USE_SYSTEM_NCCL=1
+       $ export NCCL_ROOT_DIR=/nopt/nrel/apps/gpu_stack/software/nccl/2.21.5/install/
+       $ git clone --branch v2.7.0 https://github.com/pytorch/pytorch.git
+       $ cd pytorch
+       $ MAX_JOBS=20 python setup.py install
+    ```
 
 ### Running a PyTorch or TensorFlow Batch Job on Kestrel - GPU
 
