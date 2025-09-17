@@ -21,7 +21,7 @@ In this model, the HPC does the I/O and computational work, then "serves" the re
 ## Connecting to Kestrel with ParaView
 1. Reserve Compute Nodes
 
-    The first step is to reserve the computational resources on Kestrel that will be running the ParaView server.
+    Step 1 is to reserve the computational resources on Kestrel that will be running the ParaView server.
     
     This requires using the Slurm `salloc` directive and specifying an allocation name and time limit for the reservation.
     To reserve the computational resources:
@@ -30,7 +30,7 @@ In this model, the HPC does the I/O and computational work, then "serves" the re
     salloc -A <allocation> -t <time_limit>
     ```
     
-    where `<allocation>` will be replaced with the allocation name you wish to charge your time to and `<time_limit>` is the amount of time you're reserving the nodes for. This requests a single node that we can launch a maximum number of 104 ParaView server processes on in step 2.
+    where `<allocation>` will be replaced with the allocation name you wish to charge your time to and `<time_limit>` is the amount of time you're reserving the nodes for. This requests a single node that we can launch a maximum number of 104 ParaView server processes on in Step 2.
 
     Note the name of the node that the Slurm scheduler assigns you (it is what follows your username and "@" symbol where you input text, e.g., x1008c0s0b1n1) as we will need it in Step 3.
     
@@ -113,7 +113,7 @@ In this model, the HPC does the I/O and computational work, then "serves" the re
     When these 4 fields have been entered, click "Configure" to move to the next screen, where we'll leave the Startup Type set to "Manual".  
     
     !!! note "Subsequent Connections"
-        While you will need to still perform the first 3 steps, once you have performed step 4 once and saved, you may simply double-click on the saved connection every following time.
+        While you will need to still perform the first 3 steps, once you have performed Step 4 once and saved, you may simply double-click on the saved connection every following time.
 
     When finished, select the server just created and click "Connect".  
     
