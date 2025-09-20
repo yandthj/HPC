@@ -156,6 +156,8 @@ If another version of pytorch is desired, users may compile and install it on th
        $ conda install yaml
        $ conda install pyyaml
        $ conda install typing_extensions
+       $ conda install numactl
+       $ conda install scipy
        $ module load nccl
        $ export USE_SYSTEM_NCCL=1
        $ export NCCL_ROOT_DIR=/nopt/nrel/apps/gpu_stack/software/nccl/2.21.5/install/
