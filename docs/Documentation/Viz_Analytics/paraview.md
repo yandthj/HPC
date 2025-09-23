@@ -18,7 +18,7 @@ In this model, the HPC does the I/O and computational work, then "serves" the re
     
     Download the ParaView client binary which matches the version on Kestrel on the [ParaView website](https://www.paraview.org/download/). 
 
-## Connecting to Kestrel with ParaView
+### Steps for Connecting to Kestrel with ParaView
 1. Reserve Compute Nodes
 
     Step 1 is to reserve the computational resources on Kestrel that will be running the ParaView server.
