@@ -117,9 +117,9 @@ For training large datasets on multiple GPUs with NCCL and MPI support, please u
 
 ??? example "Installing pre-built PyTorch MPI NCCL environment"
 	```
-       $ wget https://raw.githubusercontent.com/NREL/HPC/gh-pages/docs/Documentation/Machine_Learning/metadata/torch_MPI_NCCL.tar.gz 
+       $ cp /nopt/nrel/apps/examples/python_envs/torchParallel.tar.gz . 
        $ mkdir -p my_torch_MPI_NCCL
-       $ tar -xzf torch_MPI_NCCL.tar.gz -C my_torch_MPI_NCCL
+       $ tar -xzf torchParallel.tar.gz -C my_torch_MPI_NCCL
        $ source my_torch_MPI_NCCL/bin/activate
        $ conda-unpack
     ```
@@ -140,7 +140,7 @@ Once the environment has been installed, it can be tested with the following ste
        Successfully initialized process group with NCCL backend.
     ```
 
-Users can also install additional packages on top of this environment. When installing additional packages, please be informed that this enviroment was produced by compiling ```pytorch v2.7.0``` from source using ```PrgEnv-gnu/8.5.0```, ```anaconda3/2024.06.1```, ```cuda/12.3```, ```gcc-native/11.2``` and the ```nccl/2.21.5``` modules. Loading these same modules before installing additional python packages is less likely to lead to conflicts. 
+Users can also install additional packages on top of this environment. When installing additional packages, please be informed that this enviroment was produced by compiling ```pytorch v2.7.0``` from source using ```PrgEnv-gnu/8.5.0```, ```anaconda3/2024.06.1```, ```cuda/12.3```, ```gcc-native/11.2```, ```cray-mpich/8.1.28``` and the ```nccl/2.21.5``` modules. Loading these same modules before installing additional python packages is less likely to lead to conflicts. 
 
 If another version of pytorch is desired, users may compile and install it on their own by using the following steps used in building v2.7.0 as a guideline:
 
