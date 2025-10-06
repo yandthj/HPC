@@ -54,8 +54,8 @@ The following table summarizes the partitions on Kestrel:
 |```hbw```    | CPU compute nodes with dual network interface cards. | 512 nodes total.<br> 256 nodes per user. <br> Minimum 2 nodes per job. | ```-p hbw``` <br>```--time <= 2-00``` <br> ```--nodes >= 2``` <br> ```--mem <= 984256``` | 
 |```hbwl```    | HBW nodes that prefer jobs with walltimes > 2 days.<br>*Maximum walltime of any job is 10 days.* | 128 nodes total.<br> 64 nodes per user. <br> Minimum 2 nodes per job. | ```-p hbw``` <br>```--time > 2-00``` <br> ```--nodes >= 2``` <br> ```--mem <= 984256```|
 |```nvme```    | CPU compute nodes with 1.7TB NVMe local drives. | 256 nodes total.<br> 128 nodes per user. | ```-p nvme``` <br>```--time <= 2-00```| 
-| ```shared```|  Nodes that can be shared by multiple users and jobs. | 64 nodes total. <br> Half of partition per user. <br> 2 days max walltime.  | ```-p shared``` <br>   or<br>  ```--partition=shared```| 
-| ```sharedl```|  Nodes that can be shared by multiple users and prefer jobs with walltimes > 2 days. | 16 nodes total. <br> 8 nodes per user. | ```-p sharedl``` <br>   or<br>  <nobr>```--partition=sharedl```</nobr>| 
+| ```shared```|  Nodes that can be shared by multiple users and jobs. | 128 nodes total. <br> Half of partition per user. <br> 2 days max walltime.  | ```-p shared``` <br>   or<br>  ```--partition=shared```| 
+| ```sharedl```|  Nodes that can be shared by multiple users and prefer jobs with walltimes > 2 days. | 32 nodes total. <br> 16 nodes per user. | ```-p sharedl``` <br>   or<br>  <nobr>```--partition=sharedl```</nobr>| 
 | ```gpu-h100```|  Shareable GPU nodes with 4 NVIDIA H100 SXM 80GB Computational Accelerators. | 156 nodes total. | ```1 <= --gpus <= 4``` <br>  ```--time <= 2-00```| 
 | ```gpu-h100s```|  Shareable GPU nodes that prefer jobs with walltimes <= 4 hours. | 156 nodes total. | ```1 <= --gpus <= 4``` <br>  ```--time <= 4:00:00```| 
 | ```gpu-h100l```|  Shareable GPU nodes that prefer jobs with walltimes > 2 days. | 39 GPU nodes total. | ```1 <= --gpus <= 4```<br> ```--time > 2-00```| 
@@ -74,7 +74,7 @@ Nodes in the shared partition can be shared by multiple users or jobs. This part
 
 #### Usage
 
-Currently, there are 64 standard compute nodes available in the shared partition. These nodes have about 240G of usable RAM and 104 cores. By default, your job will be allocated about 1G of RAM per core requested. To change this amount, you can use the ```--mem``` or ```--mem-per-cpu``` flag in your job submission. 
+Currently, there are 128 standard compute nodes available in the shared partition. These nodes have about 240G of usable RAM and 104 cores. By default, your job will be allocated about 1G of RAM per core requested. To change this amount, you can use the ```--mem``` or ```--mem-per-cpu``` flag in your job submission. 
 
 ??? info "Sample batch script for a job in the shared partition"
     ```

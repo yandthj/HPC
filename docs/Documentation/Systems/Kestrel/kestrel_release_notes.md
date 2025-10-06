@@ -2,6 +2,9 @@
 
 *We will update this page with Kestrel release notes after major Kestrel upgrades.*
 
+## October 1, 2025
+1. The size of the shared partition was doubled from 64 nodes to 128 nodes.
+
 ## July 2, 2025
 
 1. Slurm was upgraded to 24.11.05. 
