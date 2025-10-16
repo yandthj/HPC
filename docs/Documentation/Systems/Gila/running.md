@@ -7,26 +7,24 @@
 
 ### Compute hosts
 
-Gila is a collection of physical nodes with each regular node containing <Dual AMD EPYC 7532 Rome CPUs>.  However, each node is virtualized.  That is it is split up into virtual nodes with each virtual node having a portion of the cores and memory of the physical node.  Similar virtual nodes are then assigned slurm partitions as shown below.  
+Compute nodes in Gila are virtualized nodes running on either __Dual AMD EPYC Milan CPUs__ or __Intel Xeon Icelake CPUs__. These nodes are not configured as exclusive and can be shared by multiple users or jobs. 
 
+### GPU hosts
 
-*Move this info to filesystems page?*
+GPU nodes available in Gila have NVidia A100 GPU's running on __Intel Xeon Icelake CPUs__.
+
 ### Shared file systems
 
 Gila's home directories are shared across all nodes. Each user has a quota of 5 GB. There is also /scratch/$USER and /projects spaces seen across all nodes.
 
-*Need to update*
 ### Partitions
 
-Partitions are flexible and fluid on Gila.  A list of partitions can be found by running the `sinfo` command.  Here are the partitions as of 3/27/2025.
+A list of partitions can be found by running the `sinfo` command.  Here are the partitions as of 10/16/2025
 
-| Partition Name                          | Qty | RAM    | Cores/node | /var/scratch <br>1K-blocks | AU Charge Factor | 
-| :--:                               | :--: | :--:    | :--:             | :--:   | :--: |                         
-| gpu<br>*1 x NVIDIA Tesla A100*      |  16  | 114 GB |   30            |  6,240,805,336| 12 |       
-| lg                                 | 39  | 229 GB |   60            |   1,031,070,000| 7 |
-| std                                | 60  | 114 GB |   30            |     515,010,816| 3.5 |
-| sm                                 | 28  |  61 GB |   16            |     256,981,000| 0.875 |
-| t                                  | 15  |  16 GB |   4             |      61,665,000| 0.4375 |
+| Partition Name                          | CPU | Qty | RAM    | Cores/node | /var/scratch <br>1K-blocks | AU Charge Factor | 
+| :--:                               | :--: | :--:    | :--:             | :--:   | :--: | :--: |                         
+| gpu<br>*NVIDIA Tesla A100-40*<br>      |  Intel Xeon Icelake |  1  | 910 GB |   42            |  6,240,805,336| 12 |      
+| cpu-amd                                | AMD Epyc Milan |  36  | 220 GB |   120            |   1,031,070,000| 7 |
 
 ### Allocation Unit (AU) Charges
 
@@ -42,7 +40,7 @@ The **Charge Factor** for each partition is listed in the table above.
 
 ### Operating Software
 
-The Gila HPC cluster runs fairly current versions of OpenHPC and SLURM on top of OpenStack.
+The Gila HPC cluster runs on Rocky Linux 9.5.
 
 <!-- Docs from Vermilion page: -->
 <!-- ## Examples: Build and run simple applications
