@@ -1,5 +1,5 @@
 ---
-title: LBM-cfd
+title: LBM CFD
 parent: Applications
 ---
 
