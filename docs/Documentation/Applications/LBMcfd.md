@@ -89,7 +89,7 @@ $ srun -n 4 marbles3d.gnu.x86-milan.TPROF.MPI.ex isothermal_cracks.inp
 $ srun -n 1 marbles3d.gnu.TPROF.MPI.CUDA.ex isothermal_cracks.inp
 ```
 
-Results can be viewed in [ParaView](https://nrel.github.io/HPC/Documentation/Viz_Analytics/paraview/) or [VisIT](https://nrel.github.io/HPC/Documentation/Viz_Analytics/visit/).
+Results can be viewed in [ParaView](../Viz_Analytics/paraview.md) or [VisIT](../Viz_Analytics/visit/visit.md).
 
 ![Velocity Cracks Demo](LBMcfd_metadata/velocity_cracks.gif)
 *Animation credit: [@eyoung55](https://github.com/eyoung55)*
