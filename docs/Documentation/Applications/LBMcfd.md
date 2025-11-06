@@ -107,7 +107,7 @@ The M-Star GUI can be accessed though a [FastX virtual desktop](../Viz_Analytics
 ```
 $ salloc -A <projectname> -t 01:00:00 --nodes=1 --ntasks-per-node=64 --mem=160G --gres=gpu:2 --partition=debug
 ```
-2. Wait until you obtain an allocation, The terminal will display `<username>@<nodename>` when successful.
+2. Wait until you obtain an allocation. The terminal will display `<username>@<nodename>` when successful.
 3. Open a new terminal tab by right clicking on empty in the terminal. In the new terminal tab, execute the following to connect to the node you have been allocated.
 ```
 $ ssh -X <nodename>
