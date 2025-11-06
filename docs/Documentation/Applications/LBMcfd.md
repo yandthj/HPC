@@ -32,7 +32,7 @@ At NREL, serveral packages are available for the purpose, each with their streng
 
 Only M-Star and marbles can be run on the Kestrel HPC system. Users with an access to GPU enabled Windows computers or Virtual Machines may try Ansys Discovery at their own discretion.
 
-## Installation and usage on Kestrel
+## Installation and Usage on Kestrel
 
 ### NREL marbles
 
