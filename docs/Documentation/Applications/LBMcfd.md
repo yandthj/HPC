@@ -101,7 +101,7 @@ Results can be viewed in [ParaView](https://nrel.github.io/HPC/Documentation/Viz
 !!! Warning
 	Please close the application when not actively using it. The license of this product allows only one user at a time.
 
-The M-Star GUI can be accessed though a [FastX virtual desktop](../Viz_Analytics/virtualgl_fastx.md). M-Star is a resourse intensive application whose backed uses cuda aware openmpi to utlise multiple GPUs for computation. The application is always executed on a dedicated compute node while its GUI is interacted with on a FastX node. The steps to use M-Star are as follows:
+The M-Star GUI can be accessed though a [FastX virtual desktop](../Viz_Analytics/virtualgl_fastx.md). M-Star is a resource intensive application whose backend uses Cuda aware OpenMPI to utilize multiple GPUs for computation. The application should always be run on a dedicated compute node while you can interact with the GUI through a FastX session. The steps to use M-Star are as follows:
 
 1. Open a terminal in a FastX session and ask for an [allocation](../Slurm/interactive_jobs.md). For example,
 ```
