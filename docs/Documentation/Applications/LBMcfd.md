@@ -36,7 +36,7 @@ Only M-Star and marbles can be run on the Kestrel HPC system. Users with an acce
 
 ### NREL marbles
 
-Source code of marbles is available on github. It can be compiled and run on nvidia and AMD GPUs as well as Intel, AMD and Apple M series CPUs. Here, we show the process to compile and run it on the Kestrel HPC system with nvidia GPUs.
+The marbles source code is available on Github. It can be compiled and run on NVIDIA and AMD GPUs as well as Intel, AMD and Apple M series CPUs. Here, we show the process to compile and run it on the Kestrel HPC system with NVIDIA GPUs.
 
 Create a new directory in the `projects` partition
 ```
