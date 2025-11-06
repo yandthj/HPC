@@ -3,7 +3,7 @@ title: LBM CFD
 parent: Applications
 ---
 
-# Lattice Boltzmann Method based CFD Applications: M-Star, MARBLES, Ansys Discovery
+# Lattice Boltzmann Method based CFD Applications: M-Star and MARBLES
 <!---
 **Documentation:** [ link to documentation](https://nrel.gov)
 -->
@@ -22,15 +22,14 @@ The method computes a discrete version of the Boltzmann transport equation, whic
 
 ## Overview
 
-At NREL, serveral packages are available for the purpose, each with their strengths, pros and cons. The matrix below provides a birds eye view of the available packages. (All company, product and service names used on this page are for identification purposes only. Use of these names, trademarks and brands does not imply endorsement.)
+At NREL, two packages are available for the purpose. The matrix below provides a birds eye view of the available packages. (All company, product and service names used on this page are for identification purposes only. Use of these names, trademarks and brands does not imply endorsement.)
 
 |                                                                              | Windows| Mac OS  | Linux (HPC) | CPU    | GPU    | Cost | Speciality                   |
 |:----------------------------------------------------------------------------:|:------:|:-------:|:-----------:|:------:|:------:|:----:|:----------------------------:|
 | [M-Star](https://mstarcfd.com/)                                              | y      | x       | y           | y      | y      | $    | GUI, moving geometries       |
 | [NREL MARBLES](https://nrel.github.io/marbles/VandV.html)                         | y      | y       | y           | y      | y      | Free | Open source, compressible  |  
-| [Ansys Discovery](https://www.ansys.com/products/3d-design/ansys-discovery)  | y      | x       | x           | x      | y      | $    | GUI, geometry modeling       |
 
-Only M-Star and Multi-Scale Adaptively Refined Boltzmann Lattice Solver (MARBLES) can be run on the Kestrel HPC system. Users with an access to GPU enabled Windows computers or Virtual Machines may try Ansys Discovery at their own discretion.
+Both M-Star and Multi-Scale Adaptively Refined Boltzmann Lattice Solver (MARBLES) can utilize the parallel computing capability of the Kestrel HPC system . 
 
 ## Installation and Usage on Kestrel
 
