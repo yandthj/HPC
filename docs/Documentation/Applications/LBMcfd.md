@@ -3,20 +3,20 @@ title: LBM CFD
 parent: Applications
 ---
 
-# Lattice Boltzmann Method based CFD Applications: M-Star, marbles, Ansys Discovery
+# Lattice Boltzmann Method based CFD Applications: M-Star, MARBLES, Ansys Discovery
 <!---
 **Documentation:** [ link to documentation](https://nrel.gov)
 -->
 
 
-The Lattice Boltzmann Method (LBM) is a novel and unique simulation method whose meshless and exact conservation combines the best parts of the immersed boundary method and the finite volume method, without the hassle of mesh generation. The method completely does away with spatial discretisation in favour of advection of particles with pre-determined discrete velocities such that they hop to lattice sites on a structured grid. Consequently, the method does not incur any errors due to numerical dissipation or dispersion, thereby ensuring conservation of globally conserved properties like mass and total energy. The time discretisation is done with the trapezoidal rule, which results into transient simualations with second order accuracy in time. The LBM has been successfully applied to a range of problems in fluid dynamics including but not limited to transitional flows, flows involving complex moving geometries, compressible flows, multiphase flows, rarefied gases, combustion, electrochemical devices etc.. 
+The Lattice Boltzmann Method (LBM) is a novel and unique simulation method whose meshless algorithm and exact conservation combines the best parts of the immersed boundary method and the finite volume method, without the hassle of mesh generation. The method completely does away with spatial discretisation in favour of advection of particles with pre-determined discrete velocities such that they hop to lattice sites on a structured grid. The LBM has been successfully applied to a range of problems in fluid dynamics including but not limited to transitional flows, flows involving complex moving geometries, compressible flows, multiphase flows, rarefied gases, combustion, electrochemical devices etc.. 
 
 Its meshfree nature makes it very convenient to handle and resolve complex geomtries such as cracks and porous microstructures. The algorithmically simple nature of the LBM which consists of hopping of particles by a pre-determined distance followed by a local update for time increment makes the solver trivial to implement on a GPU, which results into very fast and scalable solvers that can be used as a data generators in a machine learning pipeline. 
 
 
 ![alt text](LBMcfd_metadata/lbmAlgo.png)
 
-The LBM is a recast of fluid dynamics into a fully discrete kinetic system for the populations $f_i(\mathbf{x},t)$ of particles, which are associated with the discrete velocities $\mathbf{c}_i$ fitting into a regular space-filling lattice. As a result, the kinetic equations for the populations $f_i(\mathbf{x},t)$ follow a simple algorithm of `"stream along links $\mathbf{c}_i$ and collide at the nodes $\mathbf{x}$ in discrete time $t$". The method computes a discrete version of the Boltzmann transport equation, which mathematically describes the state of the fluid with a Gaussian distribution in the velocity space with its mean representing the local fluid velocity and the variance representing the local energy of the fluid. The dynamics of the fluid then evolve with a streaming-relaxation equation for these probability distribution functions. The probablistic nature of the method makes it a gateway to quantum computing for CFD. 
+The method computes a discrete version of the Boltzmann transport equation, which mathematically describes the state of the fluid with a Gaussian distribution in the velocity space with its mean representing the local fluid velocity and the variance representing the local energy of the fluid. The dynamics of the fluid then evolve with a streaming-relaxation equation for these probability distribution functions. The probablistic nature of the method makes it a gateway to [quantum computing for CFD](https://blogs.nvidia.com/blog/ansys-dcai-quantum-computing/). 
 
 
 
@@ -27,16 +27,16 @@ At NREL, serveral packages are available for the purpose, each with their streng
 |                                                                              | Windows| Mac OS  | Linux (HPC) | CPU    | GPU    | Cost | Speciality                   |
 |:----------------------------------------------------------------------------:|:------:|:-------:|:-----------:|:------:|:------:|:----:|:----------------------------:|
 | [M-Star](https://mstarcfd.com/)                                              | y      | x       | y           | y      | y      | $    | GUI, moving geometries       |
-| [NREL marbles](https://nrel.github.io/marbles/VandV.html)                         | y      | y       | y           | y      | y      | Free | Open source, compressible  |  
+| [NREL MARBLES](https://nrel.github.io/marbles/VandV.html)                         | y      | y       | y           | y      | y      | Free | Open source, compressible  |  
 | [Ansys Discovery](https://www.ansys.com/products/3d-design/ansys-discovery)  | y      | x       | x           | x      | y      | $    | GUI, geometry modeling       |
 
-Only M-Star and marbles can be run on the Kestrel HPC system. Users with an access to GPU enabled Windows computers or Virtual Machines may try Ansys Discovery at their own discretion.
+Only M-Star and Multi-Scale Adaptively Refined Boltzmann Lattice Solver (MARBLES) can be run on the Kestrel HPC system. Users with an access to GPU enabled Windows computers or Virtual Machines may try Ansys Discovery at their own discretion.
 
 ## Installation and Usage on Kestrel
 
-### NREL marbles
+### NREL MARBLES
 
-The marbles source code is available on Github. It can be compiled and run on NVIDIA and AMD GPUs as well as Intel, AMD and Apple M series CPUs. Here, we show the process to compile and run it on the Kestrel HPC system with NVIDIA GPUs.
+The MARBLES source code is available on Github. It can be compiled and run on NVIDIA and AMD GPUs as well as Intel, AMD and Apple M series CPUs. Here, we show the process to compile and run it on the Kestrel HPC system with NVIDIA GPUs.
 
 Create a new directory in the `projects` partition
 ```
@@ -55,14 +55,14 @@ $ echo "export AMREX_HOME=/projects/<projectname>/<username>/marblesLBM/amrex" >
 $ bash
 ```
 
-Get the stable and development version of marbles
+Get the stable and development version of MARBLES
 ```
 $ cd /projects/<projectname>/<username>/marblesLBM
 $ git clone https://github.com/NREL/marbles.git
 $ git clone https://github.com/nileshsawant/marblesThermal
 ```
 
-To install the latest development version of marbles, the code has to be built on a GPU login node. Please do the following:
+To install the latest development version of MARBLES, the code has to be built on a GPU login node. Please do the following:
 ```
 $ ssh -X <username>@kestrel-gpu.hpc.nrel.gov
 $ module load PrgEnv-gnu/8.5.0
@@ -75,7 +75,7 @@ $ make USE_CUDA=TRUE
 $ ls -tr
 GNUmakefile  cmake.sh  tmp_build_dir  marbles3d.gnu.x86-milan.TPROF.MPI.ex  marbles3d.gnu.TPROF.MPI.CUDA.ex
 ```
-If the commands succeed, the `Build` directory should contain the MPI version `marbles3d.gnu.x86-milan.TPROF.MPI.ex` and the MPI + CUDA version `marbles3d.gnu.TPROF.MPI.CUDA.ex` of marbles. 
+If the commands succeed, the `Build` directory should contain the MPI version `marbles3d.gnu.x86-milan.TPROF.MPI.ex` and the MPI + CUDA version `marbles3d.gnu.TPROF.MPI.CUDA.ex` of MARBLES. 
 
 The test case for flow through fractures with heated isothermal walls can be tried out as follows:
 ```
@@ -94,7 +94,7 @@ Results can be viewed in [ParaView](https://nrel.github.io/HPC/Documentation/Viz
 ![Velocity Cracks Demo](LBMcfd_metadata/velocity_cracks.gif)
 *Animation credit: [@eyoung55](https://github.com/eyoung55)*
 
-[marbles](https://nrel.github.io/marbles/VandV.html) is an in-house effort to make a free Lattice Boltzmann solver available to the community. We encourage users to contact us for help setting up your problem or to request additional features. Please visit the repository and create a [New issue](https://github.com/NREL/marbles/issues) or [email](mailto:nsawant@nrel.gov) us directly. A [machine learning framework](https://github.com/nileshsawant/mlForLBM) for using marbles in the loop as a data generator has also been created. Pre-built executibles, `marbles3d.gnu.x86-milan.TPROF.MPI.ex` and `marbles3d.gnu.TPROF.MPI.CUDA.ex`, can also be made available on request.
+[marbles](https://nrel.github.io/marbles/VandV.html) is an in-house effort to make a free Lattice Boltzmann solver available to the community. We encourage users to contact us for help setting up your problem or to request additional features. Please visit the repository and create a [New issue](https://github.com/NREL/marbles/issues) or [email](mailto:nsawant@nrel.gov) us directly. A [machine learning framework](https://github.com/nileshsawant/mlForLBM) for using MARBLES in the loop as a data generator has also been created. Pre-built executibles, `marbles3d.gnu.x86-milan.TPROF.MPI.ex` and `marbles3d.gnu.TPROF.MPI.CUDA.ex`, can also be made available on request.
 
 ### M-Star
 
