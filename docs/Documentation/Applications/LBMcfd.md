@@ -79,7 +79,7 @@ If the commands succeed, the `Build` directory should contain the MPI version `m
 
 The test case for flow through fractures with heated isothermal walls can be tried out as follows:
 ```
-$ salloc -A hpcapps -t 00:30:00 --nodes=1 --ntasks-per-node=32 --mem=80G --gres=gpu:1 --partition=debug
+$ salloc -A <allocation handle> -t 00:30:00 --nodes=1 --ntasks-per-node=32 --mem=80G --gres=gpu:1 --partition=debug
 $ module load cuda/12.3
 $ cd /projects/<projectname>/<username>/marblesLBM/marblesThermal/Build
 $ cp ../Tests/test_files/isothermal_cracks/* .
