@@ -88,6 +88,7 @@ nav:
           - IDAES Solvers : Documentation/Applications/idaes_solvers.md
           - IPOPT:      Documentation/Applications/ipopt.md
           - LAMMPS:     Documentation/Applications/lammps.md
+          - LBM CFD:     Documentation/Applications/LBMcfd.md
           - MACE:     Documentation/Applications/mace.md
           - MATLAB:
             - Documentation/Applications/Matlab/index.md
