@@ -3,7 +3,7 @@ title: LBM-cfd
 parent: Applications
 ---
 
-# Lattice Boltzmann Method based CFD applications: M-Star, marbles, Ansys Discovery
+# Lattice Boltzmann Method based CFD Applications: M-Star, marbles, Ansys Discovery
 <!---
 **Documentation:** [ link to documentation](https://nrel.gov)
 -->
