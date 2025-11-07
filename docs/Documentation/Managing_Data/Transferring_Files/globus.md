@@ -8,10 +8,6 @@ parent: Transferring Data ---
 systems and another data center, or even a laptop off-site, we recommend using
 Globus.*
 
-A supporting set of instructions for requesting a Globus account and data
-transfer using Globus is available on the [HPC NREL
-Website](https://www.nrel.gov/hpc/globus-file-transfer.html)
-
 ## What Is Globus?
 
 Globus provides services for research data management, including file transfer.
@@ -38,7 +34,7 @@ The current NREL Globus Endpoints are:
 - **nrel#vast** - This endpoint will give you access to files you have on our VAST file system: /campaign and /bscl. It is available for other shares on VAST upon request.  
 
 !!! warning
-    Note that if you already have a Globus account with a different institution, such as a university, be sue sure to select an "NREL OIDC" identity as
+    Note that if you already have a Globus account with a different institution, such as a university, be sure to select an "NREL OIDC" identity as
     the "Owner Identity" when connecting to an NREL endpoint. Otherwise, you will encounter permission errors. 
 
 ## Globus Personal Endpoints

@@ -23,7 +23,8 @@ The following are packages that the NREL Computational Science Center supports:
 | [Gaussian](./gaussian.md) | Program for calculating molecular electronic structure and reactivity | 
 | [Gurobi](./gurobi.md) | Solver for mathematical programming |
 | [IPOPT](./ipopt.md) | Open-source interior point nonlinear optimizer |
-| [LAMMPS](./lammps.md) | Open-source classical molecular dynamics program designed for massively parallel systems | 
+| [LAMMPS](./lammps.md) | Open-source classical molecular dynamics program designed for massively parallel systems |
+| [LBM CFD](./LBMcfd.md) | CFD Solvers based on the Lattice Boltzmann Method like M-Star and MARBLES |
 | [MACE](./mace.md) | MACE is a machine learning framework for developing interatomic potentials |
 | [MATLAB](./Matlab/index.md) | General technical computing framework | 
 | [OpenFAST/FAST.Farm](./openfast.md) | Software for wind turbine aero-servo-elastic calculations and wind farm load and performance analysis | 
