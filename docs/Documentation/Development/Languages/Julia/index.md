@@ -20,6 +20,9 @@ This section contains demos (in the form of scripts and notebooks) and how-to gu
 |                    |            | julia/1.8.5-generic-linux ||
 |                    |            | julia/1.10.0-gcc ||
 |                    |            || julia/1.10.4 |
+|                    |            | julia/1.11.1-oneapi ||
+|                    |            || julia/1.11.4 |
+|                    |            | julia/1.12.1  | julia/1.12.1 |
 
 
 !!! Bug "Julia 1.9.x does not work well on Sapphire Rapids"

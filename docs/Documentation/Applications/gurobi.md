@@ -33,8 +33,9 @@ documentation](https://www.gurobi.com/documentation/).
 
 ## Available Modules
 
-| Kestrel         | Swift           |
+| Kestrel (CPU & GPU nodes)        | Swift           |
 |:---------------:|:---------------:|
+| gurobi/12.0.3   ||
 | gurobi/12.0.0   ||
 | gurobi/11.0.2   ||
 | gurobi/10.0.2   ||
