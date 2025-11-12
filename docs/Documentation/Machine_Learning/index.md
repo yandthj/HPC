@@ -122,6 +122,7 @@ For training large datasets on multiple GPUs with NCCL and MPI support, please u
        $ tar -xzf torchParallel.tar.gz -C my_torch_MPI_NCCL
        $ source my_torch_MPI_NCCL/bin/activate
        $ conda-unpack
+	   $ echo "import numpy; numpy.version.version" > ${CONDA_PREFIX}/lib/python3.13/site-packages/00-preload-numpy.pth
     ```
 
 Once the environment has been installed, it can be tested with the following steps:
