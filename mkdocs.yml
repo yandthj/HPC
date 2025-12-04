@@ -161,6 +161,8 @@ nav:
                - Performance Reports: Documentation/Development/Performance_Tools/Linaro-Forge/performance_rep.md
              - oneAPI Tools:
                - Documentation/Development/Performance_Tools/Intel/index.md
+             - WattAMeter:
+               - Documentation/Development/Performance_Tools/WattAMeter/index.md
               #  - Trace Analyzer: Documentation/Development/Performance_Tools/Intel/trace.md
               #  - VTune : Documentation/Development/Performance_Tools/Intel/vtune.md
             #  - CrayPat: Documentation/Development/Performance_Tools/craypat.md
