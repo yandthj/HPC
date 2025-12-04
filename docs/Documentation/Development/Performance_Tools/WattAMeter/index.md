@@ -16,7 +16,7 @@ In the NREL HPC systems, WattAMeter is a module that can be loaded using `module
 
 - `wattameter_benchmark_dt`: Estimate the minimum sampling interval for each reader to be used in WattAMeter tracking sessions. The sampling interval is the time between two consecutive readings from a meter.
 
-- `wattameter_benchmark_overhead`: Estimate the overhead of using WattAMeter in a tracking session. The overhead is slit into two parts: the overhead of starting and stopping a tracking session, and the overhead of each reading from a meter.
+- `wattameter_benchmark_overhead`: Estimate the overhead of using WattAMeter in a tracking session. The overhead is split into two parts: the overhead of starting and stopping a tracking session, and the overhead of each reading from a meter.
 
 While the benchmarking commands are self-explanatory, there are a few things to note about starting and stopping a WattAMeter tracking session:
 
@@ -32,6 +32,7 @@ Here is an example of how to use WattAMeter in a SLURM job script:
 
 ```bash
 #!/bin/bash
+#SBATCH --account=<project handle>
 #SBATCH --job-name=wattameter_example
 #SBATCH --nodes=2
 #SBATCH --ntasks-per-node=4
@@ -91,4 +92,4 @@ The output in the CPU reader log file using `--tracker 0.1,rapl` looks similar, 
   2025-10-07_09:38:41.325047 68484 23852448302 268223311 18194740675 202975816 95.3715804589249 0.024547753843556813 95.65664212464095 0.8593112577657622
 ```
 
-WattAMeter provides a post-processing capabilities to further analyze the log files generated from a tracking session. Check out the [WattAMeter documentation](https://nrel.github.io/WattAMeter) for more information.
+WattAMeter provides post-processing capabilities to further analyze the log files generated from a tracking session. Check out the [WattAMeter documentation](https://nrel.github.io/WattAMeter) for more information.
