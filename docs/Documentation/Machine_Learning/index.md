@@ -1,11 +1,11 @@
 # Machine Learning
 
-*Machine learning refers to a set of techniques and algorithms that enable computers to automatically learn from data and improve their performance on a specific task over time. Types of machine learning methods include, but are not limited to, supervised learning (algorithms trained on labeled datasets), unsupervised learning (algorithms trained on unlabeled datasets), and reinforcement learning (learning by trial and error). The Computational Science Center at NREL conducts research in these types of machine learning, and also supports the use of machine learning software on Kestrel.*
+*Machine learning refers to a set of techniques and algorithms that enable computers to automatically learn from data and improve their performance on a specific task over time. Types of machine learning methods include, but are not limited to, supervised learning (algorithms trained on labeled datasets), unsupervised learning (algorithms trained on unlabeled datasets), and reinforcement learning (learning by trial and error). The Computational Science Center at NLR conducts research in these types of machine learning, and also supports the use of machine learning software on Kestrel.*
 
 ## Getting Started
 
-<!-- TODO: Add link to NREL conda documentation. -->
-This section provides basic examples for getting started with two popular machine learning libraries: [PyTorch](https://pytorch.org/) and [TensorFlow](https://www.tensorflow.org/). Both examples use [Anaconda environments](https://www.anaconda.com/), so if you are not familiar with their use please refer to the NREL HPC page on using Conda environments and also the Conda guide to [managing environments](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html). 
+<!-- TODO: Add link to NLR conda documentation. -->
+This section provides basic examples for getting started with two popular machine learning libraries: [PyTorch](https://pytorch.org/) and [TensorFlow](https://www.tensorflow.org/). Both examples use [Anaconda environments](https://www.anaconda.com/), so if you are not familiar with their use please refer to the NLR HPC page on using Conda environments and also the Conda guide to [managing environments](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html). 
 
 ###Getting started with PyTorch
 
@@ -79,7 +79,7 @@ To install either PyTorch or TensorFlow for use with GPUs on Kestrel, the first 
         conda activate /projects/<your-project-name>/<your-user-name>/<conda-env-dir>/<pt or tf>
 
 !!! Note
-	If you are not familiar with using [Anaconda environments](https://www.anaconda.com/) please refer to the [NREL HPC page on using Conda environments](../Environment/Customization/conda.md) and also the Conda guide to [managing environments](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html).
+	If you are not familiar with using [Anaconda environments](https://www.anaconda.com/) please refer to the [NLR HPC page on using Conda environments](../Environment/Customization/conda.md) and also the Conda guide to [managing environments](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html).
 
 
 ### Installing TensorFlow on Kestrel

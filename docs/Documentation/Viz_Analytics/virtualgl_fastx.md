@@ -8,9 +8,9 @@ In addition to standard ssh-only login nodes, Kestrel is also equipped with seve
 !!! Note About Usage
     DAV FastX nodes are a limited resource and not intended as a general-purpose remote desktop. We ask that you please restrict your usage to only HPC allocation-related work and/or visualization software that requires an HPC system.
 
-There are seven internal DAV nodes on Kestrel available only to NREL users on the NREL VPN, on campus, or via the [HPC VPN](https://www.nrel.gov/hpc/vpn-connection.html) that are accessible via round-robin at **kestrel-dav.hpc.nrel.gov**. The individual nodes are named kd1 through kd7.hpc.nrel.gov.
+There are seven internal DAV nodes on Kestrel available only to NLR users on the NLR VPN, on campus, or via the [HPC VPN](https://www.nrel.gov/hpc/vpn-connection.html) that are accessible via round-robin at **kestrel-dav.hpc.nrel.gov**. The individual nodes are named kd1 through kd7.hpc.nrel.gov.
 
-There is also one node that is ONLY accessible by external (non-NREL) users available at **kestrel-dav.nrel.gov**. This address will connect to the node kd8, and requires both password and OTP for login. 
+There is also one node that is ONLY accessible by external (non-NLR) users available at **kestrel-dav.nrel.gov**. This address will connect to the node kd8, and requires both password and OTP for login. 
 
 All Kestrel DAV nodes have 104 CPU cores (2x 52-core Intel Xeon Sapphire Rapids CPUs), 256GB RAM, 2x 48GB NVIDIA A40 GPUs, and offer a Linux desktop (via FastX) with visualization capabilities, optional VirtualGL, and standard Linux terminal applications.
 
@@ -26,10 +26,10 @@ The traditional method of displaying graphics applications to a remote X server 
 FastX provides a means to use a graphical desktop remotely. By connecting to a FastX session on a DAV node, users can run graphical applications with a similar experience to running on their workstation.  Another benefit is that you can disconnect from a FastX connection, go to another location and [reconnect to that same session](#reattaching-fastx-sessions), picking up where you left off.
 
 ## Connecting to DAV Nodes Using FastX
-NREL users may use the web browser or the FastX desktop client. External users must use the FastX desktop client, or connect to the [HPC VPN](https://www.nrel.gov/hpc/vpn-connection.html) for the web client.
+NLR users may use the web browser or the FastX desktop client. External users must use the FastX desktop client, or connect to the [HPC VPN](https://www.nrel.gov/hpc/vpn-connection.html) for the web client.
 
 
-??? abstract "NREL On-Site and VPN Users" 
+??? abstract "NLR On-Site and VPN Users" 
     ### Using a Web Browser
 
     Launch a web browser on your local machine and connect to [https://kestrel-dav.hpc.nrel.gov](https://kestrel-dav.hpc.nrel.gov). After logging in with your HPC username/password you will be able to launch a FastX session by choosing a desktop environment of your choice. Either [GNOME](https://www.gnome.org/) or [XFCE](https://www.xfce.org/) are available for use.
@@ -88,7 +88,7 @@ NREL users may use the web browser or the FastX desktop client. External users m
 
 
 ??? abstract "Off-Site or Remote Users"
-    Remote users must use the Desktop Client via SSH for access. NREL Multifactor token (OTP) required.
+    Remote users must use the Desktop Client via SSH for access. NLR Multifactor token (OTP) required.
 
     Download the [Desktop Client](#download-fastx-desktop-client) and install it on your local machine, then follow these instructions to connect to one of the DAV nodes.
 

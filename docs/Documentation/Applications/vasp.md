@@ -1,6 +1,6 @@
 The Vienna Ab initio Simulation Package (VASP) is an application for atomic scale materials modelling from first principles. VASP computes an approximate solution to the many-body Schrödinger equation, either within density functional theory or within the Hartree-Fock approximation using pseudopotentials and plane wave basis sets. VASP can carry out a range of electronic structure and quantum-mechanical molecular dynamics calculations and has many features including hybrid functionals, Green's functions methods (GW quasiparticles, and ACFDT-RPA) and many-body perturbation theory (2nd-order Møller-Plesset). For a full list of capabilities, please see the [About VASP](https://www.vasp.at/info/about/) page and for further details, documentation, forums, and FAQs, visit the [VASP website](https://www.vasp.at/).
 
-## Accessing VASP on NREL's HPC Clusters
+## Accessing VASP on NLR's HPC Clusters
 !!! tip "Important"
 	The VASP license requires users to be a member of a "workgroup" defined by the University of Vienna or Materials Design. If you are receiving "Permission denied" errors when trying to use VASP, you must be made part of the "vasp" Linux group first. To join, please contact [HPC Help](mailto:hpc-help@nrel.gov) with the following information:
 
@@ -28,13 +28,13 @@ Each VASP module provides three executables where the correct one should be chos
 
 3. `vasp_gam` is for Gamma-point-only calculations
 
-NREL also offers build and module support for additional functionalities such as [transition state theory tools from University of Texas-Austin](http://theory.cm.utexas.edu/vtsttools/), [implicit solvation models from the University of Florida](http://vaspsol.mse.ufl.edu/), and [BEEF-vdw functionals](https://github.com/vossjo/libbeef). Please contact [HPC-Help](mailto:hpc-help@nrel.gov) if a functionality you need is not present in one of our builds.
+NLR also offers build and module support for additional functionalities such as [transition state theory tools from University of Texas-Austin](http://theory.cm.utexas.edu/vtsttools/), [implicit solvation models from the University of Florida](http://vaspsol.mse.ufl.edu/), and [BEEF-vdw functionals](https://github.com/vossjo/libbeef). Please contact [HPC-Help](mailto:hpc-help@nrel.gov) if a functionality you need is not present in one of our builds.
 
 !!! warning "Attention"
 	If you would like to build your own VASP on Kestrel, please read our section [Building VASP on Kestrel](vasp.md#building-vasp-on-kestrel) carefully before compiling on Kestrel's cray architecture. 
 
 ## Supported Versions
-NREL offers modules for VASP 5 and VASP 6 on CPUs as well as GPUs on certain systems. See table below for current availability, as well as system specific documentation for more details on running different builds.
+NLR offers modules for VASP 5 and VASP 6 on CPUs as well as GPUs on certain systems. See table below for current availability, as well as system specific documentation for more details on running different builds.
 
 |             |    Kestrel    |     Swift     |   Vermilion   |
 | ----------- | ------------- | ------------- | ------------- |
@@ -46,7 +46,7 @@ NREL offers modules for VASP 5 and VASP 6 on CPUs as well as GPUs on certain sys
 ## VASP on Kestrel
 
 ??? note "Performance Note" 
-    As part of the Computational Sciences Tutorial Series, NREL's Computational Sciences Center hosted "Fast and Efficient VASP: Accelerating and Optimizing    Workflows on CPUs and GPUs." The tutorial provides performance recommendations for Kestrel, including guidance on when it is more efficient to run calculations on GPUs (for example, hybrid calculations or larger GGA calculations with more than ~200 atoms). Please see this link to access [a copy of our presentation](https://nrel.sharepoint.com/:b:/r/sites/ComputationalSciencesTutorials/Shared%20Documents/HPC%20User%20Community/Slides/6%20-%20Applications%20of%20HPC/Fast,%20Efficient%20VASP%20-%20Accelerating%20and%20Optimizing%20Workflows%20on%20GPUs%20and%20CPUs.pdf?csf=1&web=1&e=69hKjB).
+    As part of the Computational Sciences Tutorial Series, NLR's Computational Sciences Center hosted "Fast and Efficient VASP: Accelerating and Optimizing    Workflows on CPUs and GPUs." The tutorial provides performance recommendations for Kestrel, including guidance on when it is more efficient to run calculations on GPUs (for example, hybrid calculations or larger GGA calculations with more than ~200 atoms). Please see this link to access [a copy of our presentation](https://nrel.sharepoint.com/:b:/r/sites/ComputationalSciencesTutorials/Shared%20Documents/HPC%20User%20Community/Slides/6%20-%20Applications%20of%20HPC/Fast,%20Efficient%20VASP%20-%20Accelerating%20and%20Optimizing%20Workflows%20on%20GPUs%20and%20CPUs.pdf?csf=1&web=1&e=69hKjB).
 
 ### Running Using Modules
 
@@ -141,7 +141,7 @@ CPU $ module avail vasp
 
 ??? note "Performance Note"
 
-    Internal testing at NREL has indicated that standard VASP DFT calculations from sizes 50-200 atoms run most efficiently on a quarter to a half node. The graph below shows the performance of a 192-atom VASP DFT job using partial nodes on the shared partition. Up to 1/2 a node, near perfect scaling is observed, but using the full node gives a speedup of only 1.5 relative to using 1/2 a node. So, the calculation will cost 50% more AUs if run on a single node compared to a half node. For a 48-atom surface Pt calculation, using the full node gives no speedup relative to using 1/2 a node, so the calculation will cost 100% more AUs if run on a single node compared to half a node. 
+    Internal testing at NLR has indicated that standard VASP DFT calculations from sizes 50-200 atoms run most efficiently on a quarter to a half node. The graph below shows the performance of a 192-atom VASP DFT job using partial nodes on the shared partition. Up to 1/2 a node, near perfect scaling is observed, but using the full node gives a speedup of only 1.5 relative to using 1/2 a node. So, the calculation will cost 50% more AUs if run on a single node compared to a half node. For a 48-atom surface Pt calculation, using the full node gives no speedup relative to using 1/2 a node, so the calculation will cost 100% more AUs if run on a single node compared to half a node. 
 
     ![VASP-sharednodescaling](../../../assets/images/VASP/sharedscaling-192.png)
 

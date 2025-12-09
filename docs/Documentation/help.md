@@ -2,7 +2,7 @@
 title: Help and Support
 ---
 
-*Get quick access to help resources for NREL's high-performance computing (HPC) systems.*
+*Get quick access to help resources for NLR's high-performance computing (HPC) systems.*
 ## Support Contact Information
 
 [HPC-Help@nrel.gov](mailto:HPC-Help@nrel.gov) - Email for general HPC questions, technical troubleshooting, account requests, and software installation assistance. In the email, please include your username, the system name, project handle, and any information that will help us identify and troubleshoot the issue. 
@@ -14,13 +14,13 @@ Each system has a Microsoft Teams channel where users can collaborate and post q
 
 We update the team channel members annually based on HPC project members. However, if we missed you and you would like to join, please use the following instructions:
 
-??? note "Internal Users (NREL)"
+??? note "Internal Users (NLR)"
     1. In Teams, click on the "Teams" icon in the far left navigation bar.
     1. Click "Join or create a team" in the lower left corner.
     1. In the "Search teams" bar in the upper far right corner, type the name of the channel you need to join (e.g., "Vermilion" or "Swift") and hit return.
     1. Click Join.
 
-??? note "External Users (Non-NREL)"
+??? note "External Users (Non-NLR)"
     1. You will receive a welcome email from the team owner with information about the team.  Click on accept. 
     1. If you have never created a MS Office 365 account, you will be prompted to create one. If you already have a MS Office 365 account, login. 
     1. The first time you log in, you will be prompted to set up Microsoft Authenticator or other authenticator app.

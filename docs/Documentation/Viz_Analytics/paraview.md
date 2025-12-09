@@ -12,7 +12,7 @@ Running ParaView in client-server mode is a convenient workflow for researchers 
 In this model, the HPC does the I/O and computational work, then "serves" the rendered data to your local ParaView client. This means all of your preferences and shortcuts on your local client work without moving data from the HPC or using a remote desktop enviroment.
 
 !!! note "Client Installation"
-    It is required that you use binaries provided by Kitware locally that match the NREL installed version for compatibility.
+    It is required that you use binaries provided by Kitware locally that match the NLR installed version for compatibility.
     
     To determine which version of ParaView is installed on the cluster, connect to Kestrel, load the ParaView module with `module load paraview`, then check the version with `pvserver --version`.
     

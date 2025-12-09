@@ -4,7 +4,7 @@
 
 
 !!! important
-    While Xpress Solver is available as a module on Kestrel for use by all NREL-users, you MUST be a part of the `xpressmp` group on Kestrel. If you are new or have not used Xpress in a while, you can:
+    While Xpress Solver is available as a module on Kestrel for use by all NLR users, you MUST be a part of the `xpressmp` group on Kestrel. If you are new or have not used Xpress in a while, you can:
 
     1. Check whether you are a part of this group by running the `groups` command from your terminal, or
     2. Load the `xpressmp` module and run an example
@@ -35,7 +35,7 @@ Xpress solver cannot be used to solve nonlinear programs.
 | xpressmp/9.7.0 |
 
 !!! info
-    Xpress is available as a module on Kestrel. Additionally, NREL has a site-wide license for Xpress to run locally on an NREL-issued computer. Please see instructions [here](https://github.nrel.gov/MSOC/fico-xpress).
+    Xpress is available as a module on Kestrel. Additionally, NLR has a site-wide license for Xpress to run locally on an NLR-issued computer. Please see instructions [here](https://github.nrel.gov/MSOC/fico-xpress).
 
 ## Running Xpress Solver on Kestrel
 

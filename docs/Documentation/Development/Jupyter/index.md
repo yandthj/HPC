@@ -82,11 +82,11 @@ More on kernels later.
 
 ## JupyterHub Service on Kestrel (KJHub)
 
-The NREL HPC team runs a JupyterHub service for HPC users to quickly access notebooks and data stored on Kestrel, Kestrel-JHub (KJHub.)
+The NLR HPC team runs a JupyterHub service for HPC users to quickly access notebooks and data stored on Kestrel, Kestrel-JHub (KJHub.)
 
-KJHub is available from the NREL VPN (onsite or offsite) for internal NREL users.
+KJHub is available from the NLR VPN (onsite or offsite) for internal NLR users.
 
-This service is not directly accessible externally for non-NREL HPC users. However, it may be reached by using the [HPC VPN](https://www.nrel.gov/hpc/vpn-connection.html), or by using a [FastX Remote Desktop](https://nrel.github.io/HPC/Documentation/Viz_Analytics/virtualgl_fastx/) session via the DAV nodes.
+This service is not directly accessible externally for non-NLR HPC users. However, it may be reached by using the [HPC VPN](https://www.nrel.gov/hpc/vpn-connection.html), or by using a [FastX Remote Desktop](https://nrel.github.io/HPC/Documentation/Viz_Analytics/virtualgl_fastx/) session via the DAV nodes.
 
 The JupyterHub service is accessible via web browser at [https://kestrel-jhub.hpc.nrel.gov](https://kestrel-jhub.hpc.nrel.gov)
 
@@ -130,9 +130,9 @@ Kestrel supports running your own Jupyter Notebook server on a compute node. Thi
 
 Before you get started, we recommend installing your own Jupyter inside of a conda environment. The default conda/anaconda3 module contains basic Jupyter Notebook packages, but you will likely want your own Python libraries, notebook extensions, and other features. Basic directions are included later in this document.
 
-Internal (NREL) HPC users on the NREL VPN, or external users of the HPC VPN, may use the instructions below.
+Internal (NLR) HPC users on the NLR VPN, or external users of the HPC VPN, may use the instructions below.
 
-External (non-NREL) HPC users may follow the same instructions, but please use `kestrel.nrel.gov` in place of `kestrel.hpc.nrel.gov`.
+External (non-NLR) HPC users may follow the same instructions, but please use `kestrel.nrel.gov` in place of `kestrel.hpc.nrel.gov`.
 
 ## Using a Compute Node to run Jupyter Notebooks
 
@@ -184,9 +184,9 @@ Copy the full url and token from Jupyter startup into your web browser. For exam
 Scripted assistance with launching a Jupyter session on Kestrel is available.
 
 
-### Internal NREL Users Only: pyeagle
+### Internal NLR Users Only: pyeagle
 
-The [pyeagle](https://github.nrel.gov/MBAP/pyeagle) package is available for internal users to handle launching and monitoring a jupyter server on a compute node. This package is maintained by an NREL HPC user group and was originally written for use with Eagle, but now supports Kestrel.
+The [pyeagle](https://github.nrel.gov/MBAP/pyeagle) package is available for internal users to handle launching and monitoring a jupyter server on a compute node. This package is maintained by an NLR HPC user group and was originally written for use with Eagle, but now supports Kestrel.
 
 ###  Auto-launching on Kestrel with an sbatch Script
 

@@ -1,4 +1,4 @@
---- layout: default 
+--- la*For large data transfers between NLR's high-performance computing (HPC)out: default 
 title: Globus 
 grand_parent: Data Movement 
 parent: Transferring Data ---
@@ -25,17 +25,17 @@ providing automatic fault recovery and notification of completion or problems.
 
 To get a Globus account, sign up on the [Globus account website](https://www.globusid.org/create).
 
-## Globus NREL Endpoints
+## Globus NLR Endpoints
 
-The current NREL Globus Endpoints are:
+The current NLR Globus Endpoints are:
 
 - **nrel#kglobus_projects** - This endpoint will give you access to any files you have on the Kestrel Project File System: /datasets, /projects, and /shared-projects.
 - **nrel#kglobus_scratch** - This endpoint will give you access to any files you have on the Kestrel Scratch File System: /scratch.
 - **nrel#vast** - This endpoint will give you access to files you have on our VAST file system: /campaign and /bscl. It is available for other shares on VAST upon request.  
 
 !!! warning
-    Note that if you already have a Globus account with a different institution, such as a university, be sure to select an "NREL OIDC" identity as
-    the "Owner Identity" when connecting to an NREL endpoint. Otherwise, you will encounter permission errors. 
+    Note that if you already have a Globus account with a different institution, such as a university, be sure to select an "NLR OIDC" identity as
+    the "Owner Identity" when connecting to an NLR endpoint. Otherwise, you will encounter permission errors. 
 
 ## Globus Personal Endpoints
 
@@ -78,7 +78,7 @@ Online](https://www.globus.org) website or via the [CLI](https://docs.globus.org
 ??? abstract "Globus Online" 
     Globus Online is a hosted service that allows you to use a browser to transfer
     files between trusted sites called "endpoints".  To use it, the Globus software
-    must be installed on the systems at both ends of the data transfer. The NREL
+    must be installed on the systems at both ends of the data transfer. The NLR
     endpoints are listed above.
 
     1. Click Login on the [Globus web site](https://www.globus.org/). On the login
@@ -87,10 +87,10 @@ Online](https://www.globus.org) website or via the [CLI](https://docs.globus.org
     2. The ribbon on the left side of the screen acts as a Navigator, select File Manager
     if not already selected.  In addition, select the 'middle' option for Panels in the upper
     right, which will display space for two Globus endpoints. 
-    3. The collection tab will be searchable (e.g. nrel), or one of the NREl endpoints (e.g. **nrel#kglobus_projects**) can be 
+    3. The collection tab will be searchable (e.g. nrel), or one of the NLR endpoints (e.g. **nrel#kglobus_projects**) can be 
     entered in the left collection tab.  In the box asking for authentication, **enter 
-    your NREL HPC username and password**.  Do **not** use your globus.org username 
-    or password when authenticating to the NREL endpoints.
+    your NLR HPC username and password**.  Do **not** use your globus.org username 
+    or password when authenticating to the NLR endpoints.
     4. Select another Globus endpoint, such as a personal endpoint or 
     an endpoint at another institution that you have access to.
     To use your personal endpoint, first start the Globus Connect Personal application. 

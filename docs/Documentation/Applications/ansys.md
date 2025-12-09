@@ -241,7 +241,7 @@ Try to run the job on nodes with [local disk](https://nrel.github.io/HPC/Documen
 
 ## Connect to Your Own License
 
-At NREL, a few groups own their own Ansys license. In order to connect to the private license, the user can set the environment variable `ANSYSLMD_LICENSE_FILE` (e.g. `export ANSYSLMD_LICENSE_FILE=1055@10.60.1.85`, replacing your corresponding port and license server hostname or IP address).  
+At NLR, a few groups own their own Ansys license. In order to connect to the private license, the user can set the environment variable `ANSYSLMD_LICENSE_FILE` (e.g. `export ANSYSLMD_LICENSE_FILE=1055@10.60.1.85`, replacing your corresponding port and license server hostname or IP address).  
 
 ## Contact
 For information about accessing licenses beyond CSC's base capability, please contact [Emily Cousineau.](mailto://Emily.Cousineau@nrel.gov)

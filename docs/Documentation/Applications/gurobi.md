@@ -85,7 +85,7 @@ MATLAB prompt or your script:
 ## Gurobi and General Algebraic Modeling System (GAMS)
 
 The General Algebraic Modeling System (GAMS) is a high-level modeling system for
-mathematical programming and optimization. The GAMS package installed at NREL
+mathematical programming and optimization. The GAMS package installed at NLR
 includes Gurobi solvers. For more information, see [using GAMS](gams.md).
 
 Note that the Gurobi license for this interface is separate from the standalone

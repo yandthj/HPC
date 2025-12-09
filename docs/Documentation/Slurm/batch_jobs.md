@@ -13,11 +13,11 @@ Once submitted, the scheduler will insert your job script into the queue to be r
 
 Priority factors vary on a cluster-by-cluster basis, but typically include a "fairshare" value based on the resources assigned to the allocation, as well as weighting by the job's age, partition, resources (e.g. node count) and/or Quality of Service (qos) factor. Please see the [Monitoring and Control commands](./monitor_and_control.md) page for more information on checking your job's priority. The [Systems](../Systems/index.md) documentation for each cluster will also have more information about the priority weighting, QOS factors, and any associated AU upcharges. 
 
-To submit batch jobs on an HPC system at NREL, the Slurm `sbatch` command should be used:
+To submit batch jobs on an HPC system at NLR, the Slurm `sbatch` command should be used:
 
 `$ sbatch --account=<project-handle> <batch_script>`
 
-Sbatch scripts may be stored on or run from any file system (/home or /projects, for example), as they are typically fairly lightweight shell scripts. However, on most HPC systems it's generally a good idea to have your executables, conda environments, other software that your sbatch script executes stored in a /projects directory. Your input and output files should typically be read from and/or written to either /projects or /scratch directories, as well. Please see the appropriate [Systems](../Systems/index.md) page for more information specific to the filesystems on the NREL-hosted cluster you're working on to maximize I/O performance.
+Sbatch scripts may be stored on or run from any file system (/home or /projects, for example), as they are typically fairly lightweight shell scripts. However, on most HPC systems it's generally a good idea to have your executables, conda environments, other software that your sbatch script executes stored in a /projects directory. Your input and output files should typically be read from and/or written to either /projects or /scratch directories, as well. Please see the appropriate [Systems](../Systems/index.md) page for more information specific to the filesystems on the NLR-hosted cluster you're working on to maximize I/O performance.
 
 Arguments to `sbatch` may be used to specify resource limits such as job duration (referred to as "walltime"), number of nodes, etc., as well as what hardware features you want your job to run with. These can also be supplied within the script itself by placing #SBATCH comment directives within the file. 
 
@@ -65,7 +65,7 @@ You may use these environment variables in your sbatch scripts to help control o
 | ---------------- | ----------------- | ------------------------ |
 | `$LOCAL_SCRATCH` | Absolute directory path for local-only disk space per node. This should always be /tmp/scratch for compute nodes with local disk.| `/tmp/scratch`|
 | `$TMPDIR` | Path for temporary directory for scratch space. Uses local storage on compute nodes with local disk, and RAM on those without. | `/tmp/scratch/<JOBID>` (default value on Kestrel)|
-| `$SLURM_CLUSTER_NAME` | The cluster name as per the master configuration in Slurm. Identical to `$NREL_CLUSTER`. | `kestrel`, `swift`|
+| `$SLURM_CLUSTER_NAME` | The cluster name as per the master configuration in Slurm. Identical to `$NLR_CLUSTER`. | `kestrel`, `swift`|
 | `$SLURM_CPUS_ON_NODE` | Quantity of CPUs per compute node. | `104` |
 | `$SLURMD_NODENAME` | Slurm name of the node on which the variable is evaluated. Matches hostname. | `r4i2n3`|
 | `$SLURMD_JOB_ACCOUNT` | The Slurm account used to submit the job. Matches the project handle. | `csc000` |

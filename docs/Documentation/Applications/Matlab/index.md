@@ -1,6 +1,6 @@
 # Using MATLAB Software
 
-*Learn how to use MATLAB software on the NREL HPC systems.*
+*Learn how to use MATLAB software on the NLR HPC systems.*
 
 ### [Running MATLAB in Batch Mode](batch.md)
 
@@ -23,7 +23,7 @@ Learn about the MATLAB software versions and licenses available for use.
 
 ## Additional Resources
 
-If you're an NREL user, on GitHub view [MATLAB presentations and code
+If you're an NLR user, on GitHub view [MATLAB presentations and code
 examples](https://github.nrel.gov/hpc-apps/dist-matlab).
 
 For all users, see a summary PowerPoint deck on the [MATLAB Compiler, MATLAB
