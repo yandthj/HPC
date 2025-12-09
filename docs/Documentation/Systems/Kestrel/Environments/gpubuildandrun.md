@@ -29,7 +29,7 @@ Almost all compiling/running on a linux system will at some point reference or i
 
 * Native to the Operating system
 * Built by Cray
-* Built by NREL
+* Built by NLR
 
 You will also see modules for "mixed" versions.  These are just duplicates of others and should not be loaded.
 
@@ -48,12 +48,12 @@ Here are some of the options:
 #### module load gcc-standalone/13.1.0
 * which gcc
 	* /nopt/nrel/apps/gpu_stack/compilers/03-24/.../gcc-13.1.0.../bin/gcc
-* Built by NREL
+* Built by NLR
 
 #### module load gcc-standalone/12.3.0 
 * which gcc
 	* /nopt/nrel/apps/cpu_stack/compilers/06-24/.../gcc-12.3.0.../bin/gcc
-* Built by NREL
+* Built by NLR
  
 
 

@@ -215,6 +215,6 @@ extra_css:
 extra_javascript:
   - javascripts/mathjax.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
-site_name: NREL HPC 
+site_name: NLR HPC 
 repo_url: https://github.com/NREL/HPC/tree/gh-pages
 repo_name: NREL/HPC

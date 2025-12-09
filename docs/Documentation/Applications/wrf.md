@@ -7,7 +7,7 @@
 ## Getting Started
 
 This section provides the minimum amount of information necessary to
-successfully run a WRF job on the NREL Kestrel cluster. First, we show
+successfully run a WRF job on the NLR Kestrel cluster. First, we show
 how to use WRF given that we may have different versions of WRF
 in different toolchains already built and available as modules.
 

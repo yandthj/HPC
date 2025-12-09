@@ -6,7 +6,7 @@ parent: Machine Learning
 
 # Reinforcement Learning on Eagle
 
-Welcome to the first NREL HPC tutorial for Reinforcement Learning (RL)! 
+Welcome to the first NLR HPC tutorial for Reinforcement Learning (RL)! 
 
 This tutorial covers an extended, albeit simplified, introduction of OpenAI Gym and Ray/RLlib which you can use to effortlessly design, create, and run your own RL experiments on Eagle. 
 

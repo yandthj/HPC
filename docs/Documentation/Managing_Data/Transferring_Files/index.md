@@ -7,7 +7,7 @@ parent: Transferring Data
 
 # Transferring Files
 
-*Learn how to transfer data within, to and from NREL's high-performance computing (HPC) systems.*
+*Learn how to transfer data within, to and from NLR's high-performance computing (HPC) systems.*
 
 For a video presentation on this topic, please see [Transfering data to and from Kestrel](https://nrel-my.sharepoint.com/:v:/r/personal/chschwin_nrel_gov/Documents/Recordings/Tutorials/Transferring%20Data%20to%20and%20from%20Kestrel.mov?csf=1&web=1&e=hagS2w&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D) by Matt Selensky.
 
@@ -15,9 +15,9 @@ For further information about invidiual systems' filesystem architecture and quo
 
 ## Best Practices for Transferring Files
 
-#### File Transfers Between Filesystems on the NREL network
+#### File Transfers Between Filesystems on the NLR network
 
-rsync is the recommended tool for transferring data between NREL systems. It allows you to easily restart transfers if they fail, and also provides more consistency when dealing with symbolic links, hard links, and sparse files than either scp or cp. It is recommended you do not use compression for transfers within NREL systems. An example command is:
+rsync is the recommended tool for transferring data between NLR systems. It allows you to easily restart transfers if they fail, and also provides more consistency when dealing with symbolic links, hard links, and sparse files than either scp or cp. It is recommended you do not use compression for transfers within NLR systems. An example command is:
 
 ```bash
 $ rsync -aP --no-g /scratch/username/dataset1/ /mss/users/username/dataset1/
@@ -27,8 +27,8 @@ $ rsync -aP --no-g /scratch/username/dataset1/ /mss/users/username/dataset1/
 
 *Mass Storage quotas rely on the group of the file and not the directory path. It is best to use the `--no-g` option when rsyncing to MSS so you use the destination group rather than the group permissions of your source.  You can also `chgrp` your files to the appropriate group prior to rsyncing to MSS.*
 
-#### Small Transfers (<100GB) outside of the NREL network
-`rsync`, `scp`, and `curl` will be your best option for small transfers (<100GB) outside of the NREL network. If your rsync/scp/curl transfers are taking hours to complete then you should consider using [Globus](globus.md).
+#### Small Transfers (<100GB) outside of the NLR network
+`rsync`, `scp`, and `curl` will be your best option for small transfers (<100GB) outside of the NLR network. If your rsync/scp/curl transfers are taking hours to complete then you should consider using [Globus](globus.md).
 
 If you're transferring many files then you should use rsync:
 
@@ -50,9 +50,9 @@ $ wget https://URL
 
 Additional rsync examples are available [here](https://github.com/NREL/HPC/tree/master/general/data-transfer).
 
-#### Large Transfers (>100GB) outside of the NREL network
+#### Large Transfers (>100GB) outside of the NLR network
 
-Globus is optimized for file transfers between data centers and anything outside of the NREL network. It will be several times faster than any other tools you will have available. Documentation about requesting a HPC Globus account is available on the [Globus Services page on the HPC website](https://www.nrel.gov/hpc/globus-file-transfer.html).  See [Transfering files using Globus](globus.md) for instructions on transfering files with Globus.
+Globus is optimized for file transfers between data centers and anything outside of the NLR network. It will be several times faster than any other tools you will have available. Documentation about requesting a HPC Globus account is available on the [Globus Services page on the HPC website](https://www.nrel.gov/hpc/globus-file-transfer.html).  See [Transfering files using Globus](globus.md) for instructions on transfering files with Globus.
 
 #### Transfering files using Windows
 For Windows you will need to download WinSCP to transfer files to and from HPC systems over SCP. See [Transfering using WinSCP](https://www.nrel.gov/hpc/winscp-file-transfer.html).

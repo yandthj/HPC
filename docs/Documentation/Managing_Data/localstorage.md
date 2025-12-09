@@ -1,6 +1,6 @@
-# Local and Scratch Storage on NREL HPC Systems
+# Local and Scratch Storage on NLR HPC Systems
 
-The table below summarizes the local and scratch storage currently on NREL HPC systems. 
+The table below summarizes the local and scratch storage currently on NLR HPC systems. 
 
 | System Name | Node Local Storage | $TMPDIR Default | Default $TMPDIR Storage Type | Global Scratch Storage |
 | -- | -- | -- | -- | -- | 

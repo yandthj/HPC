@@ -10,7 +10,7 @@ For more information related to the R project, see the [R website](http://www.r-
 
 ## Accessing R
 
-The supported method for using R on NREL HPC systems is via Anaconda/mamba. In order to install R, first load the mamba module. On Kestrel or Swift, this is `module load mamba`. Next, create a new conda environment that contains at least the `r-base` package, which installs R itself. Optionally, install the `r-essentials` bundle, which provides many of the most popular R packages for data science, such as the [tidyverse](https://www.tidyverse.org) family of packages.
+The supported method for using R on NLR HPC systems is via Anaconda/mamba. In order to install R, first load the mamba module. On Kestrel or Swift, this is `module load mamba`. Next, create a new conda environment that contains at least the `r-base` package, which installs R itself. Optionally, install the `r-essentials` bundle, which provides many of the most popular R packages for data science, such as the [tidyverse](https://www.tidyverse.org) family of packages.
 
 For example, to create and activate a new environment named `r_env` in your current directory that includes the `r-essentials` bundle:
 
@@ -304,7 +304,7 @@ Most of these packages will have to be installed in a custom environment as many
 
 For questions on the R software environment itself or advanced R package questions, please contact [HPC-Help@nrel.gov](mailto:HPC-Help@nrel.gov).
 
-Additionally, NREL has an internal R Users Group that meets periodically to highlight interesting packages, problems, and share experiences related to R programming. For more details, contact [Daniel Inman](mailto:daniel.inman@nrel.gov). 
+Additionally, NLR has an internal R Users Group that meets periodically to highlight interesting packages, problems, and share experiences related to R programming. For more details, contact [Daniel Inman](mailto:daniel.inman@nrel.gov). 
 
 ## References
 

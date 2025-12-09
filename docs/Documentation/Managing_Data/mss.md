@@ -1,12 +1,12 @@
 # Mass Storage Sytem (MSS)
-*NREL’s Amazon Web Services (AWS) Mass Storage System (MSS)
+*NLR’s Amazon Web Services (AWS) Mass Storage System (MSS)
 is an additional data archival resource available to active projects and users
 on the Kestrel high-performance computing (HPC) system.*
 
 The AWS MSS keeps and protects important data, primarily as an addition to
 Kestrel's high-performance Lustre filesystem (/projects and /scratch).
 
-NREL implemented the AWS MSS to take advantage of S3 Deep Glacier archiving,
+NLR implemented the AWS MSS to take advantage of S3 Deep Glacier archiving,
 replacing the previous on-premises MSS, Gyrfalcon, which reached end-of-life at
 the end of 2020. 
 

@@ -1,10 +1,10 @@
 # Applications
 
-NREL maintains a variety of applications for use on the HPC systems. Please see the navigation bar on the left under "Applications" for more information on a specific application. 
+NLR maintains a variety of applications for use on the HPC systems. Please see the navigation bar on the left under "Applications" for more information on a specific application. 
 
 These applications can be accessed through environment modules on the systems. Some may not be available on all systems, and there may be some additional packages installed that don't have a dedicated page here. Please run the `module avail` command on a system to see what is available. 
 
-The following are packages that the NREL Computational Science Center supports:
+The following are packages that the NLR Computational Science Center supports:
 
 | Name        | Description| 
 | :---------- | :--------- | 

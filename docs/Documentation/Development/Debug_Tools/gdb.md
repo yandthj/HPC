@@ -6,7 +6,7 @@
 
 ## Getting started
 
-GDB is available on NREL machines and supports a number of languages, including C, C++, and Fortran. 
+GDB is available on NLR machines and supports a number of languages, including C, C++, and Fortran. 
 
 When using GDB, make sure the program you are attempting to debug has been compiled with the `-g` debug flag and with the `-O0` optimization flag to achieve the best results.
 

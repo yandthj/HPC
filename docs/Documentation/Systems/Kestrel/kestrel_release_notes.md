@@ -129,7 +129,7 @@ Intel-oneapi-compilers.
 
 ## Jan. 29 - Feb. 14, 2024 Upgrades
 
-1. We have experienced that most previously built software runs without modification (this includes NREL provided modules) and performs at the same level. 
+1. We have experienced that most previously built software runs without modification (this includes NLR provided modules) and performs at the same level. 
 
 2. Cray programming environment (CPE) 22.10, the default on the system, produces an error with cray-libsci when using PrgEnv-intel and the cc, CC, or ftn compiler wrappers. This error can be overcome either by swapping in a newer revision of cray-libsci, or by loading CPE/22.12. 
 
@@ -153,7 +153,7 @@ Intel-oneapi-compilers.
     module swap PrgEnv-cray PrgEnv-intel  
     ```
 
-3. CPE 23.12 is now available on the system but is a work-in-progress. We are still building out the CPE 23 NREL modules.  
+3. CPE 23.12 is now available on the system but is a work-in-progress. We are still building out the CPE 23 NLR modules.  
 
     To load CPE 23.12: 
 

@@ -17,7 +17,7 @@ A wide variety of packages are available for the purpose, each with their streng
 |:------------------------------------------------------------------------:|:-----:|:-------:|:------:|:------:|:------:|:----------:|:--------:|:----:|:-------------------:|:----------------------------:|
 | [Cantera](https://cantera.org/)                                          | y     | y       | y      | y      | x      | ++         | ++++     | Free | Research codes*[^8] | Simplicity, large user base  |
 | [zero-RK](https://github.com/LLNL/zero-rk)                               | y     | x       | x*[^6] | x      | y*[^1] | ++++*[^7]  | ++*[^4]  | Free | Converge CFD ($)    | Model reduction tools        |  
-| [PelePhysics](https://amrex-combustion.github.io/PelePhysics/)           | y     | x       | x      | x      | y      | +++++      | +++      | Free | Amrex/Pele          | HPC, NREL popular framework  |
+| [PelePhysics](https://amrex-combustion.github.io/PelePhysics/)           | y     | x       | x      | x      | y      | +++++      | +++      | Free | Amrex/Pele          | HPC, NLR popular framework  |
 | [Chemkin Pro](https://www.ansys.com/products/fluids/ansys-chemkin-pro)   | y     | y*[^2]  | x      | x      | x*[^3] | ++++       | ++++     | $    | Ansys ($)           | Legacy, professional support |
 
 
@@ -185,15 +185,15 @@ Your GUI enabled applications in general and Chemkin in this specific case, can 
 
 ## Footnotes
 
-[^1]: Not clear from the documentation but ‘gpu’ exists in the code in several places. No actual GPU users amongst those surveyed at the NREL.
+[^1]: Not clear from the documentation but ‘gpu’ exists in the code in several places. No actual GPU users amongst those surveyed at the NLR.
 
 [^2]: Also possible through Chemkin II, which was a free Fortran library, not available online anymore.
 
 [^3]: The Ansys Fluent CFD solver uses GPU, the Chemkin Pro module does not.
 
-[^4]: Features unclear due to very poor documentation. Estimate based on reading parts of the code and NREL user comments.
+[^4]: Features unclear due to very poor documentation. Estimate based on reading parts of the code and NLR user comments.
 
-[^5]: Very vague estimate from documentation and NREL user comments. Benchmarking not performed.
+[^5]: Very vague estimate from documentation and NLR user comments. Benchmarking not performed.
 
 [^6]: Python scripts exist which gather parameters to execute C++ executables, no actual Python / Cython API like Cantera.
 

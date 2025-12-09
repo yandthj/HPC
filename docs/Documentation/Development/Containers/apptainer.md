@@ -3,7 +3,7 @@
     
 ## How to use Apptainer
 
-On NREL HPC systems, Apptainer is accessed via a module named `apptainer` (you can check the current default module via `ml -d av apptainer`). On Kestrel specifically, the directory `/nopt/nrel/apps/software/apptainer/1.1.9/examples` holds a number of images (`*.sif`) and an example script (`script`) that shows how to run containers hosting MPI programs across multiple nodes. The `script` can also be accessed from [our GitHub repository](https://github.com/NREL/HPC/blob/master/kestrel/apptainer/script).
+On NLR HPC systems, Apptainer is accessed via a module named `apptainer` (you can check the current default module via `ml -d av apptainer`). On Kestrel specifically, the directory `/nopt/nrel/apps/software/apptainer/1.1.9/examples` holds a number of images (`*.sif`) and an example script (`script`) that shows how to run containers hosting MPI programs across multiple nodes. The `script` can also be accessed from [our GitHub repository](https://github.com/NREL/HPC/blob/master/kestrel/apptainer/script).
 
 Before we get to the more complicated example from `script`, we'll first look at downloading (or *pulling*) and working with a simple image. The following examples assume you are logged into Kestrel, but the concepts demonstrated are still valid for any host system on which you wish to execute a container.
 
@@ -486,7 +486,7 @@ Assuming you made the same `salloc` request above, it should take ~26 seconds to
 
 ## Best practices and recommendations
 
-This section describes general recommendations and best practices for Apptainer users across NREL's HPC systems.
+This section describes general recommendations and best practices for Apptainer users across NLR's HPC systems.
 
 ### Change Apptainer cache location to `/scratch/$USER`
 
@@ -498,7 +498,7 @@ Note that you will either need to log out and back into the system, or run `sour
 
 ### Save `.def` files to home folder and images to /scratch or /projects
 
-An Apptainer definition file (`.def`) is a relatively small text file that contains much (if not all) of the build context for a given image. Since your `$HOME` folders on NREL's HPC systems are regularly backed up, it is strongly recommended to save this file to your home directory in case it accidentally gets deleted or otherwise lost. Since `.sif` images themselves are 1. typically large and 2. can be rebuilt from the `.def` files, we recommend saving them to a folder outside of your `$HOME`, for similar reasons described in the previous section. If you intend to work with an image briefly or intermittantly, it may make sense to save the `.sif` to your `/scratch` folder, from which files can be purged if they haven't been accessed for 28 days. If you plan to use an image frequently over time or share it with other users in your allocation, saving it in a `/projects` location you have access to may be better.
+An Apptainer definition file (`.def`) is a relatively small text file that contains much (if not all) of the build context for a given image. Since your `$HOME` folders on NLR's HPC systems are regularly backed up, it is strongly recommended to save this file to your home directory in case it accidentally gets deleted or otherwise lost. Since `.sif` images themselves are 1. typically large and 2. can be rebuilt from the `.def` files, we recommend saving them to a folder outside of your `$HOME`, for similar reasons described in the previous section. If you intend to work with an image briefly or intermittantly, it may make sense to save the `.sif` to your `/scratch` folder, from which files can be purged if they haven't been accessed for 28 days. If you plan to use an image frequently over time or share it with other users in your allocation, saving it in a `/projects` location you have access to may be better.
 
 
 ### Bind Mounting Directories

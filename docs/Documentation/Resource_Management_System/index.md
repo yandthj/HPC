@@ -4,7 +4,7 @@
 
 ## Access
 
-An [NREL HPC account](https://www.nrel.gov/hpc/user-accounts.html) is required to access Lex. To log in to Lex, open a web browser to [https://hpcprojects.nrel.gov](https://hpcprojects.nrel.gov/login/?next=/). Log in with your NREL HPC username and password. An OTP token is not required to authenticate. 
+An [NLR HPC account](https://www.nrel.gov/hpc/user-accounts.html) is required to access Lex. To log in to Lex, open a web browser to [https://hpcprojects.nrel.gov](https://hpcprojects.nrel.gov/login/?next=/). Log in with your NLR HPC username and password. An OTP token is not required to authenticate. 
 
 ## Requesting an Allocation
 
@@ -42,7 +42,7 @@ A **project handle** other than the default is required. It is used for director
     Use the info buttons next to the fields for more information on the question's requirements.
     ![image](../../assets/images/Lex/tooltip.png)
 
-The **HPC Lead** is the person with primary responsibility for the computational work of the allocation. They are the lead on managing user access to the allocation and permissions for the /projects storage directory. The **HPC Lead** and **HPC Alternate Lead** are **required to have NREL HPC accounts** and will be contacted for approving changes to the allocation's user list.
+The **HPC Lead** is the person with primary responsibility for the computational work of the allocation. They are the lead on managing user access to the allocation and permissions for the /projects storage directory. The **HPC Lead** and **HPC Alternate Lead** are **required to have NLR HPC accounts** and will be contacted for approving changes to the allocation's user list.
 
 ![image](../../assets/images/Lex/contacts.png)
 
@@ -81,7 +81,7 @@ The **Computational Approach** should be a high-level HPC-centric abstract of th
 
 You can save your request as many times as needed, but once it's submitted you will need to contact HPC Operations to change it. Be sure that you selected the **Pilot Request** option if your request is under 150,000 AUs. 
 
-After you have submitted your project, it will undergo an initital screening and a Technical Readiness Review. You may be contacted by the NREL HPC team with questions; please resond to these emails as soon as possible to ensure your request can be processed on time. 
+After you have submitted your project, it will undergo an initital screening and a Technical Readiness Review. You may be contacted by the NLR HPC team with questions; please resond to these emails as soon as possible to ensure your request can be processed on time. 
 
 For further information on allocations and how to request one, please visit the [Resource Allocations page.](https://www.nrel.gov/hpc/resource-allocation-requests.html)  
 
@@ -101,7 +101,7 @@ To add users, click the "Add User" button and enter the user's email. Repeat for
 ![image](../../assets/images/Lex/lex-manage-users.png)
 
 
-Users who have an existing NREL HPC account will be added to the allocation group and permissions will be granted within 24 hours. 
+Users who have an existing NLR HPC account will be added to the allocation group and permissions will be granted within 24 hours. 
 Otherwise, they will be sent an email invitation to request an account and will be listed in the "Pending Invitations" list until their account has been created. You can cancel an invitation by selecting the "Cancel" button and clicking "Submit Changes". 
 
 ## Tracking Allocation Usage
@@ -119,7 +119,7 @@ On the "AU Use Report" page, the "Project Use" section lists all of the systems 
 
 #### aus_report Command Line Utility
 
-There is a CLI utility `aus_report` available on NREL HPC systems to track your AU usage. This utility uses the data from Lex to output AU usage information on a per-allocation and per-user basis. Please refer to Lex in the case of an discrepancies. Run `aus_report --help` for more information. 
+There is a CLI utility `aus_report` available on NLR HPC systems to track your AU usage. This utility uses the data from Lex to output AU usage information on a per-allocation and per-user basis. Please refer to Lex in the case of an discrepancies. Run `aus_report --help` for more information. 
 
 ### Jobs Data
 
