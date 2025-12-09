@@ -27,6 +27,7 @@ $ cd /projects/<projectname>/<username>/
 Load the Nvidia HPC programming environment
 ```
 $ module load PrgEnv-nvhpc/8.5.0
+$ module load nccl/2.21.5_cuda124
 ```
 
 Check available conda modules and load one
@@ -42,6 +43,7 @@ Create a new environment named ‘myEnv’ in the current directory
 
 ```
 $ conda create --prefix ./myEnv
+$ conda install python==3.12.4
 ```
 
 Activate your new environment
@@ -64,6 +66,12 @@ $ ln -s /scratch/<username>/ scratch
 The above command will create a symbolic link to the `scratch` folder, which can be navigated to from JupyterHub to access files in your scratch directory.
 
 ## Install packages
+
+qiskit-aer-gpu : ["Aer is a high performance simulator for quantum circuits written in Qiskit, that includes realistic noise models."](https://pypi.org/project/qiskit-aer-gpu/)
+```
+pip install qiskit-aer-gpu
+pip install pylatexenc
+```
 
 CuPy : [“An open-source array library for GPU-accelerated computing with Python”](https://cupy.dev/)
 ```
@@ -121,11 +129,11 @@ The text in the red box shows an example of the output parameter `<nodename>` an
 
 <!-- ![<alphabet soup>](metadata/alphabetSoup.png "<alphabet soup>") -->
 
-### GPU compatible modules: E.g. CuPy, numba-cuda etc.
+### GPU compatible modules: E.g. Qiskit, CuPy, numba-cuda etc.
 
 1. Kestrel: Launch an interactive job
     ```
-    $ salloc -A <projectname> -t 00:15:00 --partition=debug --gres=gpu:1
+    $ salloc -A <projectname> -t 01:00:00 --nodes=1 --ntasks-per-node=32 --mem=80G --gres=gpu:1 --partition=debug
     $ module load anaconda3/2024.06.1
     $ conda activate ./myEnv
     $ jupyter-lab --no-browser --ip=$(hostname -s)
@@ -144,9 +152,13 @@ The text in the red box shows an example of the output parameter `<nodename>` an
 
     File > New > Notebook > myEnvJupyter
 
+[Jupyter test notebook for Qiskit](./exampleNotebooks/qcBenchmark.ipynb)
+
 [Jupyter test notebook for CuPy](./exampleNotebooks/cupyOnly.ipynb)
 
 [Jupyter test notebook for numba-cuda](./exampleNotebooks/numbaCUDA.ipynb)
+
+![<qcScaling>](metadata/qcScaling.png "qcScaling"){width=800}
 
 ### Multithread capable modules: E.g. Dask
 

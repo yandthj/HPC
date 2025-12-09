@@ -18,6 +18,7 @@ parent: Programming Languages
 The [Interactive Parallel Python with Jupyter](./KestrelParallelPythonJupyter/pyEnvsAndLaunchingJobs.md) page demonstrates various examples of using popular parallel Python packages from a Jupyter notebook.
 
 * Example notebooks to download and test:
+    * [Qiskit](./KestrelParallelPythonJupyter/exampleNotebooks/qcBenchmark.ipynb)
     * [cupy](./KestrelParallelPythonJupyter/exampleNotebooks/cupyOnly.ipynb)
     * [numbaCUDA](./KestrelParallelPythonJupyter/exampleNotebooks/numbaCUDA.ipynb)
     * [cupy ipyparallel](./KestrelParallelPythonJupyter/exampleNotebooks/cupyAndIpyparallel.ipynb)
