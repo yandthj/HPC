@@ -1,119 +1,79 @@
-# Running STAR-CCM+ Software
+# Running CONVERGE Software
+
+CONVERGE is a computational fluid dynamics (CFD) software package known for its automated meshing, high-fidelity combustion models, and efficiency on complex moving-geometry simulations (like engines, pumps, compressors, injectors, turbines, etc.). For more information about the software's features, see the [CONVERGE
+website](https://convergecfd.com/).
+
+The latest version of CONVERGE installed on Kestrel is version 5.1.0 (default).
+
+## Tips
+
+- **Licensing:**  
+   NREL has one general-use CONVERGE license available. If you expect to run CONVERGE jobs frequently, we recommend obtaining your own license. To do this, please contact ITS to set up a license server for you and provide the port number and server name. 
+
+- **Running CONVERGE-STUDIO:**  
+   The running of CONVERGE GUI (CONVERGE-STUDIO) is not supported on Kestrel as it requires openssl/1.1.1 which is not available.	 
+	 
+
+## Running CONVERGE Job in Batch Mode
+
+To run CONVERGE in batch mode: First, build your simulation and place all input files somewhere within your project directory. Then, create a Slurm script (as shown below) to submit the job. The Slurm script should be saved in the same directory as your input files.
+
+In the following examples, Slurm scripts are provided for submitting CONVERGE jobs using Intel MPI or Open MPI.
 
 
-Simcenter STAR-CCM+ is a multiphysics CFD software that enables CFD engineers to model the complexity and explore the possibilities of products operating under real-world conditions. For information about the software's features, see the [STAR-CCM+
-website](https://mdx.plm.automation.siemens.com/star-ccm-plus).
+### Running CONVERGE with Intel MPI
 
-STAR-CCM+ is installed on Kestrel but it is not supported on Vermilion or Swift. The only available version is starccm/20.02.007.
-
-!!! tip "Important"
-	 NREL does not have general use STAR-CCM+ licenses available. Users must have their own STAR-CCM+ license. For help with using your 		 license on NREL HPC, please contact [HPC-Help](mailto:hpc-help@nrel.gov).
-
-## Running STAR-CCM+ in GUI
-
-STAR-CCM+ can be run interactively on Kestrel using X windows by running the following commands in the terminal of an X window.
-
-```bash
-module load starccm
-starccm+
-```
-
-## Running STAR-CCM+ in Batch Mode
-
-To run STAR-CCM+ in batch mode, first, you need to build your simulation `<your_simulation.sim>` and
-put it in your project directory:
-
-```bash
-ls /projects/<your_project>/sim_dir
-your_simulation.sim
-```
-
-Then you need to create a Slurm script `<your_scriptfile>` as shown below to submit the job:
-
-???+ example "Example Submission Script"
-
-    ```bash
-    #!/bin/bash -l
-    #SBATCH --time=2:00:00             # walltime limit of 2 hours
-    #SBATCH --nodes=2                  # number of nodes
-    #SBATCH --ntasks-per-node=96       # number of tasks per node (<=104 on Kestrel)
-    #SBATCH --ntasks=192                # total number of tasks
-    #SBATCH --job-name=your_simulation # name of job
-    #SBATCH --account=<allocation-id>  # name of project allocation
+	#!/bin/bash
+	#SBATCH -N 2                       # number of nodes
+	#SBATCH --ntasks-per-node=24       # tasks per node
+	#SBATCH --partition shared         # partition
+	#SBATCH --account <allocation-id>  # name of project allocation 
+	#SBATCH -o converge-%j.out         # name of standard output file of Slurm 
+	#SBATCH -e converge-%j.err         # name of error file of Slurm
+	#SBATCH --time=01:00:00            # time
+	
+	module purge
+	module load converge               # load CONVERGE module
+	module load intel-oneapi-mpi       # load intel mpi
+	unset I_MPI_PMI_LIBRARY            # unset library as the hydra process manager will be found
+	
+	mpiexec converge-intel-el8 --license super > outputfilename.out
     
-    module load starccm                # load starccm module
-    
-    rm -rf /projects/<your_project>/sim_dir/simulation.log   # remove the log file from last run
-    # Run Job
-    
-    echo "------ Running Starccm+ ------"
-        
-    starccm+ -np $SLURM_NTASKS -batch /projects/<your_project>/sim_dir/your_simulation.sim >> simulation.log
-    
-    echo "------ End of the job ------"
-    ```
+### Running CONVERGE with Open MPI
 
-Note that you must give the full path of your input file in the script.
+	#!/bin/bash
+	#SBATCH -N 2                       # number of nodes
+	#SBATCH --ntasks-per-node=24       # tasks per node
+	#SBATCH --partition shared         # partition
+	#SBATCH --account <allocation-id>  # name of project allocation 
+	#SBATCH -o converge-%j.out         # name of standard output file of Slurm 
+	#SBATCH -e converge-%j.err         # name of error file of Slurm
+	#SBATCH --time=01:00:00            # time
+	
+	module purge
+	module load converge               # load CONVERGE module
+	module load openmpi       # load intel mpi
+	
+	mpiexec converge-ompi-el8 --license super > outputfilename.out
 
-By default, STAR-CCM+ uses OpenMPI. However, the performance of OpenMPI on Kestrel is poor when running on multiple nodes. Intel MPI and Cray MPI are recommended for STAR-CCM+ on Kestrel. Cray MPI is expected to have a better performance than Intel MPI. 
+### Using Your Own License
+If you have your own license installed on NREL’s license server, connect to it by setting the RLM_LICENSE variable in your Slurm script. Your Slurm script will look like the following example for Intel MPI:
 
-### Running STAR-CCM+ with Intel MPI
-
-STAR-CCM+ comes with its own Open MPI and Intel MPI. To use the Intel MPI, the Slurm script should be modified to be:
-
-???+ example "Example Intel MPI Submission Script"
-
-    ```bash
-    #!/bin/bash -l
-    #SBATCH --time=2:00:00             # walltime limit of 2 hours
-    #SBATCH --nodes=2                  # number of nodes
-    #SBATCH --ntasks-per-node=96       # number of tasks per node (<=104 on Kestrel)
-    #SBATCH --ntasks=192                # total number of tasks
-    #SBATCH --job-name=your_simulation # name of job
-    #SBATCH --account=<allocation-id>  # name of project allocation
-    
-    module load starccm                # load starccm module
-    
-    export UCX_TLS=tcp                 # telling IntelMPI to treat the network as ethernet (Kestrel Slingshot can be thought of as ethernet) 
-                                       # by using the tcp protocol
-    
-    rm -rf /projects/<your_project>/sim_dir/simulation.log   # remove the log file from last run
-    # Run Job
-    
-    echo "------ Running Starccm+ ------"
-        
-    starccm+ -mpi intel -np $SLURM_NTASKS -batch /projects/<your_project>/sim_dir/your_simulation.sim >> simulation.log
-    
-    echo "------ End of the job ------"
-    ```
-
-We are specifying the MPI to be Intel MPI in the launch command. By default, Intel MPI thinks the network on which it is running is Infiniband. Kestrel’s is Slingshot, which you can think of as ethernet on steroids. The command `export UCX_TLS=tcp` is telling Intel MPI to treat the network as ethernet by using the tcp protocol.
-
-To modify the settings for built-in Intel MPI, users can refer to the documentation of STAR-CCM by running `starccm+ --help`.
-
-### Running STAR-CCM+ with Cray MPI
-
-STAR-CCM+ does not come with its own Cray MPI, but it can run using the one installed on Kestrel. In the current STAR-CCM+ version, there is a bug that it clears all loaded modules if Crayex is specified. To overcome this, we devised a solution by reloading the required modules in the wrapper. However, this will break the Open MPI and Intel MPI. In this case, we installed two starccm versions: one for Open MPI and Intel MPI (default starccm module), and the other one for Cray MPI (starccm/20.02.007_crayex). The following Slurm script submits a STAR-CCM+ job to run with Cray MPI. The craympich module is not loaded in the slurm script as it has been loaded from the wrapper.
-
-???+ example "Example Cray MPI Script"
-
-    ```bash
-    #!/bin/bash -l
-    #SBATCH --time=2:00:00             # walltime limit of 2 hours
-    #SBATCH --nodes=2                  # number of nodes
-    #SBATCH --ntasks-per-node=96       # number of tasks per node (<=104 on Kestrel)
-    #SBATCH --ntasks=192                # total number of tasks
-    #SBATCH --job-name=your_simulation # name of job
-    #SBATCH --account=<allocation-id>  # name of project allocation
-    
-    module load starccm/20.02.007_crayex                # load starccm module
-    
-    rm -rf /projects/<your_project>/sim_dir/simulation.log   # remove the log file from last run
-    # Run Job
-    
-    echo "------ Running Starccm+ ------"
-        
-    starccm+ -mpi crayex -np $SLURM_NTASKS -batch /projects/<your_project>/sim_dir/your_simulation.sim >> simulation.log
-    
-    echo "------ End of the job ------"
-    ```
+	#!/bin/bash
+	#SBATCH -N 2                       # number of nodes
+	#SBATCH --ntasks-per-node=24       # tasks per node
+	#SBATCH --partition shared         # partition
+	#SBATCH --account <allocation-id>  # name of project allocation 
+	#SBATCH -o converge-%j.out         # name of standard output file of Slurm 
+	#SBATCH -e converge-%j.err         # name of error file of Slurm
+	#SBATCH --time=01:00:00            # time
+	
+	module purge
+	module load converge               # load CONVERGE module
+	
+	export RLM_LICENSE=<port number>@<host name or IP> # connect to your own license
+	
+	module load intel-oneapi-mpi       # load intel mpi
+	unset I_MPI_PMI_LIBRARY            # unset library as the hydra process manager will be found
+	
+	mpiexec converge-intel-el8 --license super > outputfilename.out
