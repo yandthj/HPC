@@ -10,7 +10,7 @@ Press "F1" to open the command bar, and type or search for `Remote-SSH: Connect 
 
 You may then enter your HPC username and the address of an HPC system to connect to. 
 
-* To connect to Kestrel from the NREL VPN, enter `username@kestrel.hpc.nrel.gov`, replacing "username" with your HPC user name.
+* To connect to Kestrel from the NLR VPN, enter `username@kestrel.hpc.nrel.gov`, replacing "username" with your HPC user name.
 
 * To connect to Kestrel as an external collaborator, enter `username@kestrel.nrel.gov`, replacing "username" with your HPC user name.
 

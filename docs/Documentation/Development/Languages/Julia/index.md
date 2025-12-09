@@ -9,7 +9,7 @@ parent: Programming Languages
 
 *Julia is a dynamic programming language that offers high performance while being easy to learn and develop code in.*
 
-This section contains demos (in the form of scripts and notebooks) and how-to guides for doing various things with Julia on NREL HPC environments.
+This section contains demos (in the form of scripts and notebooks) and how-to guides for doing various things with Julia on NLR HPC environments.
 
 ## Available modules
 

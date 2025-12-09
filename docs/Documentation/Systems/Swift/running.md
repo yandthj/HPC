@@ -117,7 +117,7 @@ Usage is tracked on the basis of:
 
 ### AU Calculation Examples
 
-AU calculations are performed automatically between the Slurm scheduler and [Lex](https://hpcprojects.nrel.gov)(NREL's web-based allocation tracking/management software). The following calculations are approximations to help illustrate how your AU will be consumed based on your job resource requests and are approximations only:
+AU calculations are performed automatically between the Slurm scheduler and [Lex](https://hpcprojects.nrel.gov)(NLR's web-based allocation tracking/management software). The following calculations are approximations to help illustrate how your AU will be consumed based on your job resource requests and are approximations only:
 
 A request of 1 GPU, up to 24 CPU cores, and up to 256GB RAM will be charged at 12.5 AU/hr:
 
@@ -436,5 +436,5 @@ task    thread             node name  first task    # on node  core
 
 ## VASP, Jupyter, Julia, and Other Applications on Swift
 
-Please see the relevant page in the [Applications](https://nrel.github.io/HPC/Documentation/Applications/) section for more information on using applications on Swift and other NREL clusters.
+Please see the relevant page in the [Applications](https://nrel.github.io/HPC/Documentation/Applications/) section for more information on using applications on Swift and other NLR clusters.
 

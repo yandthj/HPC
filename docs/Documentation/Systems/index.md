@@ -5,8 +5,8 @@ has_children: true
 order: 4
 ---
 
-# NREL Systems
-NREL operates three on-premises systems for computational work. 
+# NLR Systems
+NLR operates three on-premises systems for computational work. 
 
 ## System Configurations
 

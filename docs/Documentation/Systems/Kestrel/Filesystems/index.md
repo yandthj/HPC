@@ -7,7 +7,7 @@ title: Filesystems
 
 ## Home File System
 
-The Home File System (HFS) on Kestrel is part of the ClusterStor used for the Parallel File System (PFS), providing highly reliable storage for user home directories and NREL-specific software. HFS has 1.2 petabytes (PB) of capacity.
+The Home File System (HFS) on Kestrel is part of the ClusterStor used for the Parallel File System (PFS), providing highly reliable storage for user home directories and NLR-specific software. HFS has 1.2 petabytes (PB) of capacity.
 
 **/home**
 
@@ -20,7 +20,7 @@ The /home directory on Kestrel is intended to hold small files. These include sh
 
 **/nopt**
 
-The /nopt directory on Kestrel resides on HFS and is where NREL-specific software, module files, licenses, and licensed software are kept.
+The /nopt directory on Kestrel resides on HFS and is where NLR-specific software, module files, licenses, and licensed software are kept.
 
 ## Parallel File System
 
@@ -78,7 +78,7 @@ To request a /shared-projects directory, please contact [hpc-help@nrel.gov](mail
 
 The /kfs2/datasets directory on Kestrel hosts widely used data sets.
 
-There are multiple big data sets that are commonly used across various projects for computation and analysis on NREL's HPC Systems. We provide a common location on Kestrel's filesystem at /kfs2/datasets, where these data sets are available for global reading by all compute nodes. Each data set contains a readme file that covers background, references, explanation of the data structure, and Python examples.
+There are multiple big data sets that are commonly used across various projects for computation and analysis on NLR's HPC Systems. We provide a common location on Kestrel's filesystem at /kfs2/datasets, where these data sets are available for global reading by all compute nodes. Each data set contains a readme file that covers background, references, explanation of the data structure, and Python examples.
 
 These datasets include: 
 

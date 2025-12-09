@@ -1,6 +1,6 @@
 # Shell Startup
 
-*When you login to a linux-based machine you interact with the operating system via a program called a shell.  There are various types of shell programs.  One of the more common is **bash**.  Bash is the default shell on NREL's HPC platforms.  This document describes ways you can customize your shell's &#151; in particular, bash's &#151; behavior.*
+*When you login to a linux-based machine you interact with the operating system via a program called a shell.  There are various types of shell programs.  One of the more common is **bash**.  Bash is the default shell on NLR's HPC platforms.  This document describes ways you can customize your shell's &#151; in particular, bash's &#151; behavior.*
 
 
 
@@ -24,7 +24,7 @@ When you login, the file .bash_profile is sourced (run) to set up your environme
 Here is the default version of .bash_profile:  
 
 ```
-[nreluser@kl2 ~] CPU $ cat ~/.bash_profile
+[nlruser@kl2 ~] CPU $ cat ~/.bash_profile
 # .bash_profile
 
 # Get the aliases and functions
@@ -49,7 +49,7 @@ Now, let's look at the default ~/.bashrc file:
 
 
 ```
-[nreluser@kl2 ~] CPU $ cat ~/.bashrc
+[nlruser@kl2 ~] CPU $ cat ~/.bashrc
 # .bashrc
 
 # Source global definitions

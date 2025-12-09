@@ -4,7 +4,7 @@
 
 
 ## Getting Started
-This section walks through how to compile and run a basic Fortran code, and then a basic Fortran MPI code, adapted from [here](https://github.com/NREL/HPC/tree/master/languages/fortran). See [Compilers and Toolchains](#compilers-and-toolchains) for compiler and programming environment information on NREL HPC systems. For an extensive guide to Fortran 90, see our page on [Advanced Fortran](f90_advanced.md). See [External Resources](#external-resources) for general Fortran language tutorials and Fortran-MPI tutorials.  
+This section walks through how to compile and run a basic Fortran code, and then a basic Fortran MPI code, adapted from [here](https://github.com/NREL/HPC/tree/master/languages/fortran). See [Compilers and Toolchains](#compilers-and-toolchains) for compiler and programming environment information on NLR HPC systems. For an extensive guide to Fortran 90, see our page on [Advanced Fortran](f90_advanced.md). See [External Resources](#external-resources) for general Fortran language tutorials and Fortran-MPI tutorials.  
 
 ### Hello World
 

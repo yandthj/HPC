@@ -7,17 +7,18 @@ parent: Programming Languages
 
 # Python
 
-## NREL HPC Documentation
+## NLR HPC Documentation
 * [Anaconda virtual environments](../../../Environment/Customization/conda.md): Utilize a specific version of Python and install packages within a conda environment.
 * [Dask](dask.md): Parallelize your Python code using the Python-native package [Dask](https://www.dask.org).
-* [Intro to Jupyter notebooks](../../Jupyter/index.md): Run interactive Jupyter notebooks on NREL HPC systems.
-* [Interactive Parallel Python with Jupyter](./KestrelParallelPythonJupyter/pyEnvsAndLaunchingJobs.md): Examples of launching parallel Python code from Jupyter notebooks on NREL HPC systems.
+* [Intro to Jupyter notebooks](../../Jupyter/index.md): Run interactive Jupyter notebooks on NLR HPC systems.
+* [Interactive Parallel Python with Jupyter](./KestrelParallelPythonJupyter/pyEnvsAndLaunchingJobs.md): Examples of launching parallel Python code from Jupyter notebooks on NLR HPC systems.
 
 ## Interactive Tutorials
 
 The [Interactive Parallel Python with Jupyter](./KestrelParallelPythonJupyter/pyEnvsAndLaunchingJobs.md) page demonstrates various examples of using popular parallel Python packages from a Jupyter notebook.
 
 * Example notebooks to download and test:
+    * [Qiskit](./KestrelParallelPythonJupyter/exampleNotebooks/qcBenchmark.ipynb)
     * [cupy](./KestrelParallelPythonJupyter/exampleNotebooks/cupyOnly.ipynb)
     * [numbaCUDA](./KestrelParallelPythonJupyter/exampleNotebooks/numbaCUDA.ipynb)
     * [cupy ipyparallel](./KestrelParallelPythonJupyter/exampleNotebooks/cupyAndIpyparallel.ipynb)

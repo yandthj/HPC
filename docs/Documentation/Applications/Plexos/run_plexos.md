@@ -24,7 +24,7 @@ We will load the requisite modules for running PLEXOS 9.2R06 for this example. P
 module load plexos/9.200R06
 ```
 
-Recall that we can only use the Gurobi solver while running the PLEXOS on the NREL cluster. Now that we have the modules loaded, PLEXOS can be called as follows
+Recall that we can only use the Gurobi solver while running the PLEXOS on the NLR cluster. Now that we have the modules loaded, PLEXOS can be called as follows
 
 ```bash
 $PLEXOS/PLEXOS64 -n 5_bus_system_v2.xml -m 2024_yr_15percPV_MT_Gurobi

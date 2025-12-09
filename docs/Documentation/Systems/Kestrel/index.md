@@ -14,14 +14,14 @@ Kestrel is configured to run compute-intensive and parallel computing jobs. It i
 Please see the [System Configurations](../index.md) page for more information about hardware, storage, and networking.
 
 ## Accessing Kestrel
-Access to Kestrel requires an NREL HPC account and permission to join an existing allocation. Please see the [System Access](https://www.nrel.gov/hpc/system-access.html) page for more information on accounts and allocations.
+Access to Kestrel requires an NLR HPC account and permission to join an existing allocation. Please see the [System Access](https://www.nrel.gov/hpc/system-access.html) page for more information on accounts and allocations.
 
 Kestrel has two types of login nodes, CPU and GPU, which share the same architecture as the corresponding compute nodes. You should use the CPU login nodes to compile software for use on and to submit jobs to the CPU compute nodes, and the GPU login nodes for GPU jobs.  
 
 
-#### For NREL Employees:
+#### For NLR Employees:
 
-Users on an NREL device may connect via ssh to Kestrel from the NREL network using:
+Users on an NLR device may connect via ssh to Kestrel from the NLR network using:
 
 * kestrel.hpc.nrel.gov (CPU)
 * kestrel-gpu.hpc.nrel.gov (GPU)
@@ -59,8 +59,8 @@ There are eight DAV nodes available on Kestrel, which are nodes intended for HPC
 
 [FastX](https://nrel.github.io/HPC/Documentation/Viz_Analytics/virtualgl_fastx/) is available for HPC users to use graphical applications on the DAV nodes.
 
-To connect to a DAV node using the load balancing algorithim, NREL employees can connect to **kestrel-dav.hpc.nrel.gov**. To connect from outside the NREL network, use **kestrel-dav.nrel.gov**. 
+To connect to a DAV node using the load balancing algorithim, NLR employees can connect to **kestrel-dav.hpc.nrel.gov**. To connect from outside the NLR network, use **kestrel-dav.nrel.gov**. 
 
 
 ## Get Help With Kestrel
-Please see the [Help and Support Page](../../help.md) for further information on how to seek assistance with Kestrel or your NREL HPC account. 
+Please see the [Help and Support Page](../../help.md) for further information on how to seek assistance with Kestrel or your NLR HPC account. 
