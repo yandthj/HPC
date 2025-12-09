@@ -398,7 +398,7 @@ Here we build and run a single GPU code stream.cu. This code is a standard bench
 
 Steam.cu runs a standard benchmark showing the computational speed of the gpu for simple math operations.
 
-We use nvhpc-nompi which is a NREL written environment that builds cuda programs without MPI and run on each of the GPUs one at a time.
+We use nvhpc-nompi which is a NLR written environment that builds cuda programs without MPI and run on each of the GPUs one at a time.
 
 ??? example "cuda/nvidia"
 	```bash
@@ -578,7 +578,7 @@ However, if we load the modules craype and cray-mpich-abi the Intel MPI library 
 
 ## mpi/normal/nvidia/nrelopenmpi
 
-In this case we are building normal MPI programs but using a NREL built OpenMPI and a NREL installed version of NVIDIA's environment.  This particular OpenMPI was built using NVIDIA's compilers and thus is more compatible with other NVIDIA packages.  NREL's MPI versions are built with slurm support so these programs are launched with srun.
+In this case we are building normal MPI programs but using a NLR built OpenMPI and a NLR installed version of NVIDIA's environment.  This particular OpenMPI was built using NVIDIA's compilers and thus is more compatible with other NVIDIA packages.  NLR's MPI versions are built with slurm support so these programs are launched with srun.
 
 ??? example "mpi/normal/nvidia/nrelopenmpi"
 	```bash
@@ -730,7 +730,7 @@ Since PrgEnv-* is compatible with slurm we launch using srun. We do a on-node an
 
 This example is a MPI ping-pong test where the data starts and ends up on a GPU but passes through CPU memory.  See the explanation in the previous example.
 
-We are using ml openmpi/4.1.6-nvhpc and ml nvhpc-nompi/24.1.  These supply a NREL built version of OpenMPI with NVIDIA's backend compilers.
+We are using ml openmpi/4.1.6-nvhpc and ml nvhpc-nompi/24.1.  These supply an NLR built version of OpenMPI with NVIDIA's backend compilers.
 
 Here we use mpiCC. If we were compiling Fortran then ftn instead of CC.  These are wrappers that point to Cray MPI.
 
@@ -754,7 +754,7 @@ Since PrgEnv-* is compatible with slurm we launch using srun. We do a on-node an
 	
 	: << ++++ 
 	 Compile our program
-	 Here we use mpiCC which uses, in this case a NREL built  version
+	 Here we use mpiCC which uses, in this case an NLR built  version
 	 of MPI and Nvidia's backend compiler. 
 	++++
 	
@@ -1032,7 +1032,7 @@ As discussed above this is a somewhat contrived example.  If does, in fact combi
 
 Here we load openmpi/4.1.6-nvhpc and  nvhpc-nompi/24.1 which together give us a Cuda aware MPI with NVIDIA's OpenACC compile capability.
 
-We launch with srun since NREL's OpenMPI supports the slurm scheduler.
+We launch with srun since NLR's OpenMPI supports the slurm scheduler.
 
 ??? example "mpi/openacc/nvidia/nrelopenmpi"
     ```bash
