@@ -1,10 +1,10 @@
---- la*For large data transfers between NLR's high-performance computing (HPC)out: default 
+--- layout: default
 title: Globus 
 grand_parent: Data Movement 
 parent: Transferring Data ---
 # Transferring Files with Globus
 
-*For large data transfers between NREL’s high-performance computing (HPC)
+*For large data transfers between NLR’s high-performance computing (HPC)
 systems and another data center, or even a laptop off-site, we recommend using
 Globus.*
 
