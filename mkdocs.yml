@@ -78,6 +78,7 @@ nav:
           - Documentation/Applications/index.md
           - AlphaFold:  Documentation/Applications/alphafold.md
           - ANSYS CFD:  Documentation/Applications/ansys.md
+          - CONVERGE CFD:  Documentation/Applications/converge.md
           - ExaWind:  Documentation/Applications/exawind.md
           - Chemical Kinetics: Documentation/Applications/chemicalKinetics.md
           - COMSOL:     Documentation/Applications/comsol.md
