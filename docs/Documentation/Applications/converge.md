@@ -8,7 +8,7 @@ The latest version of CONVERGE installed on Kestrel is version 5.1.0 (default).
 ## Tips
 
 - **Licensing:**  
-   NREL has one general-use CONVERGE license available. If you expect to run CONVERGE jobs frequently, we recommend obtaining your own license. To do this, please contact ITS to set up a license server for you and provide the port number and server name. 
+   NRL has one general-use CONVERGE license available. If you expect to run CONVERGE jobs frequently, we recommend obtaining your own license. To do this, please contact ITS to set up a license server for you and provide the port number and server name. 
 
 - **Running CONVERGE-STUDIO:**  
    The running of CONVERGE GUI (CONVERGE-STUDIO) is not supported on Kestrel as it requires openssl/1.1.1 which is not available.	 
