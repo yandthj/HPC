@@ -30,7 +30,9 @@ Please see the [Help and Support Page](../../help.md) for further information on
 
 ## Building code
 
-Do not build or run code on login nodes. Login nodes have limited CPU and memory available. Use a compute or GPU node instead. Simply start an interactive job on an appropriately provisioned node and partition for your work and do your builds there. Similarly, build your projects under `/projects/your_project_name/` as home directories are **limited to 5GB** per user.
+Do not build or run code on login nodes. Login nodes have limited CPU and memory available. Use a compute or GPU node instead. Simply start an interactive job on an appropriately provisioned node and partition for your work and do your builds there. 
+
+Similarly, build your projects under `/projects/your_project_name/` as home directories are **limited to 5GB** per user.
 
 
 ---
