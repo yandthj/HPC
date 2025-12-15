@@ -24,7 +24,7 @@ A list of partitions can be found by running the `sinfo` command.  Here are the 
 | Partition Name                          | CPU | Qty | RAM    | Cores/node | /var/scratch <br>1K-blocks | AU Charge Factor | 
 | :--:                               | :--: | :--:    | :--:             | :--:   | :--: | :--: |                         
 | gpu<br>*NVIDIA Tesla A100-40*<br>      |  Intel Xeon Icelake |  1  | 910 GB |   42            |  6,240,805,336| 12 |      
-| amd                                | AMD Epyc Milan |  36  | 220 GB |   60            |   1,031,070,000| 7 |
+| amd                                | 2x 30 Core AMD Epyc Milan |  36  | 220 GB |   60            |   1,031,070,000| 7 |
 
 ### Allocation Unit (AU) Charges
 
