@@ -1,6 +1,6 @@
 # Running on Gila
 
-*This page discusses the compute nodes, partitions, and gives some examples of building and running applications.*
+This page discusses the compute nodes, partitions, and gives some examples of building and running applications.
 
 
 ## About Gila
@@ -24,7 +24,7 @@ A list of partitions can be found by running the `sinfo` command.  Here are the 
 | Partition Name                          | CPU | Qty | RAM    | Cores/node | /var/scratch <br>1K-blocks | AU Charge Factor | 
 | :--:                               | :--: | :--:    | :--:             | :--:   | :--: | :--: |                         
 | gpu<br>*NVIDIA Tesla A100-40*<br>      |  Intel Xeon Icelake |  1  | 910 GB |   42            |  6,240,805,336| 12 |      
-| cpu-amd                                | AMD Epyc Milan |  36  | 220 GB |   120            |   1,031,070,000| 7 |
+| amd                                | AMD Epyc Milan |  36  | 220 GB |   60            |   1,031,070,000| 7 |
 
 ### Allocation Unit (AU) Charges
 
@@ -36,7 +36,7 @@ The Walltime is the actual length of time that the job runs, in hours or fractio
 
 The **Charge Factor** for each partition is listed in the table above. 
 
-*Add example AU calculation, like Swift page*
+<!--  *Add example AU calculation, like Swift page* -->
 
 ### Operating Software
 
