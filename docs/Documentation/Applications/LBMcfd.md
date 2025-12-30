@@ -100,6 +100,7 @@ Results can be viewed in [ParaView](../Viz_Analytics/paraview.md) or [VisIT](../
 !!! Warning
 	Please close the application when not actively using it. The license of this product allows only one user at a time.
 
+#### GUI single node
 The M-Star GUI can be accessed though a [FastX virtual desktop](../Viz_Analytics/virtualgl_fastx.md). M-Star is a resource intensive application whose backend uses Cuda aware OpenMPI to utilize multiple GPUs for computation. The application should always be run on a dedicated compute node while you can interact with the GUI through a FastX session. The steps to use M-Star are as follows:
 
 1. Open a terminal in a FastX session and ask for an [allocation](../Slurm/interactive_jobs.md). For example,
@@ -118,6 +119,45 @@ $ mstar
 ```
 
 The above process will let you use utilize 64 cores, 160 GB of RAM and 2 GPUs for 1 hour, as requested in the `salloc` command above.
-Users can try examples [tutorials](https://docs.mstarcfd.com/1a_Tutorials/index.html) from the offical documentation. The [Simple Agitated Tank example](https://docs.mstarcfd.com/1a_Tutorials/simple-agitated-tank.html) which is relevant to bioreactors has been tested successfully on Kestrel. 
+Users can try examples [tutorials](https://docs.mstarcfd.com/1a_Tutorials/index.html) from the offical documentation. The [Simple Agitated Tank example](https://docs.mstarcfd.com/1a_Tutorials/simple-agitated-tank.html) which is relevant to bioreactors has been tested successfully on Kestrel.
 
+#### Command line multinode
+For using M-Star over multiple nodes, please setup your case with the GUI method above and then click on `File > Export Solver XML File Only`. The process will let you save an xml file with the default name being `input.xml`. This input file can be used to run the application in command line mode. 
 
+##### To run interactively as command line:
+
+1. Open a SSH connection to Kestral terminal and get an [allocation](../Slurm/interactive_jobs.md). For example, to test over 2 nodes with 1 GPU per node,
+```
+$ salloc -A <projectname> -t 00:30:00 --nodes=2 --ntasks-per-node=32 --mem=80G --gres=gpu:1 --partition=debug 
+```
+2. The terminal will display `<username>@<nodename>` when successful.
+```
+$ module load mstar
+$ mpirun --map-by node:PE=1 -x PATH -x LD_LIBRARY_PATH -np 2 mstar-cfd-mgpu -i input.xml -o out --gpu-ids "0,0" 
+```
+
+##### To run in batch mode:
+Typical command line usage would involve submitting the task as a [batch job](../Slurm/batch_jobs.md). An equivalent batch script would be as below: 
+```
+#!/bin/bash
+#SBATCH --account=<projectname>
+#SBATCH --time=00:30:00
+#SBATCH --nodes=2
+#SBATCH --ntasks-per-node=32
+#SBATCH --mem=80G
+#SBATCH --gres=gpu:1
+#SBATCH --partition=debug
+#SBATCH --job-name=mstar_job
+#SBATCH --output=slurm-%j.out
+
+# Load necessary modules
+module load mstar
+
+# Run the application
+mpirun --map-by node:PE=1 -x PATH -x LD_LIBRARY_PATH -np 2 mstar-cfd-mgpu -i input.xml -o out --gpu-ids "0,0"
+```
+Save it to a file named 'jobScipt.sh' and submit it to the queue for execution as follows:
+```
+$ sbatch jobScipt.sh 
+```
+Please note that `--gpu-ids "0,0"` represents id of the  GPUs, in this case, first available GPU of each node. To learn more about command line options, please refer to the [M-Star documentation](https://docs.mstarcfd.com/10_Running_the_Solver/cli.html).  
