@@ -3,6 +3,8 @@
 
 Gila is an OpenHPC-based cluster running on __Dual AMD EPYC 7532 Rome CPUs__ and __Intel Xeon Icelake CPUs with NVidia A100 GPUs__. The nodes run as virtual machines in a local virtual private cloud (OpenStack). Gila is allocated for NLR workloads and intended for LDRD, SPP or Office of Science workloads. Allocation decisions are made by the IACAC through the annual allocation request process. Check back regularly as the configuration and capabilities for Gila are augmented over time.
 
+*TODO: Update information about the allocations (include aurorahpc allocation info)*
+
 ## Accessing Gila
 Access to Gila requires an NLR HPC account and permission to join an existing allocation. Please see the [System Access](https://www.nrel.gov/hpc/system-access.html) page for more information on accounts and allocations.
 
