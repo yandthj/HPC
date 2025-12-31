@@ -147,6 +147,32 @@ to run Ansys on the first GPU:
 
 `vglrun -d :0.0 ansys`
 
+## Applications Available on FastX/DAV Nodes
+
+The following applications can be run on Kestrel DAV nodes through FastX sessions. These applications typically require graphical user interfaces (GUI) and benefit from the hardware-accelerated OpenGL rendering provided by VirtualGL.
+
+### Visualization and Analysis Tools
+
+| Application | Module Command | Launch Command | Quick Start Example |
+|------------|---------------|----------------|-------------------|
+| **ParaView** | `module load paraview/5.11.0-gui` | `vglrun -d :0.1 paraview` | Launch GUI for interactive visualization |
+| **VisIt** | `module load visit` | `visit` | Launch GUI for data visualization |
+
+### Engineering and Simulation Software
+
+| Application | Module Command | Launch Command | Notes |
+|------------|---------------|----------------|-------|
+| **MATLAB** | `module load matlab` | `vglrun matlab` | For interactive GUI usage |
+| **Ansys Workbench** | `module load ansys/<version>` | `vglrun runwb2` | For building models and meshes |
+| **COMSOL** | `module load comsol` | `vglrun comsol` | For building and testing models |
+| **Chemkin (Ansys)** | `module load ansys` | `run_rdworkbench.sh` | Chemkin Reaction Workbench GUI |
+| **M-Star CFD** | `module load mstar` | N/A | Requires compute node with X-forwarding. See [M-Star documentation](../Applications/LBMcfd.md) for setup instructions |
+
+### Development and Profiling Tools
+
+| Application | Module Command | Launch Command | Notes |
+|------------|---------------|----------------|-------|
+| **Linaro Forge (MAP)** | Follow [Linaro Forge instructions](../Development/Performance_Tools/Linaro-Forge/map.md) | `map` | Performance profiling tool |
 
 ## Download FastX Desktop Client
 
