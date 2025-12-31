@@ -5,7 +5,7 @@
 
 ## Compute hosts
 
-Compute nodes in Gila are virtualized nodes running on either __Dual AMD EPYC Milan CPUs__ or __Intel Xeon Icelake CPUs__. These nodes are not configured as exclusive and can be shared by multiple users or jobs. 
+Compute nodes in Gila are virtualized nodes. These nodes are not configured as exclusive and can be shared by multiple users or jobs. 
 
 ## GPU hosts
 
