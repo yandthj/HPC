@@ -9,7 +9,9 @@ Compute nodes in Gila are virtualized nodes running on either __Dual AMD EPYC Mi
 
 ## GPU hosts
 
-GPU nodes available in Gila have NVidia A100 GPU's running on __Intel Xeon Icelake CPUs__.
+GPU nodes available in Gila have NVIDIA A100 GPU's running on __Intel Xeon Icelake CPUs__.
+
+There are also 5 NVIDIA Grace Hopper nodes.
 
 ## Shared file systems
 
