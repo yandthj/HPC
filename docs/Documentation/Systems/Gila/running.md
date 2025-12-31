@@ -19,11 +19,11 @@ Gila's home directories are shared across all nodes. Each user has a quota of 5 
 
 A list of partitions can be found by running the `sinfo` command.  Here are the partitions as of 12/30/2025
 
-| Partition Name                          | CPU | Qty | RAM    | Cores/node |  AU Charge Factor | 
-| :--:                                    | :--:| :--:| :--:   | :--:       |  :--:             |                         
-| gpu<br>*NVIDIA Tesla A100-40*<br>       |  Intel Xeon Icelake |  1  | 910 GB |   42            |   12 |      
-| amd                                | 2x 30 Core AMD Epyc Milan |  36  | 220 GB |   60            |    7 |
-| gh                                |  |  5  | 470 GB |       72       |    7 |
+| Partition Name                          | CPU |  GPU | Qty | RAM    | Cores/node |  AU Charge Factor | 
+| :--:                                    | :--:| :--: | :--:| :--:   | :--:       |  :--:             |                         
+| gpu       |  Intel Xeon Icelake | NVIDIA Tesla A100-80 |  1  | 910 GB |   42            |   12 |      
+| amd                                | 2x 30 Core AMD Epyc Milan |  |  36  | 220 GB |   60            |    7 |
+| gh                                | NVIDIA Grace | GH200 |  5  | 470 GB |       72       |    7 |
 
 ## Allocation Unit (AU) Charges
 
