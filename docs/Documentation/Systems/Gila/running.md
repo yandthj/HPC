@@ -23,7 +23,7 @@ A list of partitions can be found by running the `sinfo` command.  Here are the 
 | :--:                                    | :--:| :--:| :--:   | :--:       |  :--:             |                         
 | gpu<br>*NVIDIA Tesla A100-40*<br>       |  Intel Xeon Icelake |  1  | 910 GB |   42            |   12 |      
 | amd                                | 2x 30 Core AMD Epyc Milan |  36  | 220 GB |   60            |    7 |
-| gh                                |  |  5  |  |              |    7 |
+| gh                                |  |  5  | 470 GB |       72       |    7 |
 
 ## Allocation Unit (AU) Charges
 
