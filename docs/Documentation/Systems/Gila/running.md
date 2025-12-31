@@ -1,32 +1,31 @@
 # Running on Gila
 
-This page discusses the compute nodes, partitions, and gives some examples of building and running applications.
+*Learn about compute nodes and job partitions on Gila.*
 
 
-## About Gila
-
-### Compute hosts
+## Compute hosts
 
 Compute nodes in Gila are virtualized nodes running on either __Dual AMD EPYC Milan CPUs__ or __Intel Xeon Icelake CPUs__. These nodes are not configured as exclusive and can be shared by multiple users or jobs. 
 
-### GPU hosts
+## GPU hosts
 
 GPU nodes available in Gila have NVidia A100 GPU's running on __Intel Xeon Icelake CPUs__.
 
-### Shared file systems
+## Shared file systems
 
-Gila's home directories are shared across all nodes. Each user has a quota of 5 GB. There is also /scratch/$USER and /projects spaces seen across all nodes.
+Gila's home directories are shared across all nodes. Each user has a quota of 5 GB. There are also `/scratch/$USER` and `/projects` spaces seen across all nodes.
 
-### Partitions
+## Partitions
 
-A list of partitions can be found by running the `sinfo` command.  Here are the partitions as of 10/16/2025
+A list of partitions can be found by running the `sinfo` command.  Here are the partitions as of 12/30/2025
 
-| Partition Name                          | CPU | Qty | RAM    | Cores/node | /var/scratch <br>1K-blocks | AU Charge Factor | 
-| :--:                               | :--: | :--:    | :--:             | :--:   | :--: | :--: |                         
-| gpu<br>*NVIDIA Tesla A100-40*<br>      |  Intel Xeon Icelake |  1  | 910 GB |   42            |  6,240,805,336| 12 |      
-| amd                                | 2x 30 Core AMD Epyc Milan |  36  | 220 GB |   60            |   1,031,070,000| 7 |
+| Partition Name                          | CPU | Qty | RAM    | Cores/node |  AU Charge Factor | 
+| :--:                                    | :--:| :--:| :--:   | :--:       |  :--:             |                         
+| gpu<br>*NVIDIA Tesla A100-40*<br>       |  Intel Xeon Icelake |  1  | 910 GB |   42            |   12 |      
+| amd                                | 2x 30 Core AMD Epyc Milan |  36  | 220 GB |   60            |    7 |
+| gh                                |  |  5  |  |              |    7 |
 
-### Allocation Unit (AU) Charges
+## Allocation Unit (AU) Charges
 
 The equation for calculating the AU cost of a job on Gila is: 
 
@@ -38,7 +37,7 @@ The **Charge Factor** for each partition is listed in the table above.
 
 <!--  *Add example AU calculation, like Swift page* -->
 
-### Operating Software
+## Operating Software
 
 The Gila HPC cluster runs on Rocky Linux 9.5.
 

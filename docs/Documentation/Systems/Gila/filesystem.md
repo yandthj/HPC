@@ -12,8 +12,6 @@ Quota usage can be viewed at any time by issuing a `cd` command into the project
 
 ## Scratch Storage: /scratch/username and /scratch/username/jobid
 
-For users who also have Kestrel allocations, please be aware that scratch space on Gila behaves differently, so adjustments to job scripts may be necessary.
-
 The scratch filesystem on Gila compute node is a 79TB spinning disk Ceph filesystem, and is accessible from login and compute nodes. The default writable path for scratch use is `/scratch/<username>`.
 
 ## Temporary space: $TMPDIR 

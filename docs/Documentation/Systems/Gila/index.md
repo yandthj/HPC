@@ -6,7 +6,8 @@ Gila is an OpenHPC-based cluster running on __Dual AMD EPYC 7532 Rome CPUs__ and
 *TODO: Update information about the allocations (include aurorahpc allocation info)*
 
 ## Accessing Gila
-Access to Gila requires an NLR HPC account and permission to join an existing allocation. Please see the [System Access](https://www.nrel.gov/hpc/system-access.html) page for more information on accounts and allocations.
+All NLR employees with an HPC account automatically have access to Gila. Please see the [System Access](https://www.nrel.gov/hpc/system-access.html) page for more information on accounts and allocations.
+
 
 #### For NLR Employees:
 To access Gila, log into the NLR network and connect via ssh:
