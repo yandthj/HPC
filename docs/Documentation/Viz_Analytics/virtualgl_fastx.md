@@ -153,10 +153,10 @@ The following applications can be run on Kestrel DAV nodes through FastX session
 
 ### Visualization and Analysis Tools
 
-| Application | Module Command | Launch Command | Quick Start Example |
-|------------|---------------|----------------|-------------------|
-| **ParaView** | `module load paraview/5.11.0-gui` | `vglrun -d :0.1 paraview` | Launch GUI for interactive visualization |
-| **VisIt** | `module load visit` | `visit` | Launch GUI for data visualization |
+| Application | Module Command | Launch Command | 
+|------------|---------------|----------------|
+| **ParaView** | `module load paraview/5.11.0-gui` | `vglrun -d :0.1 paraview` | 
+| **VisIt** | `module load visit` | `vglrun -d :0.0 visit` | 
 
 ### Engineering and Simulation Software
 
@@ -166,7 +166,7 @@ The following applications can be run on Kestrel DAV nodes through FastX session
 | **Ansys Workbench** | `module load ansys/<version>` | `vglrun runwb2` | For building models and meshes |
 | **COMSOL** | `module load comsol` | `vglrun comsol` | For building and testing models |
 | **Chemkin (Ansys)** | `module load ansys` | `run_rdworkbench.sh` | Chemkin Reaction Workbench GUI |
-| **M-Star CFD** | `module load mstar` | N/A | Requires compute node with X-forwarding. See [M-Star documentation](../Applications/LBMcfd.md) for setup instructions |
+| **M-Star CFD** | `module load mstar` | N/A | Requires compute node. See [M-Star documentation](../Applications/LBMcfd.md) |
 
 ### Development and Profiling Tools
 
