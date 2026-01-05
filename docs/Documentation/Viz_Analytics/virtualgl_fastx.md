@@ -158,9 +158,9 @@ The following applications can be run on Kestrel DAV nodes through FastX session
 | Engineering | **[MATLAB](../Applications/Matlab/index.md)** | `module load matlab` | `vglrun matlab` | For interactive GUI usage |
 | Engineering | **[Ansys Workbench](../Applications/ansys.md)** | `module load ansys/<version>` | `vglrun runwb2` | For building models and meshes |
 | Engineering | **[COMSOL](../Applications/comsol.md)** | `module load comsol` | `vglrun comsol` | For building and testing models |
-| Engineering | **Chemkin (Ansys)** | `module load ansys` | `run_rdworkbench.sh` | Chemkin Reaction Workbench GUI |
-| Engineering | **M-Star CFD** | `module load mstar` | N/A | Requires compute node. See [M-Star documentation](../Applications/LBMcfd.md) |
-| Development | **Linaro Forge (MAP)** | Follow [Linaro Forge instructions](../Development/Performance_Tools/Linaro-Forge/map.md) | `map` | Performance profiling tool |
+| Engineering | **[Chemkin (Ansys)](../Applications/ansys.md)** | `module load ansys` | `run_rdworkbench.sh` | Chemkin Reaction Workbench GUI |
+| Engineering | **[M-Star CFD](../Applications/LBMcfd.md)** | `module load mstar` | N/A | Requires compute node |
+| Development | **[Linaro Forge (MAP)](../Development/Performance_Tools/Linaro-Forge/map.md)** | `module load forge` | `map` | Performance profiling tool |
 
 ## Download FastX Desktop Client
 
