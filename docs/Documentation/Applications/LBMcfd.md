@@ -122,7 +122,7 @@ The above process will let you use utilize 64 cores, 160 GB of RAM and 2 GPUs fo
 Users can try examples [tutorials](https://docs.mstarcfd.com/1a_Tutorials/index.html) from the offical documentation. The [Simple Agitated Tank example](https://docs.mstarcfd.com/1a_Tutorials/simple-agitated-tank.html) which is relevant to bioreactors has been tested successfully on Kestrel.
 
 #### Command line multinode
-For using M-Star over multiple nodes, please setup your case with the GUI method above and then click on `File > Export Solver XML File Only`. The process will let you save an xml file with the default name being `input.xml`. This input file can be used to run the application in command line mode. 
+For using M-Star over multiple nodes, please set up your case with the GUI method above and then click on `File > Export Solver XML File Only`. The process will let you save an xml file with the default name being `input.xml`. This input file can be used to run the application in command line mode. 
 
 ##### Run interactively
 
