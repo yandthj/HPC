@@ -124,7 +124,7 @@ Users can try examples [tutorials](https://docs.mstarcfd.com/1a_Tutorials/index.
 #### Command line multinode
 For using M-Star over multiple nodes, please setup your case with the GUI method above and then click on `File > Export Solver XML File Only`. The process will let you save an xml file with the default name being `input.xml`. This input file can be used to run the application in command line mode. 
 
-##### To run interactively as command line:
+##### Run interactively
 
 1. Open a SSH connection to Kestral terminal and get an [allocation](../Slurm/interactive_jobs.md). For example, to test over 2 nodes with 1 GPU per node,
 ```
