@@ -137,7 +137,7 @@ $ mpirun --map-by node:PE=1 -x PATH -x LD_LIBRARY_PATH -np 2 mstar-cfd-mgpu -i i
 ```
 
 ##### Run in batch mode
-Typical command line usage would involve submitting the task as a [batch job](../Slurm/batch_jobs.md). An equivalent batch script would be as below: 
+Typical command line usage would involve submitting the task as a [batch job](../Slurm/batch_jobs.md). An equivalent batch script example is below: 
 ```
 #!/bin/bash
 #SBATCH --account=<projectname>
