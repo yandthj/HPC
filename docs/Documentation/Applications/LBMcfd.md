@@ -160,4 +160,4 @@ Save it to a file named 'jobScipt.sh' and submit it to the queue for execution a
 ```
 $ sbatch jobScipt.sh 
 ```
-Please note that `--gpu-ids "0,0"` represents id of the  GPUs, in this case, first available GPU of each node. To learn more about command line options, please refer to the [M-Star documentation](https://docs.mstarcfd.com/10_Running_the_Solver/cli.html).  
+Please note that `--gpu-ids "0,0"` represents the ID's of the GPUs. In this case, the first available GPU of each node. To learn more about command line options, please refer to the [M-Star documentation](https://docs.mstarcfd.com/10_Running_the_Solver/cli.html).  
