@@ -3,7 +3,6 @@
 
 Gila is an OpenHPC-based cluster running on __Dual AMD EPYC 7532 Rome CPUs__ and __Intel Xeon Icelake CPUs with NVIDIA A100 GPUs__. The nodes run as virtual machines in a local virtual private cloud (OpenStack). Gila is allocated for NLR workloads and intended for LDRD, SPP or Office of Science workloads. Check back regularly as the configuration and capabilities for Gila are augmented over time.
 
-#TODO cover grace hopper nodes here.
 
 ## Gila Access and Allocations
 
