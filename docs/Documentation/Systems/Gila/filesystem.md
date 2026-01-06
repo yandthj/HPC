@@ -2,27 +2,39 @@
 
 ## Home Directories: /home
 
-/home directories are mounted as `/home/<username>`. Home directories are hosted under the user's initial /project directory. Quotas in /home are included as a part of the quota of that project's storage allocation
+`/home` directories are mounted as `/home/<username>`. To check your usage in your /home directory, visit the [Gila Filesystem Dashboard](https://influx.hpc.nrel.gov/d/ch4vndd/ceph-filesystem-quotas?folderUid=fexgrdi5pt91ca&orgId=1&from=now-1h&to=now&timezone=browser&tab=queries). You can also check your home directory usage and quota by running the following commands: 
+
+```
+# Check usage
+getfattr -n ceph.dir.rbytes <directory path>
+# Check quota
+getfattr -n ceph.quota.max_bytes <directory path>
+```
+
+If you need a quota increase in your home directory, please contact [HPC-Help@nrel.gov](mailto:HPC-Help@nrel.gov).
 
 ## Project Storage: /projects
 
-Each active project is granted a subdirectory under `/projects/<projectname>`. This is where the bulk of data is expected to be, and where jobs should generally be run from. Storage quotas are based on the allocation award.
+Each active project is granted a subdirectory under `/projects/<projectname>`. There are currently no quotas on `/projects` directories. Please monitor your space usage at the [Gila Filesystem Dashboard](https://influx.hpc.nrel.gov/d/ch4vndd/ceph-filesystem-quotas?folderUid=fexgrdi5pt91ca&orgId=1&from=now-1h&to=now&timezone=browser&tab=queries). 
 
-Quota usage can be viewed at any time by issuing a `cd` command into the project directory, and using the `df -h` command to view total, used, and remaining available space for the mounted project directory
+Note that there is currently no `/projects/aurorahpc` directory. Data can be kept in your `/home` directory. 
 
-## Scratch Storage: /scratch/username and /scratch/username/jobid
+## Scratch Storage
 
-The scratch filesystem on Gila compute node is a 79TB spinning disk Ceph filesystem, and is accessible from login and compute nodes. The default writable path for scratch use is `/scratch/<username>`.
+The scratch filesystem on Gila is a spinning disk Ceph filesystem, and is accessible from login and compute nodes. The default writable path for scratch use is `/scratch/<username>`. 
+
+!!! warning
+    Data in `/scratch` is subject to deletion after 28 days. It is recommended to store your important data, libraries, and programs in your project or home directory. 
 
 ## Temporary space: $TMPDIR 
 
-When a job starts, the environment variable `$TMPDIR` is set to `/scratch/<username>/<jobid>` for the duration of the job. This is temporary space only, and should be purged when your job is complete. Please be sure to use this path instead of /tmp for your tempfiles.
+When a job starts, the environment variable `$TMPDIR` is set to `/scratch/<username>/<jobid>` for the duration of the job. This is temporary space only, and should be purged when your job is complete. Please be sure to use this path instead of `/tmp` for your tempfiles.
 
-There is no expectation of data longevity in the temporary space, and is purged once a job has completed. If desired data is stored here during the job, please be sure to copy it to a /projects directory as part of the job script before the job finishes.
+There is no expectation of data longevity in the temporary space, and data is purged once a job has completed. If desired data is stored here during the job, please be sure to copy it to a project or home directory as part of the job script before the job finishes.
 
 ## Mass Storage System
 
-There is no Mass Storage System for deep archive storage on Gila.
+There is no Mass Storage System for deep archive storage from Gila.
 
 ## Backups and Snapshots
 

@@ -1,41 +1,36 @@
 
 # About Gila
 
-Gila is an OpenHPC-based cluster running on __Dual AMD EPYC 7532 Rome CPUs__ and __Intel Xeon Icelake CPUs with NVIDIA A100 GPUs__. The nodes run as virtual machines in a local virtual private cloud (OpenStack). Gila is allocated for NLR workloads and intended for LDRD, SPP or Office of Science workloads. Allocation decisions are made by the IACAC through the annual allocation request process. Check back regularly as the configuration and capabilities for Gila are augmented over time.
+Gila is an OpenHPC-based cluster running on __Dual AMD EPYC 7532 Rome CPUs__ and __Intel Xeon Icelake CPUs with NVIDIA A100 GPUs__. The nodes run as virtual machines in a local virtual private cloud (OpenStack). Gila is allocated for NLR workloads and intended for LDRD, SPP or Office of Science workloads. Check back regularly as the configuration and capabilities for Gila are augmented over time.
 
-*TODO: Update information about the allocations (include aurorahpc allocation info)*
+#TODO cover grace hopper nodes here.
 
-## Accessing Gila
-All NLR employees with an HPC account automatically have access to Gila. Please see the [System Access](https://www.nrel.gov/hpc/system-access.html) page for more information on accounts and allocations.
+## Gila Access and Allocations
 
+ **A specific allocation is not needed for NLR employee use of Gila.** All NLR employees with an HPC account automatically have access to Gila and can use the *aurorahpc* allocation to run jobs. If you do not have an HPC account already and would like to use Gila, please see the [User Accounts](https://www.nrel.gov/hpc/user-accounts) page to request an account. 
+
+The aurorahpc allocation does have limited resources allowed per job. These limits are dynamic, and can be found in the MOTD displayed when you log in to Gila. Please note that this allocation is a shared resource. If excessive usage reduces productivity for the broader user community, you may be contacted by HPC Operations staff. If you need to use more resources than allowed by the aurorahpc allocation, or work with external collaborators, you can request a specific allocation for your project. For more information on requesting an allocation, please see the [Resource Allocation Requests](https://www.nrel.gov/hpc/resource-allocation-requests) page. 
 
 #### For NLR Employees:
-To access Gila, log into the NLR network and connect via ssh:
+To access Gila, log in to the NLR network and connect via ssh to:
 
-    ssh gila.hpc.nrel.gov
+    gila.hpc.nrel.gov
+
+To use the Grace Hopper nodes, connect via ssh to:
+
+    gila-hopper-login1.hpc.nrel.gov
 
 #### For External Collaborators:
-There are currently no external-facing login nodes for Gila. There are two options to connect:
+There are no external-facing login nodes for Gila. There are two options to connect:
 
 1. Connect to the [SSH gateway host](https://www.nrel.gov/hpc/ssh-gateway-connection.html) and log in with your username, password, and OTP code. Once connected, ssh to the login nodes as above.
 1. Connect to the [HPC VPN](https://www.nrel.gov/hpc/vpn-connection.html) and ssh to the login nodes as above.
-
-There are currently two login nodes. They share the same home directory so work done on one will appear on the other. They are:
-
-    gila-login-1
-    gila-login-2
-
-You may connect directly to a login node, but they may be cycled in and out of the pool. If a node is unavailable, try connecting to another login node or the `gila.hpc.nrel.gov` round-robin option.
 
 ## Get Help with Gila
 
 Please see the [Help and Support Page](../../help.md) for further information on how to seek assistance with Gila or your NLR HPC account. 
 
-## Building code
+## Building Code
 
-Do not build or run code on login nodes. Login nodes have limited CPU and memory available. Use a compute or GPU node instead. Simply start an interactive job on an appropriately provisioned node and partition for your work and do your builds there. 
+Do not build or run code on login nodes. Login nodes have limited CPU and memory available. Use a compute node or GPU node instead. Simply start an [interactive job](../../Slurm/interactive_jobs.md) on an appropriately provisioned node and partition for your work and do your builds there.
 
-Similarly, build your projects under `/projects/your_project_name/` as home directories are **limited to 5GB** per user.
-
-
----
