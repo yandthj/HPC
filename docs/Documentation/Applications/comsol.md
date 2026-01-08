@@ -5,7 +5,9 @@ parent: Applications
 
 # COMSOL Multiphysics 
 
-*COMSOL Multiphysics is a versatile finite element analysis and simulation package. The COMSOL graphical user interface (GUI) environment is supported primarily for building and solving small models while operation in batch mode allows users to scale their models to larger, higher-fidelity studies. Currently, we host three floating network licenses and a number of additional modules. Three COMSOL versions are available on Kestrel, they are 6.2, 6.3 and 6.4 (default).*
+COMSOL Multiphysics is a versatile finite element analysis and simulation package. The COMSOL graphical user interface (GUI) environment is supported primarily for building and solving small models while operation in batch mode allows users to scale their models to larger, higher-fidelity studies. Currently, we host three floating network licenses and a number of additional modules. Three COMSOL versions are available on Kestrel, they are 6.2, 6.3 and 6.4 (default).
+## Note
+By default, COMSOL will create a hidden directory (*.comsol*) in your home directory to save the preference files, recovery files, and temporary files. It will fill up your home directory soon. To prevent this, we included new wrappers for the 6.3 and 6.4 versions to force comsol create a directory named with comsol_prefs in your directory under */scratch*.
 
 ## Building a COMSOL Model
 Extensive documentation is available in the menu: **Help > Documentation**. For beginners, it is highly recommended to follow the steps in *Introduction to COMSOL Multiphysics* found in **Help > Documentation**.
@@ -178,4 +180,5 @@ In COMSOL Multiphysics®, GPU acceleration can significantly increase performanc
 
 Note, when launching a GPU job on Kestrel, be sure to do so from one of its dedicated [GPU login nodes](../Systems/Kestrel/index.md).
 
+## More Resources
 The Complex Systems Simulation and Optimization group has hosted introductory and advanced COMSOL trainings. The introductory training covered how to use the COMSOL GUI and run COMSOL in batch mode on Kestrel. The advanced training showed how to do a parametric study using different sweeps (running an interactive session is also included) and introduced equation-based simulation and parameter estimation. To learn more about using COMSOL on Kestrel, please refer to the training. The recording can be accessed at [Computational Sciences Tutorials](https://nrel.sharepoint.com/sites/ComputationalSciencesTutorials/Lists/Computational%20Sciences%20Tutorial%20Recordings/AllItems.aspx?viewid=7b97e3fa%2Dedf6%2D48cd%2D91d6%2Df69848525ba4&playlistLayout=playback&itemId=75) and the slides and models used in the training can be downloaded from [Github](https://github.com/NREL/HPC/tree/master/applications/comsol/comsol-training).
