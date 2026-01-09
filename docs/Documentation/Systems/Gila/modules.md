@@ -14,6 +14,15 @@ When you log in to Gila, three modules are loaded automatically by default:
 !!! note
     The `DefApps` module is a convenience module that ensures both `Core` and `GCC` are loaded upon login or when you use `module restore`. It does not load additional software itself but guarantees that the essential environment is active.
 
+## X86 VS ARM 
+
+There are two module stacks on Gila, one for each hardware architecture and each stack is loaded depending on the hardware used. 
+The two hardware stacks are almost identical in terms of modules offered, however some modules might be missing and/or have different versions. Please email [HPC-Help](mailto:HPC-Help@nrel.gov) for any request regarding modules availability and/or versions change.
+The recommended usage is to connect to the login node corresponding to the hardware intended to be used for the compute, e.g. `gila-login-1` for **x86** and `gila-hopper-login1` for **arm**.
+
+!!! warning
+    Usage of the GraceHopper computes from the x86 login node, or the usage of x86 computes from the GraceHopper login is not allowed and will cause module problems. 
+
 
 ## Module Structure on Gila
 
@@ -71,6 +80,54 @@ Loading an MPI implementation makes MPI-enabled software that was installed with
 
 This behavior ensures that only software built against the selected MPI implementation is exposed, helping users avoid mixing incompatible MPI libraries.
 
+For example, using **module spider** to find all available variances of **HDF5**.
+
+```bash
+[USER@gila-login-1 ~]$ ml spider hdf5
+  hdf5:
+--------------------------------------------
+    Versions:
+      hdf5/1.14.5
+      hdf5/1.14.5-mpi 
+```
+
+Each version of **HDF5** requires dependency modules to be loaded so that they can be available to be used. 
+Please refer to the **module spider** section for more details.
+
+To find the dependencies needed for **hdf5/1.14.5-mpi** 
+
+```bash
+[USER@gila-login-1 ~]$ ml spider hdf5/1.14.5-mpi
+ 
+  hdf5:
+--------------------------------------------
+    You will need to load all module(s) on one of the lines below before the 'hdf5/1.14.5-mpi' module is available to load.
+      gcc/14.2.0  openmpi/5.0.5
+      oneapi/2025.1.3  oneapi/mpi-2021.14.0
+      oneapi/2025.1.3  openmpi/5.0.5
+```
+
+Without the dependencies and using **ml avail** 
+
+```bash
+[USER@gila-login-1 ~]$ ml avail hdf5
+--------------- [ gcc/14.2.0 ] -------------
+  hdf5/1.14.5
+```
+
+This version of **HDF5** is not *mpi* enabled. 
+
+Now with the dependencies loaded 
+
+```bash
+[USER@gila-login-1 ~]$ ml avail hdf5
+--------------- [ gcc/14.2.0, openmpi/5.0.5 ] -------------
+  hdf5/1.14.5-mpi
+--------------- [ gcc/14.2.0 ] -------------
+  hdf5/1.14.5
+```
+
+
 !!! note
     To determine whether a software package is available on the cluster, use `module spider`. This command lists **all available versions and configurations** of a given software, including those that are not currently visible with `module avail`.
     
@@ -82,6 +139,20 @@ This behavior ensures that only software built against the selected MPI implemen
 Container tools such as **Apptainer** and **Podman** do not require module files on this cluster. They are available on the system **by default** and are already included in your `PATH`.
 
 This means you can use Apptainer and Podman at any time without loading a specific module, regardless of which compiler, MPI, or CUDA toolchain is currently active.
+
+
+## Building on Gila
+
+Building on Gila should be done on compute nodes and **NOT** login nodes. 
+Some important build tools are not available by default and requires loading them from the module stack. 
+
+These build tools are: 
+
+- perl
+- autoconf
+- libtool
+- automake
+- m4
 
 
 ## Module Commands: restore, avail, and spider
