@@ -18,7 +18,7 @@ GPU nodes in Gila have 8 NVIDIA A100 GPUs running on x86-64 __Intel Xeon Icelake
 
 ### Grace Hopper Nodes
 
-Gila has 6 NVIDIA Grace Hopper nodes. To use the Grace Hopper nodes, submit your jobs to the `gh` partition from the `gila-hopper-login1.hpc.nrel.gov` login node. Each Grace Hopper node has a 72 core NVIDIA Grace CPU and an NVIDIA GH200 GPU, with 96GB of VRAM and 470GB of RAM. They have one socket and NUMA node. 
+Gila has 6 NVIDIA Grace Hopper nodes. To use the Grace Hopper nodes, submit your jobs to the `gh` partition from the `gila-arm.hpc.nrel.gov` login node. Each Grace Hopper node has a 72 core NVIDIA Grace CPU and an NVIDIA GH200 GPU, with 96GB of VRAM and 470GB of RAM. They have one socket and NUMA node. 
 
 Please note - the __NVIDIA Grace CPUs__ run on a different processing architecture (ARM64) than both the __Intel Xeon Icelake CPUs__ (x86-64) and the __AMD EPYC Milan__ (x86-64). Any application that is manually compiled by a user and intended to be used on the Grace Hopper nodes __MUST__ be compiled on the Grace Hopper nodes themselves. 
 

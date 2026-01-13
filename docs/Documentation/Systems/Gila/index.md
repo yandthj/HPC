@@ -17,7 +17,7 @@ To access Gila, log in to the NLR network and connect via ssh to:
 
 To use the Grace Hopper nodes, connect via ssh to:
 
-    gila-hopper-login1.hpc.nrel.gov
+    gila-arm.hpc.nrel.gov
 
 #### For External Collaborators:
 There are no external-facing login nodes for Gila. There are two options to connect:
