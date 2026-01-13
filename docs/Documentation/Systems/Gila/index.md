@@ -1,7 +1,7 @@
 
 # About Gila
 
-Gila is an OpenHPC-based cluster. The [nodes](./running.md#gila-compute-nodes) run as virtual machines in a local virtual private cloud (OpenStack). Gila is allocated for NLR workloads and intended for LDRD, SPP or Office of Science workloads. Check back regularly as the configuration and capabilities for Gila are augmented over time.
+Gila is an OpenHPC-based cluster. Most [nodes](./running.md#gila-compute-nodes) run as virtual machines, with the exception of the Grace Hopper nodes, in a local virtual private cloud (OpenStack). Gila is allocated for NLR workloads. Check back regularly as the configuration and capabilities for Gila are augmented over time.
 
 
 ## Gila Access and Allocations
