@@ -159,7 +159,7 @@ The following applications can be run on Kestrel DAV nodes through FastX session
 | Engineering | **[Ansys Workbench](../Applications/ansys.md)** | `module load ansys/<version>` | `vglrun runwb2` | For building models and meshes |
 | Engineering | **[COMSOL](../Applications/comsol.md)** | `module load comsol` | `vglrun comsol` | For building and testing models |
 | Engineering | **[Chemkin (Ansys)](../Applications/chemicalKinetics.md#chemkin)** | `module load ansys` | `run_rdworkbench.sh` | Chemkin Reaction Workbench GUI |
-| Engineering | **M-Star CFD** | `module load mstar` | `mstar` | Requires compute node. See [M-Star documentation](../Applications/LBMcfd.md#m-star) |
+| Engineering | **[M-Star CFD](../Applications/LBMcfd.md#m-star)** | `module load mstar` | `mstar` | Requires compute node |
 | Development | **[Linaro Forge (MAP)](../Development/Performance_Tools/Linaro-Forge/map.md)** | `module load forge` | `map` | Performance profiling tool |
 
 ## Download FastX Desktop Client
