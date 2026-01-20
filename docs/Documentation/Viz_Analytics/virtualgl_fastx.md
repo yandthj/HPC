@@ -155,7 +155,7 @@ The following applications can be run on Kestrel DAV nodes through FastX session
 |-----------------|------------|---------------|----------------|-------|
 | Visualization | **[ParaView](paraview.md)** | `module load paraview/5.11.0-gui` | `vglrun paraview` | For scientific visualization |
 | Visualization | **[VisIt](visit.md)** | `module load visit` | `vglrun visit` | For scientific visualization |
-| Engineering | **[MATLAB](../Applications/Matlab/index.md)** | `module load matlab` | `vglrun matlab` | For interactive GUI usage |
+| Engineering | **[MATLAB](../Applications/Matlab/interactive.md)** | `module load matlab` | `vglrun matlab` | For interactive GUI usage |
 | Engineering | **[Ansys Workbench](../Applications/ansys.md)** | `module load ansys/<version>` | `vglrun runwb2` | For building models and meshes |
 | Engineering | **[COMSOL](../Applications/comsol.md)** | `module load comsol` | `vglrun comsol` | For building and testing models |
 | Engineering | **[Chemkin (Ansys)](../Applications/chemicalKinetics.md#chemkin)** | `module load ansys` | `run_rdworkbench.sh` | Chemkin Reaction Workbench GUI |
