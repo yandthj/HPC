@@ -236,7 +236,7 @@ When running an Ansys job, the out of memory error (OOM) is commonly encountered
 
 If you are running on shared nodes, by default, your job will be allocated about 1G of RAM per core requested. To change this amount, you can use the `--mem` or `--mem-per-cpu` flag in your job submission.
 
-Try to run the job on nodes with [local disk](../Systems/Kestrel/running.md) by using the `--tmp` option in your job submission script (e.g. `--tmp=1600000` ).
+Try to run the job on nodes with [local disk](../Systems/Kestrel/Running/index.md#kestrel-compute-nodes) by using the `--tmp` option in your job submission script (e.g. `--tmp=1600000` ).
 
 
 ## Connect to Your Own License
