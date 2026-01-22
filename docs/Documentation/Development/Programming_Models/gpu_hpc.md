@@ -7,7 +7,7 @@ This page documents how NLR HPC users can utilize GPUs, from submitting the righ
 The following examples are generic templates that NLR HPC users can adapt for their own GPU job scripts for a given system. Be sure to replace `<allocation>` with the name of your HPC allocation. Note that Kestrel and Swift's GPU partitions have sharable nodes, allowing for multiple jobs to run on one node simultaneously. Since there are four GPU cards on each node on these systems, each node can theoretically accommodate four GPU-driven jobs at once. As such, example scripts for those systems are tailored for requesting one-quarter of a node by default. Although Vermilion's GPUs are technically "shared" in the sense that multiple (CPU) jobs can run on one node, there is only one GPU per node. As such the Vermilion example requests the entire node. Please refer to the [system-specific pages](../../Systems/index.md) for more information on the GPUs available on each cluster and how AUs are charged accordingly.
 
 !!! note
-    When launching a GPU job on Kestrel, be sure to do so from [one of its dedicated GPU login nodes](https://nrel.github.io/HPC/Documentation/Systems/Kestrel/#accessing-kestrel).
+    When launching a GPU job on Kestrel, be sure to do so from [one of its dedicated GPU login nodes](../../Systems/Kestrel/index.md#accessing-kestrel).
 
 !!! note
     Be aware that `--mem` in Slurm ALWAYS refers to CPU, not GPU, memory. You are automatically given all of the per-device GPU memory in a Slurm job.

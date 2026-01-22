@@ -48,7 +48,7 @@ To access the GPU login nodes, first connect with one of the methods described a
     ssh -m hmac-sha2-512 username@kestrel.hpc.nrel.gov
     ```
 
-    See the [Workaround blog post](https://nrel.github.io/HPC/blog/2022-12-19-windows_ssh/) for further details and information.
+    See the [Workaround blog post](../../../blog/2022-12-19-windows_ssh.md) for further details and information.
 
 !!! warning "Login Node Policies"
     Kestrel login nodes are shared resources, and because of that are subject to process limiting based on usage to ensure that these resources aren't being [used inappropriately](https://www.nrel.gov/hpc/inappropriate-use-policy.html). Each user is permitted up to 8 cores and 100GB of RAM at a time, after which the Arbiter monitoring software will begin moderating resource consumption, restricting further processes by the user until usage is reduced to acceptable limits.
@@ -57,7 +57,7 @@ To access the GPU login nodes, first connect with one of the methods described a
 
 There are eight DAV nodes available on Kestrel, which are nodes intended for HPC applications that require a graphical user interface.  They are not general-purpose remote desktops, and are intended for HPC or visualization software that requires Kestrel.
 
-[FastX](https://nrel.github.io/HPC/Documentation/Viz_Analytics/virtualgl_fastx/) is available for HPC users to use graphical applications on the DAV nodes.
+[FastX](../../Viz_Analytics/virtualgl_fastx.md) is available for HPC users to use graphical applications on the DAV nodes.
 
 To connect to a DAV node using the load balancing algorithim, NLR employees can connect to **kestrel-dav.hpc.nrel.gov**. To connect from outside the NLR network, use **kestrel-dav.nrel.gov**. 
 

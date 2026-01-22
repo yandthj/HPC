@@ -2,7 +2,7 @@
 
 ![WattAMeter-logo](../../../../assets/images/WattAMeter/wattameter_logo.png)
 
-[WattAMeter API documentation](https://nrel.github.io/WattAMeter)
+[WattAMeter API documentation](https://natlabrockies.github.io/WattAMeter)
 
 WattAMeter is a Python library developed for tracking and analyzing time series of power system data. It provides trackers for collecting power per node, per job, enabling users to analyze power consumption patterns and optimize energy usage in high-performance computing environments. It is designed to be easy to integrate into existing workflows, making it a valuable tool for researchers and engineers focused on energy efficiency in computing. There are multiple ways to use WattAMeter. Check out the complete documentation [here](https://github.com/NREL/WattAMeter).
 
@@ -92,4 +92,4 @@ The output in the CPU reader log file using `--tracker 0.1,rapl` looks similar, 
   2025-10-07_09:38:41.325047 68484 23852448302 268223311 18194740675 202975816 95.3715804589249 0.024547753843556813 95.65664212464095 0.8593112577657622
 ```
 
-WattAMeter provides post-processing capabilities to further analyze the log files generated from a tracking session. Check out the [WattAMeter documentation](https://nrel.github.io/WattAMeter) for more information.
+WattAMeter provides post-processing capabilities to further analyze the log files generated from a tracking session. Check out the [WattAMeter documentation](https://natlabrockies.github.io/WattAMeter) for more information.

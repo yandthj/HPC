@@ -204,7 +204,7 @@ $ run_rdworkbench.sh
 
 #### Could not connect to session bus: Failed to connect to socket /tmp/dbus-XXX: Connection refused
 This error is usually the result of a change to the default login environment, often by an alteration to `~/.bashrc` by 
-altering your $PATH, or by configuring [Conda](https://nrel.github.io/HPC/Documentation/Software_Tools/conda/) to launch into a (base) or other environment immediately upon login. 
+altering your $PATH, or by configuring [Conda](../Development/Languages/Python/conda.md) to launch into a (base) or other environment immediately upon login. 
 
 For changes to your `$PATH`, be sure to prepend any changes with `$PATH` so that the default system paths are included before 
 any custom changes that you make. For example: `$PATH=$PATH:/home/username/bin` instead of `$PATH=/home/username/bin/:$PATH`.

@@ -86,7 +86,7 @@ The NLR HPC team runs a JupyterHub service for HPC users to quickly access noteb
 
 KJHub is available from the NLR VPN (onsite or offsite) for internal NLR users.
 
-This service is not directly accessible externally for non-NLR HPC users. However, it may be reached by using the [HPC VPN](https://www.nrel.gov/hpc/vpn-connection.html), or by using a [FastX Remote Desktop](https://nrel.github.io/HPC/Documentation/Viz_Analytics/virtualgl_fastx/) session via the DAV nodes.
+This service is not directly accessible externally for non-NLR HPC users. However, it may be reached by using the [HPC VPN](https://www.nrel.gov/hpc/vpn-connection.html), or by using a [FastX Remote Desktop](../../Viz_Analytics/virtualgl_fastx.md) session via the DAV nodes.
 
 The JupyterHub service is accessible via web browser at [https://kestrel-jhub.hpc.nrel.gov](https://kestrel-jhub.hpc.nrel.gov)
 
@@ -119,7 +119,7 @@ Kestrel supports running your own Jupyter Notebook server on a compute node. Thi
 * Custom conda environments to load preferred libraries.
 * Full node usage: Exclusive access to the resources of the node your job is reserved on, including up to 104 CPU cores and up to 240GB RAM on Kestrel CPU nodes and up to 2TB RAM on Kestrel bigmem nodes. (See the system specifications page for more information on the types of nodes available on Kestrel.)
 * No competing with other users for CPU cores and RAM, and no Arbiter2 process throttling.
-* Less than a whole node may be requested via the [shared node](https://nrel.github.io/HPC/Documentation/Systems/Kestrel/running/#shared-node-partition) queue, to save AUs.
+* Less than a whole node may be requested via the [shared node](../../Systems/Kestrel/running.md#shared-node-partition) queue, to save AUs.
 
 ### Disadvantages:
 
