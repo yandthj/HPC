@@ -66,7 +66,7 @@ $ python3
 >>> exit() 
 $ conda deactivate
 ```
-??? example "[Example interactive jupyter usage](https://nrel.github.io/HPC/Documentation/Development/Jupyter/)"
+??? example "[Example interactive jupyter usage](../Development/Jupyter/index.md)"
 	```
 	$ ssh username@kestrel.hpc.nrel.gov
 	```
@@ -125,7 +125,7 @@ $ g++ demo.cpp -o demo $(pkg-config --cflags --libs cantera) && ./demo
 	``` 
 	srun -n 5 ./flame.out
 	```
-	Please refer to the [job submission documentation](https://nrel.github.io/HPC/Documentation/Slurm/batch_jobs/) for larger jobs in Batch mode.   
+	Please refer to the [job submission documentation](../Slurm/batch_jobs.md) for larger jobs in Batch mode.   
 
 ### zero-RK
 Please follow the [official installation instructions](https://github.com/LLNL/zero-rk). The procedure has been tested successfully on the Kestrel and repeated below from the official instructions for convenience.

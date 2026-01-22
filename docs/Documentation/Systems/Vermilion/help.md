@@ -19,7 +19,7 @@ For internal users (NLR), please follow these instructions if we missed you and 
 1. In in the “Search teams” field in the upper far right, type “Vermilion” and hit return
 1. Click Join 
 
-For external users, please follow the instructions listed in the [CSC Tutorial Team - External Users](https://nrel.github.io/HPC/Announcements/2022-04-06-announcement/#csc-tutorials-team-external-users:~:text=CSC%20Tutorials%20Team%20%2D%20External%20Users) announcement. 
+For external users, please follow the instructions listed in the [CSC Tutorial Team - External Users](../../../Announcements/2022-04-06-announcement.md#csc-tutorials-team-external-users) announcement. 
 
 ## Additional Support
 Additional HPC help and contact information can be found on the NLR [HPC Help](https://www.nrel.gov/hpc/help.html) main page.

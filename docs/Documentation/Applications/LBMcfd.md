@@ -27,7 +27,7 @@ At NLR, two packages are available for the purpose. The matrix below provides a 
 |                                                                              | Windows| Mac OS  | Linux (HPC) | CPU    | GPU    | Cost | Speciality                   |
 |:----------------------------------------------------------------------------:|:------:|:-------:|:-----------:|:------:|:------:|:----:|:----------------------------:|
 | [M-Star](https://mstarcfd.com/)                                              | y      | x       | y           | y      | y      | $    | GUI, moving geometries       |
-| [NLR MARBLES](https://nrel.github.io/marbles/VandV.html)                         | y      | y       | y           | y      | y      | Free | Open source, compressible  |  
+| [NLR MARBLES](https://natlabrockies.github.io/marbles/VandV.html)                         | y      | y       | y           | y      | y      | Free | Open source, compressible  |  
 
 Both M-Star and Multi-Scale Adaptively Refined Boltzmann Lattice Solver (MARBLES) can utilize the parallel computing capability of the Kestrel HPC system . 
 
@@ -93,7 +93,7 @@ Results can be viewed in [ParaView](../Viz_Analytics/paraview.md) or [VisIT](../
 ![Velocity Cracks Demo](LBMcfd_metadata/velocity_cracks.gif)
 *Animation credit: [@eyoung55](https://github.com/eyoung55)*
 
-[MARBLES](https://nrel.github.io/marbles/VandV.html) is an in-house effort to make a free Lattice Boltzmann solver available to the community. We encourage users to contact us for help setting up your problem or to request additional features. Please visit the repository and create a [New issue](https://github.com/NREL/marbles/issues) or [email](mailto:nsawant@nrel.gov) us directly. A [machine learning framework](https://github.com/nileshsawant/mlForLBM) for using MARBLES in the loop as a data generator has also been created. Pre-built executibles, `marbles3d.gnu.x86-milan.TPROF.MPI.ex` and `marbles3d.gnu.TPROF.MPI.CUDA.ex`, can also be made available on request.
+[MARBLES](https://natlabrockies.github.io/marbles/VandV.html) is an in-house effort to make a free Lattice Boltzmann solver available to the community. We encourage users to contact us for help setting up your problem or to request additional features. Please visit the repository and create a [New issue](https://github.com/NREL/marbles/issues) or [email](mailto:nsawant@nrel.gov) us directly. A [machine learning framework](https://github.com/nileshsawant/mlForLBM) for using MARBLES in the loop as a data generator has also been created. Pre-built executibles, `marbles3d.gnu.x86-milan.TPROF.MPI.ex` and `marbles3d.gnu.TPROF.MPI.CUDA.ex`, can also be made available on request.
 
 ### M-Star
 

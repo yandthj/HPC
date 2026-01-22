@@ -1,7 +1,7 @@
 ## Ansys
 The current Ansys license is an unlimited license that covers all Ansys products, with no restrictions on quantities. However, since Ansys is unable to provide a license file that includes all products in unlimited quantities, we have requested licenses based on our anticipated needs. You can check the available licenses on Kestrel using the command `lmstat.ansys`. If the module you need is not listed, please submit a ticket by emailing [HPC-Help@nrel.gov](mailto:HPC-Help@nrel.gov) so that we can request an updated license to include the specific module you require.
 
-The main workflow that we support has two stages. The first is interactive graphical usage, e.g., for interactively building meshes or visualizing boundary geometry. For this, Ansys should be run on a [FastX desktop](https://nrel.github.io/HPC/Documentation/Viz_Analytics/virtualgl_fastx/). The second stage is batch (i.e., non-interactive) parallel processing, which should be run on compute nodes via a Slurm job script. Of course, if you have Ansys input from another location ready to run in batch mode, the first stage is not needed. We unfortunately cannot support running parallel jobs on the DAV nodes, nor launching parallel jobs from interactive sessions on compute nodes.
+The main workflow that we support has two stages. The first is interactive graphical usage, e.g., for interactively building meshes or visualizing boundary geometry. For this, Ansys should be run on a [FastX desktop](../Viz_Analytics/virtualgl_fastx.md). The second stage is batch (i.e., non-interactive) parallel processing, which should be run on compute nodes via a Slurm job script. Of course, if you have Ansys input from another location ready to run in batch mode, the first stage is not needed. We unfortunately cannot support running parallel jobs on the DAV nodes, nor launching parallel jobs from interactive sessions on compute nodes.
 
 ### Shared License Etiquette
 Network floating licenses are a shared resource. Whenever you open an Ansys Fluent window, a license is pulled from the pool and becomes unavailable to other users. *Please do not keep idle windows open if you are not actively using the application*, close it and return the associated licenses to the pool. Excessive retention of software licenses falls under the inappropriate use policy.
@@ -21,7 +21,7 @@ HPC Pack licenses are used to distribute Ansys batch jobs to run in parallel acr
 Additionally, Ansys allows you to use up to four cores without consuming any of the HPC Pack licenses.  When scaling these jobs to more than four cores, the four cores are added to the total amount made available by the HPC Pack licenses. For example, a batch job designed to completely fill a node with 36 cores requires one `cfd_base` license and two HPC Pack licenses (32 + 4 cores enabled).
 
 ## Building Models in the Ansys GUI
-GUI access is provided through [FastX desktops](https://nrel.github.io/HPC/Documentation/Viz_Analytics/virtualgl_fastx/). Open a terminal, load, and launch the Ansys Workbench with:
+GUI access is provided through [FastX desktops](../Viz_Analytics/virtualgl_fastx.md). Open a terminal, load, and launch the Ansys Workbench with:
 
 ```
 module load ansys/<version>
@@ -236,7 +236,7 @@ When running an Ansys job, the out of memory error (OOM) is commonly encountered
 
 If you are running on shared nodes, by default, your job will be allocated about 1G of RAM per core requested. To change this amount, you can use the `--mem` or `--mem-per-cpu` flag in your job submission.
 
-Try to run the job on nodes with [local disk](https://nrel.github.io/HPC/Documentation/Systems/Kestrel/Running/) by using the `--tmp` option in your job submission script (e.g. `--tmp=1600000` ).
+Try to run the job on nodes with [local disk](../Systems/Kestrel/Running/index.md#kestrel-compute-nodes) by using the `--tmp` option in your job submission script (e.g. `--tmp=1600000` ).
 
 
 ## Connect to Your Own License

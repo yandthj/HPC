@@ -52,7 +52,7 @@ To request use of a GPU, use the flag `--gres=gpu:<quantity>` with sbatch, srun,
 
 #### CPU Core and RAM Defaults on GPU Nodes
 
-If your job will require more than the default 1 CPU core and 1.5GB RAM you must request the quantity of cores and/or RAM that you will need, by using additional flags such as `--ntasks=` or `--mem=`. See the [Slurm Job Scheduling](https://nrel.github.io/HPC/Documentation/Slurm/) section for details on requesting additional resources.
+If your job will require more than the default 1 CPU core and 1.5GB RAM you must request the quantity of cores and/or RAM that you will need, by using additional flags such as `--ntasks=` or `--mem=`. See the [Slurm Job Scheduling](../../Slurm/index.md) section for details on requesting additional resources.
 
 
 ## Allocation Unit (AU) Charges
@@ -436,5 +436,5 @@ task    thread             node name  first task    # on node  core
 
 ## VASP, Jupyter, Julia, and Other Applications on Swift
 
-Please see the relevant page in the [Applications](https://nrel.github.io/HPC/Documentation/Applications/) section for more information on using applications on Swift and other NLR clusters.
+Please see the relevant page in the [Applications](../../Applications/index.md) section for more information on using applications on Swift and other NLR clusters.
 
