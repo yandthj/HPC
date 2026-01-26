@@ -213,7 +213,7 @@ For conda users, the command `conda config --set auto_activate_base false` will 
 launching into a base environment upon login. 
 
 #### No Free Licenses
-FastX has a limited number of licenses for concurrent usage, so please remember to log out of your X session AND out of FastX when you are done working. If you receive a "no free licenses" error when trying to start a new session, please contact hpc-help@nrel.gov for assistance.
+FastX has a limited number of licenses for concurrent usage, so please remember to log out of your X session AND out of FastX when you are done working. If you receive a "no free licenses" error when trying to start a new session, please contact hpc-help@nlr.gov for assistance.
 
 ### How to Get Help
-Please contact the [HPC Helpdesk](https://www.nrel.gov/hpc/help.html) at [hpc-help@nrel.gov](mailto://hpc-help@nrel.gov) if you have any questions, technical issues, or receive a "no free licenses" error. 
+Please contact the [HPC Helpdesk](https://www.nrel.gov/hpc/help.html) at [hpc-help@nlr.gov](mailto://hpc-help@nlr.gov) if you have any questions, technical issues, or receive a "no free licenses" error. 

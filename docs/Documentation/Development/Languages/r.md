@@ -302,9 +302,9 @@ Most of these packages will have to be installed in a custom environment as many
 
 ## Contacts
 
-For questions on the R software environment itself or advanced R package questions, please contact [HPC-Help@nrel.gov](mailto:HPC-Help@nrel.gov).
+For questions on the R software environment itself or advanced R package questions, please contact [HPC-Help@nlr.gov](mailto:HPC-Help@nlr.gov).
 
-Additionally, NLR has an internal R Users Group that meets periodically to highlight interesting packages, problems, and share experiences related to R programming. For more details, contact [Daniel Inman](mailto:daniel.inman@nrel.gov). 
+Additionally, NLR has an internal R Users Group that meets periodically to highlight interesting packages, problems, and share experiences related to R programming. For more details, contact [Daniel Inman](mailto:daniel.inman@nlr.gov). 
 
 ## References
 

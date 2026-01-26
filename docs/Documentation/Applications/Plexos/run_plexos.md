@@ -14,7 +14,7 @@ Please follow the [setup instructions](setup_plexos.md) before running the examp
     module avail
     ```
 
-    This should display all of the test modules available in addition to the defaults. We encourage you to reach out to us at [HPC-Help@nrel.gov](mailto:HPC-Help@nrel.gov) for access if you would like access to these modules.
+    This should display all of the test modules available in addition to the defaults. We encourage you to reach out to us at [HPC-Help@nlr.gov](mailto:HPC-Help@nlr.gov) for access if you would like access to these modules.
 
 ## Example Run
 
@@ -107,7 +107,7 @@ We will run the same example by submitting the job to the SLURM queue. This exam
 
     # Go to the appropriate folder and submit the job on the HPC
     cd HPC/applications/plexos/RunFiles
-    sbatch -A account_name --mail-user=your.email@nrel.gov submit_simple.sh
+    sbatch -A account_name --mail-user=your.email@nlr.gov submit_simple.sh
     ```
 
 ### 3: Enhanced batch script submission
@@ -124,7 +124,7 @@ This builds upon the previous example where it tries to run the same model as be
 
     # Go into the appropriate directory
     cd /scratch/${USER}/HPC/applications/plexos/RunFiles
-    sbatch -A account_name --mail-user=your.email@nrel.gov submit_enhanced.sh
+    sbatch -A account_name --mail-user=your.email@nlr.gov submit_enhanced.sh
     ```
 
 ### 4: Submitting multiple PLEXOS jobs
@@ -160,6 +160,6 @@ This example demonstrates the use of SLURM job arrays to run multiple PLEXOS job
     cd /scratch/${USER}/HPC/applications/plexos/RunFiles
     export filename=5_bus_system_v2 # Export the XML dataset name
     export models.txt # Export the file that contains the models names within the XML dataset
-    sbatch -A account_name -t 5 --mail-user=your.email@nrel.gov --array=1-4 submit_job_array.sh
+    sbatch -A account_name -t 5 --mail-user=your.email@nlr.gov --array=1-4 submit_job_array.sh
     ```
 

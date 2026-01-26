@@ -1283,10 +1283,10 @@ Again we run on a cube of size 512.
 1. stream.cu - https://github.com/bcumming/cuda-stream with mods for MPI
 1. nbodyacc2.c - Nvidia, part of the nvhpc distribution
 1. acc_c3.c - Nvidia, part of the nvhpc distribution
-1. helloc.c, hellof.f90 - Tim Kaiser tkaiser2@nrel.gov
+1. helloc.c, hellof.f90 - Tim Kaiser tkaiser2@nlr.gov
 1. ping\_pong\_cuda\_aware.cu, ping\_pong\_cuda\_staged.cu [https://github.com/olcf-tutorials/MPI_ping_pong]()
 1. cpu.C - Multiple sources with significant mods 
 1. cusolver\_getrf\_example.cu - https://github.com/NVIDIA/CUDALibrarySamples.git with significant mods
 1. 3d\_mgpu\_c2c\_example.cpp - https://github.com/NVIDIA/CUDALibrarySamples.git
-1. ftw3d.c - Tim Kaiser tkaiser2@nrel.gov
+1. ftw3d.c - Tim Kaiser tkaiser2@nlr.gov
 

@@ -6,7 +6,7 @@ grand_parent: Systems
 ---
 # Vermilion Technical Support Contacts
 
-For assistance with accounts or allocations, software installation requests, or technical questions, please email [HPC-Help@nrel.gov](mailto://hpc-help@nrel.gov) with "Vermilion" in the subject line.
+For assistance with accounts or allocations, software installation requests, or technical questions, please email [HPC-Help@nlr.gov](mailto://hpc-help@nlr.gov) with "Vermilion" in the subject line.
 
 ## Microsoft Teams
 There is a Microsoft Teams Vermilion channel that is one of the primary ways we communicate with Vermilion users about system updates and known problems.  

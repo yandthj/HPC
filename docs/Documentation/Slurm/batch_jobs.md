@@ -52,7 +52,7 @@ Command and control and monitoring customization are also available:
 | Standby priority | `--qos` | `--qos=standby` | Standby jobs will only run when nodes are idle. *Note*: Jobs with standby priority do not consume AUs.| 
 | Dependencies | `--dependency` | `--dependency=<condition>:<job_id>` <br><br>Conditions:<br><br>`after`<br>`afterany`<br>`afternotok`<br>`afterok`<br>`singleton` | You can submit jobs that will wait until a condition is met before running. <br><br><br>Conditions:<br><br>After the listed jobs have started<br>After the listed jobs have finished<br>After the listed jobs have failed<br>After the listed jobs return exit code 0<br>After all existing jobs with the same name and user have ended|
 | Job Name | `--job-name` | `--job-name=myjob` | A short, descriptive job name for easier identification in the queue.|
-| Email notifications | `--mail-user` | `--mail-user=my.email@nrel.gov`<br>`--mail=type=ALL` | Slurm will send updates on job status change. Type can be specified with `--mail-type` as BEGIN, END, FAIL, or ALL.|
+| Email notifications | `--mail-user` | `--mail-user=my.email@nlr.gov`<br>`--mail=type=ALL` | Slurm will send updates on job status change. Type can be specified with `--mail-type` as BEGIN, END, FAIL, or ALL.|
 | Output | `--output`<br><br>`--error` | `--output=job_stdout`<br><br>`--output=job_stderr` | Defaults to `slurm-<jobid>.out`<br><br>Defaults to `slurm-<jobid>.out` (same file as stdout)<br><br> stdout and stderr will be written to the same file unless specified otherwise|
 
 
@@ -98,7 +98,7 @@ Here's a basic template job script to get started, followed by a breakdown of th
 #SBATCH --account=<allocation>
 #SBATCH --time=4:00:00
 #SBATCH --job-name=job
-#SBATCH --mail-user=your.email@nrel.gov
+#SBATCH --mail-user=your.email@nlr.gov
 #SBATCH --mail-type=BEGIN,END,FAIL
 #SBATCH --output=job_output_filename.%j.out  # %j will be replaced with the job ID
 
@@ -123,7 +123,7 @@ This denotes the start of the script, and that it is written in BASH shell langu
 #SBATCH --account=<allocation>
 #SBATCH --time=4:00:00
 #SBATCH --job-name=job
-#SBATCH --mail-user=your.email@nrel.gov
+#SBATCH --mail-user=your.email@nlr.gov
 #SBATCH --mail-type=BEGIN,END,FAIL
 #SBATCH --output=job_output_filename.%j.out  # %j will be replaced with the job ID
 ```

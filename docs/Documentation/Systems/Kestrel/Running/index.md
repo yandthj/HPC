@@ -99,7 +99,7 @@ when running multi-node applications that send significant amounts of data over 
 can alleviate such congestion during runtime. Some common examples of communication-bound HPC software are AMRWind and [LAMMPS](../../../Applications/lammps.md).
 
 To request nodes with two NICs, specify `--partition=hbw` in your job submissions. Because the purpose of the high bandwidth nodes is to optimize communication in multi-node jobs, it is not permitted to submit single-node jobs to the `hbw` partition.
-If you would like assistance with determining whether your workflow could benefit from running in the `hbw` partition, please reach out to [HPC-Help@nrel.gov](mailto:HPC-Help).
+If you would like assistance with determining whether your workflow could benefit from running in the `hbw` partition, please reach out to [HPC-Help@nlr.gov](mailto:HPC-Help).
 
 ### GPU Jobs
 

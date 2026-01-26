@@ -11,7 +11,7 @@ getfattr -n ceph.dir.rbytes <directory path>
 getfattr -n ceph.quota.max_bytes <directory path>
 ```
 
-If you need a quota increase in your home directory, please contact [HPC-Help@nrel.gov](mailto:HPC-Help@nrel.gov).
+If you need a quota increase in your home directory, please contact [HPC-Help@nlr.gov](mailto:HPC-Help@nlr.gov).
 
 ## Project Storage: /projects
 

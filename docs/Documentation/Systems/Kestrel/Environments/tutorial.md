@@ -143,7 +143,7 @@ module swap PrgEnv-cray PrgEnv-intel
 module load gcc-stdalone/12.3.0
 ```
 
-Note that where possible, we want to avoid using `module purge` because it can unset some environment variables that we generally want to keep. We unload the `cray-libsci` package for the sake of simplicity (we are working through resolving a default versioning conflict between cray-libsci and PrgEnv-intel. If you need to use cray-libsci within PrgEnv-intel, please reach out to hpc-help@nrel.gov).
+Note that where possible, we want to avoid using `module purge` because it can unset some environment variables that we generally want to keep. We unload the `cray-libsci` package for the sake of simplicity (we are working through resolving a default versioning conflict between cray-libsci and PrgEnv-intel. If you need to use cray-libsci within PrgEnv-intel, please reach out to hpc-help@nlr.gov).
 
 Again, we can test which C compiler we're using with:
 `cc --version`

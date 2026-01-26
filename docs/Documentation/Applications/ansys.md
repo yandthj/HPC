@@ -1,5 +1,5 @@
 ## Ansys
-The current Ansys license is an unlimited license that covers all Ansys products, with no restrictions on quantities. However, since Ansys is unable to provide a license file that includes all products in unlimited quantities, we have requested licenses based on our anticipated needs. You can check the available licenses on Kestrel using the command `lmstat.ansys`. If the module you need is not listed, please submit a ticket by emailing [HPC-Help@nrel.gov](mailto:HPC-Help@nrel.gov) so that we can request an updated license to include the specific module you require.
+The current Ansys license is an unlimited license that covers all Ansys products, with no restrictions on quantities. However, since Ansys is unable to provide a license file that includes all products in unlimited quantities, we have requested licenses based on our anticipated needs. You can check the available licenses on Kestrel using the command `lmstat.ansys`. If the module you need is not listed, please submit a ticket by emailing [HPC-Help@nlr.gov](mailto:HPC-Help@nlr.gov) so that we can request an updated license to include the specific module you require.
 
 The main workflow that we support has two stages. The first is interactive graphical usage, e.g., for interactively building meshes or visualizing boundary geometry. For this, Ansys should be run on a [FastX desktop](../Viz_Analytics/virtualgl_fastx.md). The second stage is batch (i.e., non-interactive) parallel processing, which should be run on compute nodes via a Slurm job script. Of course, if you have Ansys input from another location ready to run in batch mode, the first stage is not needed. We unfortunately cannot support running parallel jobs on the DAV nodes, nor launching parallel jobs from interactive sessions on compute nodes.
 
@@ -244,4 +244,4 @@ Try to run the job on nodes with [local disk](../Systems/Kestrel/Running/index.m
 At NLR, a few groups own their own Ansys license. In order to connect to the private license, the user can set the environment variable `ANSYSLMD_LICENSE_FILE` (e.g. `export ANSYSLMD_LICENSE_FILE=1055@10.60.1.85`, replacing your corresponding port and license server hostname or IP address).  
 
 ## Contact
-For information about accessing licenses beyond CSC's base capability, please contact [Emily Cousineau.](mailto://Emily.Cousineau@nrel.gov)
+For information about accessing licenses beyond CSC's base capability, please contact [Emily Cousineau.](mailto://Emily.Cousineau@nlr.gov)

@@ -7,7 +7,7 @@ website](https://mdx.plm.automation.siemens.com/star-ccm-plus).
 STAR-CCM+ is installed on Kestrel but it is not supported on Vermilion or Swift. The only available version is starccm/20.02.007.
 
 !!! tip "Important"
-	 NLR does not have general use STAR-CCM+ licenses available. Users must have their own STAR-CCM+ license. For help with using your 		 license on NLR HPC, please contact [HPC-Help](mailto:hpc-help@nrel.gov).
+	 NLR does not have general use STAR-CCM+ licenses available. Users must have their own STAR-CCM+ license. For help with using your 		 license on NLR HPC, please contact [HPC-Help](mailto:hpc-help@nlr.gov).
 
 ## Running STAR-CCM+ in GUI
 

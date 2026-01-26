@@ -63,7 +63,7 @@ Directories in /projects have a quota assigned based on the project resource all
 
 Projects may request a shared project directory to host data, configuration, and applications shared by multiple projects/allocations. 
 
-To request a /shared-projects directory, please contact [hpc-help@nrel.gov](mailto:HPC-Help@nrel.gov) and include the following information:
+To request a /shared-projects directory, please contact [hpc-help@nlr.gov](mailto:HPC-Help@nlr.gov) and include the following information:
 ```
 1. The name of the primary/"host" allocation that the /shared-projects directory will belong to. 
 2. The name/email of a person who will authorize changes to the /shared-projects directory. 

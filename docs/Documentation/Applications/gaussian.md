@@ -3,7 +3,7 @@
 *Learn about the Gaussian16 electronic structure program and how to run Gaussian16 jobs at NLR.*
 
 !!! tip "Important"
-	 To run Gaussian16, users must be a member of the Gaussian user group. To be added to the group, contact [HPC-Help](mailto:hpc-help@nrel.gov). In your email message, include your username and copy the following text agreeing not to compete with Gaussian, Inc.:
+	 To run Gaussian16, users must be a member of the Gaussian user group. To be added to the group, contact [HPC-Help](mailto:hpc-help@nlr.gov). In your email message, include your username and copy the following text agreeing not to compete with Gaussian, Inc.:
 
 	```
 	I am not actively developing applications for a competing software program, or for a project in 

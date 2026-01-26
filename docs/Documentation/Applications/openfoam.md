@@ -74,7 +74,7 @@ CPU $ module avail openfoam
     #SBATCH --account=<your-account-name>
     #SBATCH --output=foamOutputLog.out
     #SBATCH --error=foamErrorLog.out
-    #SBATCH --mail-user=<yourEmailAddress>@nrel.gov 
+    #SBATCH --mail-user=<yourEmailAddress>@nlr.gov 
     #SBATCH --nodes=2
     #SBATCH --partition=hbw
     #SBATCH --ntasks-per-node=104 # set number of MPI ranks per node
