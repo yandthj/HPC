@@ -21,7 +21,7 @@ Git needs to know your user name and an email address at a minimum:
 
 ```
 $ git config --global user.name "Your name"
-$ git config --global user.email "your.name@nrel.gov"
+$ git config --global user.email "your.name@nlr.gov"
 ```
 
 Github does not accept account passwords for authenticated Git operations. Instead, token-based authentication ([PAT](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) or [SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh)) is required.

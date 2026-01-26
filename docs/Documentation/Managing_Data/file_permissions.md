@@ -192,4 +192,4 @@ When first created, all /projects directories will be owned by the allocation's 
 
 ## NLR Technical Help with File Permissions
 
-The NLR HPC Support Team relies on allocation owners and users to be responsible for file permissions and ownership as a part of managing the allocation and its data, but the PI or HPC Leads of a project may request assistance in changing permissions or ownership of files that belong to the allocation by opening a support ticket with [hpc-help@nrel.gov](mailto://hpc-help@nrel.gov).
+The NLR HPC Support Team relies on allocation owners and users to be responsible for file permissions and ownership as a part of managing the allocation and its data, but the PI or HPC Leads of a project may request assistance in changing permissions or ownership of files that belong to the allocation by opening a support ticket with [hpc-help@nlr.gov](mailto://hpc-help@nlr.gov).

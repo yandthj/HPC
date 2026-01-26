@@ -17,7 +17,7 @@ When you log in to Gila, three modules are loaded automatically by default:
 ## x86 vs ARM 
 
 Gila has two separate module stacks, one for each hardware architecture. The appropriate stack is automatically loaded based on which login node you use.
-The two hardware stacks are almost identical in terms of available modules. However, some modules might be missing or have different versions depending on the architecture. For requests regarding module availability or version changes, please email [HPC-Help](mailto:HPC-Help@nrel.gov).
+The two hardware stacks are almost identical in terms of available modules. However, some modules might be missing or have different versions depending on the architecture. For requests regarding module availability or version changes, please email [HPC-Help](mailto:HPC-Help@nlr.gov).
 
 To ensure proper module compatibility, connect to the login node corresponding to your target compute architecture:
 
@@ -211,13 +211,13 @@ Please see [here](./running.md#example-compiling-a-program-on-gila) for a full e
 ## Frequently Asked Questions
 
 ??? note "I can't find the module I need."
-    Please email [HPC-Help](mailto:HPC-Help@nrel.gov). The Apps team will get in touch with you to provide the module you need.
+    Please email [HPC-Help](mailto:HPC-Help@nlr.gov). The Apps team will get in touch with you to provide the module you need.
 
 ??? note "I need to mix and match compilers and libraries/MPI. How can I do that?"
-    Modules on Gila do not support mixing and matching. For example, if `oneapi` is loaded, only software compiled with `oneapi` will appear. If you require a custom combination of software stacks, you are encouraged to use **Spack** to deploy your stack. Please contact [HPC-Help](mailto:HPC-Help@nrel.gov) to be matched with a Spack expert.
+    Modules on Gila do not support mixing and matching. For example, if `oneapi` is loaded, only software compiled with `oneapi` will appear. If you require a custom combination of software stacks, you are encouraged to use **Spack** to deploy your stack. Please contact [HPC-Help](mailto:HPC-Help@nlr.gov) to be matched with a Spack expert.
 
 ??? note "Can I use Miniforge with other modules?"
     While it is technically possible, Miniforge is intended to provide an isolated environment separate from external modules. Be careful with the order in which modules are loaded, as this can impact your `PATH` and `LD_LIBRARY_PATH`.
 
 ??? note "What if I want a different CUDA version?"
-    Other CUDA versions are available under **Core** modules. If you need additional versions, please reach out to [HPC-Help](mailto:HPC-Help@nrel.gov). Note that CUDA modules under CORE do **not** automatically make CUDA-enabled software available; only CUDA modules under **Base** modules will load CUDA-enabled packages.
+    Other CUDA versions are available under **Core** modules. If you need additional versions, please reach out to [HPC-Help](mailto:HPC-Help@nlr.gov). Note that CUDA modules under CORE do **not** automatically make CUDA-enabled software available; only CUDA modules under **Base** modules will load CUDA-enabled packages.

@@ -86,7 +86,7 @@ After you have submitted your project, it will undergo an initital screening and
 For further information on allocations and how to request one, please visit the [Resource Allocations page.](https://www.nrel.gov/hpc/resource-allocation-requests.html)  
 
 !!! tip
-    Please contact [HPC-Requests@nrel.gov](mailto:HPC-Requests@nrel.gov) for any questions about the allocation request process. 
+    Please contact [HPC-Requests@nlr.gov](mailto:HPC-Requests@nlr.gov) for any questions about the allocation request process. 
 
 ## Managing Users
 
@@ -137,4 +137,4 @@ To see a summary about a job, click the job ID.
 ![image](../../assets/images/Lex/lex-job-details.png)
 
 
-For any questions or feedback on Lex, please contact [HPC-Help@nrel.gov](mailto:HPC-Help@nrel.gov).
+For any questions or feedback on Lex, please contact [HPC-Help@nlr.gov](mailto:HPC-Help@nlr.gov).

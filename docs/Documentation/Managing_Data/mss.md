@@ -35,18 +35,18 @@ Data placed in ```/kfs2/shared-projects/MSS/projects/<project_handle>``` and
 ##How To Restore Data 
 
 - Restore requests of AWS MSS data will require a request to
-the [HPC Help Desk](mailto:HPC-Help@nrel.gov) and may require 48 hours or more to be able to stage from
+the [HPC Help Desk](mailto:HPC-Help@nlr.gov) and may require 48 hours or more to be able to stage from
 Deep Archive to recover.  
 - Users can see a list of the archived files they have on AWS MSS by searching the following file: ```/kfs2/shared-projects/MSS/MSS-archived-files```
     - The MSS-archived-files has limited information, but all archives 
       related to a project can be found using a command such as:
       ```$ grep <project name> /kfs2/shared-projects/MSS/MSS-archived-files```
 
-- Let the [HPC Help Desk](mailto:HPC-Help@nrel.gov) know specifically what file(s) you would like to recover, and where the
+- Let the [HPC Help Desk](mailto:HPC-Help@nlr.gov) know specifically what file(s) you would like to recover, and where the
 recovered files should be placed.  
 
 ##Usage Policies 
 Follow the [AWS MSS policies](https://www.nrel.gov/hpc/mass-storage-system-policies.html).
 
 ##Contact 
-Contact the [HPC Help Desk](mailto:HPC-Help@nrel.gov) if you have any questions or issues.
+Contact the [HPC Help Desk](mailto:HPC-Help@nlr.gov) if you have any questions or issues.

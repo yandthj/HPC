@@ -71,7 +71,7 @@ If you are doing work that requires real-time Kestrel access in conjunction with
 
 Your project allocation will be charged for the entire time you have the nodes reserved, whether you use them or not.
 
-To request a reservation, contact [HPC Help](mailto://hpc-help@nrel.gov).
+To request a reservation, contact [HPC Help](mailto://hpc-help@nlr.gov).
 
 ## How to Get Standby Priority for a Job
 

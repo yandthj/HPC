@@ -93,7 +93,7 @@ Results can be viewed in [ParaView](../Viz_Analytics/paraview.md) or [VisIT](../
 ![Velocity Cracks Demo](LBMcfd_metadata/velocity_cracks.gif)
 *Animation credit: [@eyoung55](https://github.com/eyoung55)*
 
-[MARBLES](https://natlabrockies.github.io/marbles/VandV.html) is an in-house effort to make a free Lattice Boltzmann solver available to the community. We encourage users to contact us for help setting up your problem or to request additional features. Please visit the repository and create a [New issue](https://github.com/NREL/marbles/issues) or [email](mailto:nsawant@nrel.gov) us directly. A [machine learning framework](https://github.com/nileshsawant/mlForLBM) for using MARBLES in the loop as a data generator has also been created. Pre-built executibles, `marbles3d.gnu.x86-milan.TPROF.MPI.ex` and `marbles3d.gnu.TPROF.MPI.CUDA.ex`, can also be made available on request.
+[MARBLES](https://natlabrockies.github.io/marbles/VandV.html) is an in-house effort to make a free Lattice Boltzmann solver available to the community. We encourage users to contact us for help setting up your problem or to request additional features. Please visit the repository and create a [New issue](https://github.com/NREL/marbles/issues) or [email](mailto:nsawant@nlr.gov) us directly. A [machine learning framework](https://github.com/nileshsawant/mlForLBM) for using MARBLES in the loop as a data generator has also been created. Pre-built executibles, `marbles3d.gnu.x86-milan.TPROF.MPI.ex` and `marbles3d.gnu.TPROF.MPI.CUDA.ex`, can also be made available on request.
 
 ### M-Star
 

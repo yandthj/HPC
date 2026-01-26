@@ -6,7 +6,7 @@ There are a few common scientific libraries: LAPACK, BLAS, BLACS, scaLAPACK, FFT
 
 Scientific libraries can be packaged together, like in the Intel Math Kernel Library (MKL), or Cray’s LibSci. They can also be built completely separately and act as standalone libraries. These libraries can be built with different MPI implementations and compiler choices. 
 
-If you’re building a code that relies on one or more of these libraries, you can choose how to include these libraries. By the end of this tutorial, how to include these libraries should be clearer. If you need help building a particular package on an NLR machine, please contact [HPC help](mailto:hpc-help@nrel.gov). 
+If you’re building a code that relies on one or more of these libraries, you can choose how to include these libraries. By the end of this tutorial, how to include these libraries should be clearer. If you need help building a particular package on an NLR machine, please contact [HPC help](mailto:hpc-help@nlr.gov). 
 
 ## Makefiles, autoconf, and cmake
 
@@ -206,4 +206,4 @@ If you’re working with a code that has a testsuite, now is a good time to run 
 
 ## Questions?
 
-If you’re still stuck and unable to successfully link the scientific libraries you need, get in contact with [HPC help](mailto:hpc-help@nrel.gov).
+If you’re still stuck and unable to successfully link the scientific libraries you need, get in contact with [HPC help](mailto:hpc-help@nlr.gov).

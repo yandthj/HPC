@@ -5,9 +5,9 @@ title: Help and Support
 *Get quick access to help resources for NLR's high-performance computing (HPC) systems.*
 ## Support Contact Information
 
-[HPC-Help@nrel.gov](mailto:HPC-Help@nrel.gov) - Email for general HPC questions, technical troubleshooting, account requests, and software installation assistance. In the email, please include your username, the system name, project handle, and any information that will help us identify and troubleshoot the issue. 
+[HPC-Help@nlr.gov](mailto:HPC-Help@nlr.gov) - Email for general HPC questions, technical troubleshooting, account requests, and software installation assistance. In the email, please include your username, the system name, project handle, and any information that will help us identify and troubleshoot the issue. 
 
-[HPC-Requests@nrel.gov](mailto:HPC-Requests@nrel.gov) - Email for HPC questions related to allocation requests and to request increases/decreases to allocation units or storage. 
+[HPC-Requests@nlr.gov](mailto:HPC-Requests@nlr.gov) - Email for HPC questions related to allocation requests and to request increases/decreases to allocation units or storage. 
 
 ## Microsoft Teams
 Each system has a Microsoft Teams channel where users can collaborate and post questions. The Swift and Vermilion Team chats are one of the primary ways we communicate announcements and status updates for these systems. 

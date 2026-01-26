@@ -256,4 +256,4 @@ Here are some useful components to add to your ParaView Python script:
 ParaView is supported in the Insight Center's immersive virtual environment. 
 [Learn about the Insight Center](https://www.nrel.gov/computational-science/insight-center.html). 
 
-For assistance, contact [Kenny Gruchalla](Kenny.Gruchalla@nrel.gov).
+For assistance, contact [Kenny Gruchalla](Kenny.Gruchalla@nlr.gov).

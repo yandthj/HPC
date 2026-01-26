@@ -23,7 +23,7 @@ NLR-built environments can make use of Cray MPICH via the `cray-mpich-abi`. As l
 
 ## A note on OpenMPI
 
-Currently, OpenMPI does not run performantly or stably on Kestrel. You should do your best to avoid using OpenMPI. Please reach out to hpc-help@nrel.gov if you need help working around OpenMPI.
+Currently, OpenMPI does not run performantly or stably on Kestrel. You should do your best to avoid using OpenMPI. Please reach out to hpc-help@nlr.gov if you need help working around OpenMPI.
 
 ## Summary of available compiler environments
 
@@ -201,7 +201,7 @@ The NLR build modules are similar to Eagle, where the module are separate and no
 
 The modules are grouped by type `compilers_mpis` `utilities_libraries` and `applications`, and a module can be loaded using `module load $module_name`.
 
-The modules are optimized for Kestrel architecture and will be updated/upgraded every 6/12months or upon request. If there is a module you need but is not available, email hpc-help@nrel.gov
+The modules are optimized for Kestrel architecture and will be updated/upgraded every 6/12months or upon request. If there is a module you need but is not available, email hpc-help@nlr.gov
 
 
 ## NLR-built environments with cray-mpich-abi

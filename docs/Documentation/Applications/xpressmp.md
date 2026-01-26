@@ -9,7 +9,7 @@
     1. Check whether you are a part of this group by running the `groups` command from your terminal, or
     2. Load the `xpressmp` module and run an example
 
-    If you are not a part of the `xpressmp` linux group and/or are unable to run an Xpress instance, please submit a ticket to [HPC-Help@nrel.gov](mailto:HPC-Help@nrel.gov) requesting access to Xpress on HPC systems and provide a business justification that describes how you intend to use Xpress in your workflow. **Please indicate whether you intend to use Xpress for federally funded projects or otherwise**. Our HPC license **ONLY SUPPORTS FEDERALLY FUNDED PROJECTS**. 
+    If you are not a part of the `xpressmp` linux group and/or are unable to run an Xpress instance, please submit a ticket to [HPC-Help@nlr.gov](mailto:HPC-Help@nlr.gov) requesting access to Xpress on HPC systems and provide a business justification that describes how you intend to use Xpress in your workflow. **Please indicate whether you intend to use Xpress for federally funded projects or otherwise**. Our HPC license **ONLY SUPPORTS FEDERALLY FUNDED PROJECTS**. 
 
 For documentation, forums, and FAQs, see the [FICO
 website](https://www.fico.com/fico-xpress-optimization/docs/latest/overview.html).

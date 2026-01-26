@@ -104,10 +104,10 @@ Mon Mar 24 16:42:36 2025
 +-----------------------------------------------------------------------------------------+
 ```
 
-Please reach out to [HPC-Help@nrel.gov](mailto:HPC-Help@nrel.gov) if you would like assistance with profiling your multi-node GPU jobs in a similar manner.
+Please reach out to [HPC-Help@nlr.gov](mailto:HPC-Help@nlr.gov) if you would like assistance with profiling your multi-node GPU jobs in a similar manner.
 
 !!! note
-    **Importantly**, if your target process is running but does *not* show up in the `nvidia-smi` output, that indicates your code cannot recognize the GPU device(s), likely due to software problems or user error. Always feel free to submit a ticket with [HPC-Help@nrel.gov](mailto:HPC-Help@nrel.gov) if something does not look right!
+    **Importantly**, if your target process is running but does *not* show up in the `nvidia-smi` output, that indicates your code cannot recognize the GPU device(s), likely due to software problems or user error. Always feel free to submit a ticket with [HPC-Help@nlr.gov](mailto:HPC-Help@nlr.gov) if something does not look right!
 
 ### GPU-relevant environment variables
 
@@ -183,7 +183,7 @@ Consider the script `numba-mat.py` below. This script demonstrates the importanc
     # balancing the cost of copying data from the host CPU to GPU device in 
     # terms of runtime performance.
 
-    # Please contact Matt.Selensky@nrel.gov with any questions.
+    # Please contact Matt.Selensky@nlr.gov with any questions.
 
     import numba
     from numba import vectorize
