@@ -46,7 +46,7 @@ Deep Archive to recover.
 recovered files should be placed.  
 
 ##Usage Policies 
-Follow the [AWS MSS policies](https://www.nrel.gov/hpc/mass-storage-system-policies.html).
+Follow the [AWS MSS policies](https://www.nlr.gov/hpc/mass-storage-system-policies.html).
 
 ##Contact 
 Contact the [HPC Help Desk](mailto:HPC-Help@nlr.gov) if you have any questions or issues.

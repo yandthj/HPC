@@ -6,9 +6,9 @@ Gila is an OpenHPC-based cluster. Most [nodes](./running.md#gila-compute-nodes) 
 
 ## Gila Access and Allocations
 
- **A specific allocation is not needed for NLR employee use of Gila.** All NLR employees with an HPC account automatically have access to Gila and can use the *aurorahpc* allocation to run jobs. If you do not have an HPC account already and would like to use Gila, please see the [User Accounts](https://www.nrel.gov/hpc/user-accounts) page to request an account. 
+ **A specific allocation is not needed for NLR employee use of Gila.** All NLR employees with an HPC account automatically have access to Gila and can use the *aurorahpc* allocation to run jobs. If you do not have an HPC account already and would like to use Gila, please see the [User Accounts](https://www.nlr.gov/hpc/user-accounts) page to request an account. 
 
-The aurorahpc allocation does have limited resources allowed per job. These limits are dynamic, and can be found in the MOTD displayed when you log in to Gila. Please note that this allocation is a shared resource. If excessive usage reduces productivity for the broader user community, you may be contacted by HPC Operations staff. If you need to use more resources than allowed by the aurorahpc allocation, or work with external collaborators, you can request a specific allocation for your project. For more information on requesting an allocation, please see the [Resource Allocation Requests](https://www.nrel.gov/hpc/resource-allocation-requests) page. 
+The aurorahpc allocation does have limited resources allowed per job. These limits are dynamic, and can be found in the MOTD displayed when you log in to Gila. Please note that this allocation is a shared resource. If excessive usage reduces productivity for the broader user community, you may be contacted by HPC Operations staff. If you need to use more resources than allowed by the aurorahpc allocation, or work with external collaborators, you can request a specific allocation for your project. For more information on requesting an allocation, please see the [Resource Allocation Requests](https://www.nlr.gov/hpc/resource-allocation-requests) page. 
 
 #### For NLR Employees:
 To access Gila, log in to the NLR network and connect via ssh to:
@@ -22,8 +22,8 @@ To use the Grace Hopper nodes, connect via ssh to:
 #### For External Collaborators:
 There are no external-facing login nodes for Gila. There are two options to connect:
 
-1. Connect to the [SSH gateway host](https://www.nrel.gov/hpc/ssh-gateway-connection.html) and log in with your username, password, and OTP code. Once connected, ssh to the login nodes as above.
-1. Connect to the [HPC VPN](https://www.nrel.gov/hpc/vpn-connection.html) and ssh to the login nodes as above.
+1. Connect to the [SSH gateway host](https://www.nlr.gov/hpc/ssh-gateway-connection.html) and log in with your username, password, and OTP code. Once connected, ssh to the login nodes as above.
+1. Connect to the [HPC VPN](https://www.nlr.gov/hpc/vpn-connection.html) and ssh to the login nodes as above.
 
 ## Get Help with Gila
 

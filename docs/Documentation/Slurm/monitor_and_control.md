@@ -14,7 +14,7 @@ Slurm includes a suite of command-line tools used to submit, monitor, and contro
 
 Please see ```man``` pages on the cluster for more information on each command. Also see ```--help``` or ```--usage``` flags for each.
 
-Our [Presentation on Advanced Slurm Features](https://www.nrel.gov/hpc/assets/pdfs/slurm-advanced-topics.pdf) is also available as a resource, which has supplementary information on how to manage jobs.
+Our [Presentation on Advanced Slurm Features](https://www.nlr.gov/hpc/assets/pdfs/slurm-advanced-topics.pdf) is also available as a resource, which has supplementary information on how to manage jobs.
 
 Another great resource for Slurm at NLR is [this repository on Github](https://github.com/sayerhs/nrel-eagle/blob/master/nrel-eagle.md).
 

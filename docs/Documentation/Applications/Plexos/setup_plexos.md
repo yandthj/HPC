@@ -14,7 +14,7 @@ PLEXOS XML model files can only run with Gurobi that is pre-packaged with a give
 | plexos/9.200R06  | 10.0.2 |
 | plexos/11.000R01 | 11.0.2 |
 
-Please [contact us](https://www.nrel.gov/hpc/contact-us.html) if you encounter any issues or require a newer version.
+Please [contact us](https://www.nlr.gov/hpc/contact-us.html) if you encounter any issues or require a newer version.
 
 ## Setting up the License
 

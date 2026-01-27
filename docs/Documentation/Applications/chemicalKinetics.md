@@ -104,7 +104,7 @@ $ cmake . && cmake --build . && ./demo
 $ g++ demo.cpp -o demo $(pkg-config --cflags --libs cantera) && ./demo
 ```
 
-??? example "[Example interactive C++ usage](https://www.nrel.gov/hpc/running-jobs.html)"
+??? example "[Example interactive C++ usage](https://www.nlr.gov/hpc/running-jobs.html)"
 	```
 	$ ssh username@kestrel.hpc.nrel.gov
 	```
