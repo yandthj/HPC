@@ -25,8 +25,8 @@ The HPC community also hosts workshops covering various topics. Check the traini
 
 
 ## Additional NLR resources
-* [About NLR HPC](https://www.nrel.gov/hpc/about-hpc.html)
-* [User Basics](https://www.nrel.gov/hpc/user-basics.html)
+* [About NLR HPC](https://www.nlr.gov/hpc/about-hpc.html)
+* [User Basics](https://www.nlr.gov/hpc/user-basics.html)
 
 
 ## Calendar

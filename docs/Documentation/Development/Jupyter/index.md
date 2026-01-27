@@ -86,7 +86,7 @@ The NLR HPC team runs a JupyterHub service for HPC users to quickly access noteb
 
 KJHub is available from the NLR VPN (onsite or offsite) for internal NLR users.
 
-This service is not directly accessible externally for non-NLR HPC users. However, it may be reached by using the [HPC VPN](https://www.nrel.gov/hpc/vpn-connection.html), or by using a [FastX Remote Desktop](../../Viz_Analytics/virtualgl_fastx.md) session via the DAV nodes.
+This service is not directly accessible externally for non-NLR HPC users. However, it may be reached by using the [HPC VPN](https://www.nlr.gov/hpc/vpn-connection.html), or by using a [FastX Remote Desktop](../../Viz_Analytics/virtualgl_fastx.md) session via the DAV nodes.
 
 The JupyterHub service is accessible via web browser at [https://kestrel-jhub.hpc.nrel.gov](https://kestrel-jhub.hpc.nrel.gov)
 

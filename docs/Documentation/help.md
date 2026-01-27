@@ -37,7 +37,7 @@ We update the team channel members annually based on HPC project members. Howeve
 
 ## Additional Resources
 
-[HPC Website](https://www.nrel.gov/hpc/) - Resources to get access to systems, basics on getting started with HPC, accounts and allocation information, and refer to our policies.
+[HPC Website](https://www.nlr.gov/hpc/) - Resources to get access to systems, basics on getting started with HPC, accounts and allocation information, and refer to our policies.
 
 [Computational Sciences Tutorials Team](https://teams.microsoft.com/l/team/19%3a6nLmPDt9QHQMEuLHVBaxfsitEZSGH6oXT6lyVauMvXY1%40thread.tacv2/conversations?groupId=22ad3c7b-a45a-4880-b8b4-b70b989f1344&tenantId=a0f29d7e-28cd-4f54-8442-7885aee7c080): Staff in the Computational Science Center host multiple tutorials and workshops on various computational science topics throughout the year, such as Visualization, Cloud, HPC, and others. The team has a calendar of the upcoming training schedule and past slide decks and recordings. Please use the above instructions if you would like to join the team.  
 

@@ -14,7 +14,7 @@ Kestrel is configured to run compute-intensive and parallel computing jobs. It i
 Please see the [System Configurations](../index.md) page for more information about hardware, storage, and networking.
 
 ## Accessing Kestrel
-Access to Kestrel requires an NLR HPC account and permission to join an existing allocation. Please see the [System Access](https://www.nrel.gov/hpc/system-access.html) page for more information on accounts and allocations.
+Access to Kestrel requires an NLR HPC account and permission to join an existing allocation. Please see the [System Access](https://www.nlr.gov/hpc/system-access.html) page for more information on accounts and allocations.
 
 Kestrel has two types of login nodes, CPU and GPU, which share the same architecture as the corresponding compute nodes. You should use the CPU login nodes to compile software for use on and to submit jobs to the CPU compute nodes, and the GPU login nodes for GPU jobs.  
 
@@ -35,9 +35,9 @@ Users on an NLR device may connect via ssh to Kestrel from the NLR network using
 * kl6.hpc.nrel.gov (GPU)
 
 #### For External Collaborators:
-If you are an external HPC user, you will need a [One-Time Password Multifactor token (OTP)](https://www.nrel.gov/hpc/multifactor-tokens.html) for two-factor authentication.
+If you are an external HPC user, you will need a [One-Time Password Multifactor token (OTP)](https://www.nlr.gov/hpc/multifactor-tokens.html) for two-factor authentication.
 
-For command line access, you may login directly to **kestrel.nrel.gov**.  Alternatively, you can connect to the [SSH gateway host](https://www.nrel.gov/hpc/ssh-gateway-connection.html) or the [HPC VPN](https://www.nrel.gov/hpc/vpn-connection.html).
+For command line access, you may login directly to **kestrel.nrel.gov**.  Alternatively, you can connect to the [SSH gateway host](https://www.nlr.gov/hpc/ssh-gateway-connection.html) or the [HPC VPN](https://www.nlr.gov/hpc/vpn-connection.html).
 
 To access the GPU login nodes, first connect with one of the methods described above, and then ssh to **kestrel-gpu.hpc.nrel.gov**. 
 
@@ -51,7 +51,7 @@ To access the GPU login nodes, first connect with one of the methods described a
     See the [Workaround blog post](../../../blog/2022-12-19-windows_ssh.md) for further details and information.
 
 !!! warning "Login Node Policies"
-    Kestrel login nodes are shared resources, and because of that are subject to process limiting based on usage to ensure that these resources aren't being [used inappropriately](https://www.nrel.gov/hpc/inappropriate-use-policy.html). Each user is permitted up to 8 cores and 100GB of RAM at a time, after which the Arbiter monitoring software will begin moderating resource consumption, restricting further processes by the user until usage is reduced to acceptable limits.
+    Kestrel login nodes are shared resources, and because of that are subject to process limiting based on usage to ensure that these resources aren't being [used inappropriately](https://www.nlr.gov/hpc/inappropriate-use-policy.html). Each user is permitted up to 8 cores and 100GB of RAM at a time, after which the Arbiter monitoring software will begin moderating resource consumption, restricting further processes by the user until usage is reduced to acceptable limits.
 
 ## Data Analytics and Visualization (DAV) Nodes
 

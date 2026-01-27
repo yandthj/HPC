@@ -22,4 +22,4 @@ For internal users (NLR), please follow these instructions if we missed you and 
 For external users, please follow the instructions listed in the [CSC Tutorial Team - External Users](../../../Announcements/2022-04-06-announcement.md#csc-tutorials-team-external-users) announcement. 
 
 ## Additional Support
-Additional HPC help and contact information can be found on the NLR [HPC Help](https://www.nrel.gov/hpc/help.html) main page.
+Additional HPC help and contact information can be found on the NLR [HPC Help](https://www.nlr.gov/hpc/help.html) main page.

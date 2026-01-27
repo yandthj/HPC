@@ -4,7 +4,7 @@
 
 ## Access
 
-An [NLR HPC account](https://www.nrel.gov/hpc/user-accounts.html) is required to access Lex. To log in to Lex, open a web browser to [https://hpcprojects.nrel.gov](https://hpcprojects.nrel.gov/login/?next=/). Log in with your NLR HPC username and password. An OTP token is not required to authenticate. 
+An [NLR HPC account](https://www.nlr.gov/hpc/user-accounts.html) is required to access Lex. To log in to Lex, open a web browser to [https://hpcprojects.nrel.gov](https://hpcprojects.nrel.gov/login/?next=/). Log in with your NLR HPC username and password. An OTP token is not required to authenticate. 
 
 ## Requesting an Allocation
 
@@ -83,7 +83,7 @@ You can save your request as many times as needed, but once it's submitted you w
 
 After you have submitted your project, it will undergo an initital screening and a Technical Readiness Review. You may be contacted by the NLR HPC team with questions; please resond to these emails as soon as possible to ensure your request can be processed on time. 
 
-For further information on allocations and how to request one, please visit the [Resource Allocations page.](https://www.nrel.gov/hpc/resource-allocation-requests.html)  
+For further information on allocations and how to request one, please visit the [Resource Allocations page.](https://www.nlr.gov/hpc/resource-allocation-requests.html)  
 
 !!! tip
     Please contact [HPC-Requests@nlr.gov](mailto:HPC-Requests@nlr.gov) for any questions about the allocation request process. 

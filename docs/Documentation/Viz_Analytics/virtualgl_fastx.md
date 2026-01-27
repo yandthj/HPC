@@ -8,7 +8,7 @@ In addition to standard ssh-only login nodes, Kestrel is also equipped with seve
 !!! Note About Usage
     DAV FastX nodes are a limited resource and not intended as a general-purpose remote desktop. We ask that you please restrict your usage to only HPC allocation-related work and/or visualization software that requires an HPC system.
 
-There are seven internal DAV nodes on Kestrel available only to NLR users on the NLR VPN, on campus, or via the [HPC VPN](https://www.nrel.gov/hpc/vpn-connection.html) that are accessible via round-robin at **kestrel-dav.hpc.nrel.gov**. The individual nodes are named kd1 through kd7.hpc.nrel.gov.
+There are seven internal DAV nodes on Kestrel available only to NLR users on the NLR VPN, on campus, or via the [HPC VPN](https://www.nlr.gov/hpc/vpn-connection.html) that are accessible via round-robin at **kestrel-dav.hpc.nrel.gov**. The individual nodes are named kd1 through kd7.hpc.nrel.gov.
 
 There is also one node that is ONLY accessible by external (non-NLR) users available at **kestrel-dav.nrel.gov**. This address will connect to the node kd8, and requires both password and OTP for login. 
 
@@ -26,7 +26,7 @@ The traditional method of displaying graphics applications to a remote X server 
 FastX provides a means to use a graphical desktop remotely. By connecting to a FastX session on a DAV node, users can run graphical applications with a similar experience to running on their workstation.  Another benefit is that you can disconnect from a FastX connection, go to another location and [reconnect to that same session](#reattaching-fastx-sessions), picking up where you left off.
 
 ## Connecting to DAV Nodes Using FastX
-NLR users may use the web browser or the FastX desktop client. External users must use the FastX desktop client, or connect to the [HPC VPN](https://www.nrel.gov/hpc/vpn-connection.html) for the web client.
+NLR users may use the web browser or the FastX desktop client. External users must use the FastX desktop client, or connect to the [HPC VPN](https://www.nlr.gov/hpc/vpn-connection.html) for the web client.
 
 
 ??? abstract "NLR On-Site and VPN Users" 
@@ -216,4 +216,4 @@ launching into a base environment upon login.
 FastX has a limited number of licenses for concurrent usage, so please remember to log out of your X session AND out of FastX when you are done working. If you receive a "no free licenses" error when trying to start a new session, please contact hpc-help@nlr.gov for assistance.
 
 ### How to Get Help
-Please contact the [HPC Helpdesk](https://www.nrel.gov/hpc/help.html) at [hpc-help@nlr.gov](mailto://hpc-help@nlr.gov) if you have any questions, technical issues, or receive a "no free licenses" error. 
+Please contact the [HPC Helpdesk](https://www.nlr.gov/hpc/help.html) at [hpc-help@nlr.gov](mailto://hpc-help@nlr.gov) if you have any questions, technical issues, or receive a "no free licenses" error. 

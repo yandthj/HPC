@@ -52,10 +52,10 @@ Additional rsync examples are available [here](https://github.com/NREL/HPC/tree/
 
 #### Large Transfers (>100GB) outside of the NLR network
 
-Globus is optimized for file transfers between data centers and anything outside of the NLR network. It will be several times faster than any other tools you will have available. Documentation about requesting a HPC Globus account is available on the [Globus Services page on the HPC website](https://www.nrel.gov/hpc/globus-file-transfer.html).  See [Transfering files using Globus](globus.md) for instructions on transfering files with Globus.
+Globus is optimized for file transfers between data centers and anything outside of the NLR network. It will be several times faster than any other tools you will have available. Documentation about requesting a HPC Globus account is available on the [Globus Services page on the HPC website](https://www.nlr.gov/hpc/globus-file-transfer.html).  See [Transfering files using Globus](globus.md) for instructions on transfering files with Globus.
 
 #### Transfering files using Windows
-For Windows you will need to download WinSCP to transfer files to and from HPC systems over SCP. See [Transfering using WinSCP](https://www.nrel.gov/hpc/winscp-file-transfer.html).
+For Windows you will need to download WinSCP to transfer files to and from HPC systems over SCP. See [Transfering using WinSCP](https://www.nlr.gov/hpc/winscp-file-transfer.html).
 
 
 ## Archiving files and directories
