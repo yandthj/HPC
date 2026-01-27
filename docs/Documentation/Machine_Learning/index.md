@@ -176,16 +176,19 @@ The [Gila](../Systems/Gila/index.md) cluster hosts two types of accelerator node
 !!! Note 
     Python/conda environments built on Gila will only work for **either** `x86` or `arm` architectures depending on which node was used to create them. In other words, an environment created on an `x86`-based node hosting A100s would *not* be expected to work on an `arm`-based Grace Hopper node (and vice versa). This is generally true for all software managed on Gila. As such, always ensure you are using an environment that was created on the same node architecture you plan to run it on.
 
-Regardless of architecture, installing an accelerated version PyTorch on Gila is straightforward; simply load the `cuda` and `miniforge3` modules and pass the appropriate `index-url` to use cuda 13+ wheels. This example reflects a minimal arm-based environment that simply starts with `python` and the `numpy` package. Note that in this example, a project's `.conda-envs` folder is assumed to be organized to include `arm` and `x86` subfolders to distinguish environments created for the two different types of architectures:
+Regardless of architecture, installing an accelerated version PyTorch on Gila is straightforward; simply load the `cuda` and `miniforge3` modules and pass the appropriate `index-url` to use cuda 13+ wheels. This example reflects a minimal arm-based environment that starts with `python` and the `numpy` package. Note that in this example, a project's `.conda-envs` folder is assumed to be organized to include `arm` and `x86` subfolders to distinguish environments created for the two different types of architectures:
 
 ??? example "Creating an arm-based PyTorch environment for Grace Hopper nodes on Gila"
     ```
-    # Request Grace Hopper node for 15 minutes to create arm-based environment
-    salloc -A hpcapps -p gh -t 00:15:00 --mem=0 -n 1 -c 72 --gres=gpu:1
+    # Connect to the arm login node
+    ssh gila-arm.hpc.nrel.gov
+    
+    # Request partial Grace Hopper node for 15 minutes to create arm-based environment
+    # Replace <allocation handle> accordingly
+    salloc -A <allocation handle> -p gh -t 00:15:00 --mem-per-cpu=2G -n 1 -c 8 --gres=gpu:1
 
-    # Replace HPC_PROJECT accordingly
-    HPC_PROJECT=hpcapps
-    EXAMPLE_TORCH_ENV=/projects/$HPC_PROJECT/.conda-envs/arm/torch-test-env
+    # Define location for PyTorch environment (don't forget to replace <allocation handle>!)
+    EXAMPLE_TORCH_ENV=/projects/<allocation handle>/.conda-envs/arm/torch-test-env
 
     # Load modules, create env, and use pip to install torch into it
     ml cuda/13.1 miniforge3
