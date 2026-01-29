@@ -44,7 +44,7 @@ The following table summarizes the partitions on Kestrel:
 
 | Partition Name | Description   | Limits | Placement Condition |
 | -------------- | ------------- | ------ | ------------------- | 
-| ```debug```    | Nodes dedicated to developing <br> and troubleshooting jobs. Debug nodes with each of the non-standard hardware configurations are available. | - 1 job with a max of 2 nodes per user. <br> - 2 GPUs per user.<br> - 1/2 GPU node resources per user (Across 1-2 nodes). <br> - 01:00:00 max walltime. | ```-p debug``` <br>   or<br>   ```--partition=debug``` |
+| ```debug```    | Nodes dedicated to developing <br> and troubleshooting jobs. Debug nodes with each of the non-standard hardware configurations are available. | - 1 job with a max of 2 nodes per user. <br> - 4 GPUs per user.<br> - 1/2 GPU node resources per user (Across 1-2 nodes). <br> - 04:00:00 max walltime. | ```-p debug``` <br>   or<br>   ```--partition=debug``` |
 |```short```     |  Nodes that prefer jobs with walltimes <br> <= 4 hours. | 2240 nodes total.| ```--time <= 4:00:00```<br>```--mem <= 984256```<br> ```--tmp <= 1700000 (256 nodes)```| 
 | ```standard``` | Nodes that prefer jobs with walltimes <br> <= 2 days. | 2240 nodes total. <br> 1050 nodes per user. | ```--mem <= 984256```<br> ```--tmp <= 1700000```|
 | ```long```     | Nodes that prefer jobs with walltimes > 2 days.<br>*Maximum walltime of any job is 10 days.* | 430 nodes total.<br> 215 nodes per user.|  ```--time <= 10-00```<br>```--mem <= 984256```<br>```--tmp <= 1700000  (256 nodes)```|
@@ -116,7 +116,7 @@ Most of the GPU nodes also have 3.4 TB of local disk space, and 24 of them have 
 
 #### GPU Debug Jobs
 
-To run GPU debug jobs, specify `--partition=debug` in your job script. In addition to the limits for the `debug` partition, 1 job per user, up to 2 nodes per user, and up to 1 hour of walltime, a single GPU job is also limited to half of a total GPU node's resources. This is equivalent to 64 CPU cores, 2 GPUs, and 180G of RAM, which can be spread across 1 or 2 nodes. Unlike the other GPU nodes, the GPU debug nodes can't be used exclusively, so the `--exclusive` flag can't be used for debug GPU jobs. 
+To run GPU debug jobs, specify `--partition=debug` in your job script. In addition to the limits for the `debug` partition, 1 job per user, up to 2 nodes per user, and up to 1 hour of walltime, a single GPU job is also limited to 4 GPUs and half of a total GPU node's CPU cores and RAM. This is equivalent to 64 cores and 180G of RAM, which can be spread across 1 or 2 nodes. Unlike the other GPU nodes, the GPU debug nodes can't be used exclusively, so the `--exclusive` flag can't be used for debug GPU jobs. 
 
 ## Allocation Unit (AU) Charges
 
