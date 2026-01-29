@@ -25,6 +25,9 @@ There are no external-facing login nodes for Gila. There are two options to conn
 1. Connect to the [SSH gateway host](https://www.nlr.gov/hpc/ssh-gateway-connection.html) and log in with your username, password, and OTP code. Once connected, ssh to the login nodes as above.
 1. Connect to the [HPC VPN](https://www.nlr.gov/hpc/vpn-connection.html) and ssh to the login nodes as above.
 
+!!! warning "Former Vermilion Users"
+    Your `~/.bashrc` file was transferred from Vermilion to Gila. Please review any customizations to ensure compatibility with Gila.
+
 ## Get Help with Gila
 
 Please see the [Help and Support Page](../../help.md) for further information on how to seek assistance with Gila or your NLR HPC account. 
