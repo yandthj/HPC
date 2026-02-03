@@ -2,6 +2,12 @@
 
 *We will update this page with Kestrel release notes after major Kestrel upgrades.*
 
+## February 2, 2026
+1. Slurm was upgraded to 25.05.5
+2. The following scheduling policy changes were made:
+    - Debug walltime was increased to four hours
+    - The walltime limit for all standby jobs was decreased to 24 hours
+
 ## October 1, 2025
 1. The size of the shared partition was doubled from 64 nodes to 128 nodes.
 
