@@ -52,7 +52,7 @@ As additional complexity, the above usage calculations are modified by a half-de
 
 $$ U = U_{currentperiod} + ( D * U_{lastperiod}) + (D * D * U_{period-2}) + ...$$
 
-The decay factor, *D*, is a number between 0 and 1 that achieves the half-decay rate specified by the Slurm configruation files (14 day on Kestrel).
+The decay factor, *D*, is a number between 0 and 1 that achieves the half-decay rate specified by the Slurm configruation files (7 days on Kestrel).
 
 ## How to View Slurm Job Priority
 
@@ -80,4 +80,7 @@ All partitions have a matching `-standby` partition, which has *lower* priority.
     2) Your desired Slurm partition is relatively open, and you want to save AUs for other jobs. Please [see here](../../../Slurm/monitor_and_control.md#sinfo) for instructions on how to estimate a partition's availability.
 
 Note that `standby` is the default QoS for allocations which have already consumed all awarded AUs for the year.
+
+!!! info
+    Standby jobs are limited to 24 hours. 
 
