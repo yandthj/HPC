@@ -7,6 +7,9 @@
 
 Gila compute nodes are not configured as exclusive and can be shared by multiple users or jobs. Be sure to request the resources that your job needs, including memory and cores. If you need exclusive use of a node, add the `--exclusive` flag to your job submission. 
 
+!!! info "Important" 
+    Please note that Gila's hardware configuration is continuously evolving, and partitions are subject to change. For the most current partition information, use the `sinfo` command. To display detailed configuration information about a node, run `scontrol show node <nodename>`. 
+
 ### CPU Nodes
 
 The CPU nodes in Gila are single-threaded virtualized nodes.  There are two sockets and NUMA nodes per compute node, with each socket containing 30 __AMD EPYC Milan__ (x86-64) cores. Each node has 220GB of RAM that can be used. 
@@ -14,11 +17,11 @@ The CPU nodes in Gila are single-threaded virtualized nodes.  There are two sock
 
 ### GPU Nodes
 
-GPU nodes in Gila have 8 NVIDIA A100 GPUs running on x86-64 __Intel Xeon Icelake CPUs__. There are 42 cores on a GPU node, with one socket and NUMA node. Each GPU node has 910GB of RAM, and each NVIDIA A100 GPU has 80GB of VRAM.
+There are four types of GPU nodes on Gila, including the Grace Hopper nodes described below. Two types have A100 GPUs and are running on x86-64 __Intel Xeon Icelake CPUs__. There is also one node with an AMD MI210 GPU.
 
 ### Grace Hopper Nodes
 
-Gila has 6 NVIDIA Grace Hopper nodes. To use the Grace Hopper nodes, submit your jobs to the `gh` partition from the `gila-arm.hpc.nrel.gov` login node. Each Grace Hopper node has a 72 core NVIDIA Grace CPU and an NVIDIA GH200 GPU, with 96GB of VRAM and 470GB of RAM. They have one socket and NUMA node. 
+Gila has 5 NVIDIA Grace Hopper nodes. To use the Grace Hopper nodes, submit your jobs to the `gh` partition from the `gila-arm.hpc.nrel.gov` login node. Each Grace Hopper node has a 72 core NVIDIA Grace CPU and an NVIDIA GH200 GPU, with 96GB of VRAM and 470GB of RAM. They have one socket and NUMA node. 
 
 Please note - the __NVIDIA Grace CPUs__ run on a different processing architecture (ARM64) than both the __Intel Xeon Icelake CPUs__ (x86-64) and the __AMD EPYC Milan__ (x86-64). Any application that is manually compiled by a user and intended to be used on the Grace Hopper nodes __MUST__ be compiled on the Grace Hopper nodes themselves. 
 
@@ -26,13 +29,15 @@ Please note - the __NVIDIA Grace CPUs__ run on a different processing architectu
 
 ## Partitions
 
-A list of partitions can be found by running the `sinfo` command.  Here are the partitions as of 12/30/2025
+Here are the partitions as of 2/4/2026:
 
-| Partition Name                          | CPU |  GPU | Qty | RAM    | Cores/node |
-| :--:                                    | :--:| :--: | :--:| :--:   | :--:       |                        
-| gpu       |  Intel Xeon Icelake | NVIDIA Tesla A100-80 |  1  | 910 GB |   42            |      
-| amd                                | 2x 30 Core AMD Epyc Milan | N/A |  36  | 220 GB |   60            |
-| gh                                | NVIDIA Grace | GH200 |  5  | 470 GB |       72       |
+| Partition Name       | CPU                       | GPU                      | Qty | RAM    | Cores/node | GPUs/node |
+| :--:                 | :--:                      | :--:                     | :--:| :--:   | :--:       | :--:      |
+| gpu-intel-a100-40g   | Intel Xeon Icelake        | NVIDIA Tesla A100-40     | 7   | 210 GB | 60         | 1         |
+| gpu-intel-a100-80g   | Intel Xeon Icelake        | NVIDIA Tesla A100-80     | 5   | 910 GB | 42         | 8         |
+| amd                  | 2x 30 Core AMD Epyc Milan | N/A                      | 36  | 220 GB | 60         | N/A       |
+| gh                   | NVIDIA Grace              | GH200                    | 5   | 470 GB | 72         | 1         |
+| gpu-amd-mi210        | 2x 30 Core AMD Epyc Milan | AMD MI210                | 1   | 210 GB | 60         | 1         |
 
 
 ## Performance Recommendations
@@ -95,7 +100,7 @@ The following batch script requests two cores to use two MPI ranks on a single n
     #SBATCH --nodes=1
     #SBATCH --ntasks=2
     #SBATCH --cpus-per-task=2
-    #SBATCH --time=00:01:00
+    #SBATCH --time=01:00:00
     #SBATCH --mem=20GB
     #SBATCH --account=aurorahpc
 
@@ -144,7 +149,7 @@ Once the program has been compiled against OpenMPI, we can go ahead and submit a
     #SBATCH --nodes=1
     #SBATCH --ntasks=2
     #SBATCH --cpus-per-task=2
-    #SBATCH --time=00:01:00
+    #SBATCH --time=01:00:00
     #SBATCH --mem=20GB
     #SBATCH --account=aurorahpc
 
