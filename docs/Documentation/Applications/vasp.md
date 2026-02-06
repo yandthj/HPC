@@ -468,166 +468,119 @@ Sample makefiles for vasp5 (cpu version) and vasp6 (cpu and gpu versions) on Kes
     mpirun -npernode 4 vasp_std &> out
     ```
 
-## VASP on Vermilion
+## VASP on Gila
 
 #### CPU
-??? example "Sample job script: Vermilion - VASP 6 CPU (Intel MPI)"
+??? example "Sample job script: Gila - VASP 6.4.1 CPU (Intel - Intel MPI)"
   
     ```
     #!/bin/bash
     #SBATCH --job-name=vasp
     #SBATCH --nodes=1
+    #SBATCH --ntasks=60
+    #SABTCH --mem=60G
     #SBATCH --time=8:00:00
     #SBATCH --error=std.err
     #SBATCH --output=std.out
-    #SBATCH --partition=lg
-    #SBATCH --exclusive
+    #SBATCH --partition=amd
     #SBATCH --account=myaccount
 
-    module purge
-    ml vasp/6.3.1
+    ml application
+    ml vasp-intel/6.4.1
 
-    source /nopt/nrel/apps/220525b/myenv.2110041605
-    ml intel-oneapi-compilers/2022.1.0-k4dysra
-    ml intel-oneapi-mkl/2022.1.0-akthm3n
-    ml intel-oneapi-mpi/2021.6.0-ghyk7n2
-
-    # some extra lines that have been shown to improve VASP reliability on Vermilion
+    # some extra lines that have been shown to improve VASP performance on Gila when compiled against an Intel toolchain
     ulimit -s unlimited
-    export UCX_TLS=tcp,self
-    export OMP_NUM_THREADS=1
-    ml ucx
+    export I_MPI_ADJUST_REDUCE=3
 
-    srun --mpi=pmi2 -n 60 vasp_std
+    srun -n 60 vasp_std
 
     # If the multi-node calculations are breaking, replace the srun line with this line
-    # I_MPI_OFI_PROVIDER=tcp mpirun -iface ens7 -np 60 vasp_std
-    ```
-??? example "Sample job script: Vermilion - VASP 6 CPU (Open MPI)"
-  
-    ```
-    #!/bin/bash
-    #SBATCH --job-name=vasp
-    #SBATCH --nodes=1
-    #SBATCH --time=8:00:00
-    #SBATCH --error=std.err
-    #SBATCH --output=std.out
-    #SBATCH --partition=lg
-    #SBATCH --exclusive
-    #SBATCH --account=myaccount
-
-    module purge
-    ml gcc
-    ml vasp/6.1.1-openmpi
-
-    # some extra lines that have been shown to improve VASP reliability on Vermilion
-    ulimit -s unlimited
-    export UCX_TLS=tcp,self
-    export OMP_NUM_THREADS=1
-    ml ucx
-
-    # lines to set "ens7" as the interconnect network
-    module use /nopt/nrel/apps/220525b/level01/modules/lmod/linux-rocky8-x86_64/gcc/12.1.0
-    module load openmpi
-    OMPI_MCA_param="btl_tcp_if_include ens7"
-
-    srun --mpi=pmi2 -n 60 vasp_std
-    ```
-??? example "Sample job script: Vermilion - VASP 5 CPU (Intel MPI)"
-  
-    ```
-    #!/bin/bash
-    #SBATCH --job-name=vasp
-    #SBATCH --nodes=1
-    #SBATCH --time=8:00:00
-    ##SBATCH --error=std.err
-    ##SBATCH --output=std.out
-    #SBATCH --partition=lg
-    #SBATCH --exclusive
-    #SBATCH --account=myaccount
-
-    module purge
-
-    ml vasp/5.4.4
-
-    source /nopt/nrel/apps/220525b/myenv.2110041605
-    ml intel-oneapi-compilers/2022.1.0-k4dysra
-    ml intel-oneapi-mkl/2022.1.0-akthm3n
-    ml intel-oneapi-mpi/2021.6.0-ghyk7n2
-
-    # some extra lines that have been shown to improve VASP reliability on Vermilion
-    ulimit -s unlimited
-    export UCX_TLS=tcp,self
-    export OMP_NUM_THREADS=1
-    ml ucx
-
-    srun --mpi=pmi2 -n 60 vasp_std
-
-    # If the multi-node calculations are breaking, replace the srun line with this line
-    # I_MPI_OFI_PROVIDER=tcp mpirun -iface ens7 -np 60 vasp_std
-    ```
-
-??? note "Performance Notes"
-
-    On Vermilion, VASP runs more performantly on a single node. Many issues have been reported for running VASP on multiple nodes, especially when requesting all available cores on each node. In order for MPI to work reliably on Vermilion, it is necessary to specify the interconnect network that Vermilion should use to communicate between nodes. If many cores are needed for your VASP calculation, it is recommended to run VASP on a singe node in the lg partition (60 cores/node), which provides the largest numbers of cores per node and use the following settings that have been shown to work well for multi-node jobs on 2 nodes. The Open MPI multi-node jobs are more reliable on Vermilion, but Intel MPI VASP jobs show better runtime performance as usual.
     
-    If your multi-node **Intel MPI VASP** job is crashing on Vermilion, try replacing your srun line with the following mpirun run line. ```-iface ens7``` sets ens7 as the interconnect. 
     ```
-    I_MPI_OFI_PROVIDER=tcp mpirun -iface ens7 -np 16 vasp_std
+??? example "Sample job script: Gila - VASP 6.4.1 CPU (GCC - OpenMPI)"
+  
     ```
+    #!/bin/bash
+    #SBATCH --job-name=vasp
+    #SBATCH --nodes=1
+    #SBATCH --ntasks=60
+    #SBATCH --mem=60G
+    #SBATCH --time=8:00:00
+    #SBATCH --error=std.err
+    #SBATCH --output=std.out
+    #SBATCH --partition=amd
+    #SBATCH --account=myaccount
 
-    If your multi-node **Open MPI VASP** job is crashing on Vermilion, replace a call to load an openmpi module with the following lines. The OMPI_MCA_param variable sets ens7 as the interconnect. 
+    ml vasp-gcc/6.4.1
 
-    ```
-    module use /nopt/nrel/apps/220525b/level01/modules/lmod/linux-rocky8-x86_64/gcc/12.1.0
-    module load openmpi
-    OMPI_MCA_param="btl_tcp_if_include ens7"
+    ### Using mpirun as opposed to srun due to OpenMPI 5.0 compatibility issues with Slurm Process Manager
+    mpirun -np 60 vasp_std
     ```
 
 #### GPU
 
-??? example "Sample job script: Vermilion - VASP 6 CPU (OpenACC)"
+??? example "Sample job script: Gila - VASP 6.4.1 GPU (A100) (OpenACC)"
   
     ```
     #!/bin/bash
     #SBATCH --job-name=vasp
-    #SBATCH --nodes=2
-    #SBATCH --time=1:00:00
+    #SBATCH --nodes=1
+    #SBATCH --time=8:00:00
+    #SBATCH --ntasks=1
+    #SBATCH --mem=60G
+    #SBATCH --gpus=1
+    #SBATCH --error=std.err
+    #SBATCH --output=std.out
+    #SBATCH --partition=gpu-intel-a100-80g
+    #SBATCH --account=myaccount
+    
+    ml application
+    ml vasp-gpu-a100/6.4.1
+    export CUDA_VISIBLE_DEVICES=0
+    export OMPI_MCA_opal_cuda_support=1
+
+    ### Using mpirun as opposed to srun due to OpenMPI 5.0 compatibility issues with Slurm Process Manager
+    mpirun -np 1 60 vasp_std
+
+    ```
+
+
+??? example "Sample job script: Gila - VASP 6.4.1 GPU (Grace-Hopper) (OpenACC)"
+  
+    ```
+    #!/bin/bash
+    #SBATCH --job-name=vasp
+    #SBATCH --nodes=1
+    #SBATCH --time=8:00:00
+    #SBATCH --ntasks=1
+    #SBATCH --mem=60G
+    #SBATCH --gpus=1
     ##SBATCH --error=std.err
     ##SBATCH --output=std.out
-    #SBATCH --partition=gpu
-    #SBATCH --gpu-bind=map_gpu:0,1,0,1
-    #SBATCH --exclusive
+    #SBATCH --partition=gh
     #SBATCH --account=myaccount
 
-    # Load the OpenACC build of VASP
-    ml vasp/6.3.1-nvhpc_acc
+    export OMPI_MCA_opal_cuda_support=1
+    export CUDA_VISIBLE_DEVICES=0
+    ml application
+    ml vasp-gpu-grace
 
-    # Load some additional modules
-    module use  /nopt/nrel/apps/220421a/modules/lmod/linux-rocky8-x86_64/gcc/11.3.0/
-    ml nvhpc
-    ml fftw
 
-    mpirun -npernode 1 vasp_std > vasp.$SLURM_JOB_ID
+    ### Using mpirun as opposed to srun due to OpenMPI 5.0 compatibility issues with Slurm Process Manager
+    mpirun -np 1 60 vasp_std
+
+
     ```
 
 ??? note "Performance Notes"
-    The OpenACC build shows significant performance improvement compared to the Cuda build, but is more susceptible to running out of memory. The OpenACC GPU-port of VASP was released with VASP 6.2.0, and the Cuda GPU-port of VASP was dropped in VASP 6.3.0.
 
+    On Gila, VASP runs more performantly on a single node. If many cores are needed for your VASP calculation, it is recommended to run VASP on a singe node in the amd partition (60 cores/node), which provides the largest numbers of cores per node and use the following settings that have been shown to work well for multi-node jobs on 2 nodes. Intel-MPI is required to run multi-node VASP jobs on Gila, where as OpenMPI can only be run on single node VASP jobs.
 
+    Between the two GPU VASP versions available, the Grace-Hopper version is more performant than the NVIDIA A100 version on a single GPU, but each NVIDIA A100 node has more GPUs than the Grace-Hopper nodes. However, both GPU versions can not be run multinode - the underlying compilation architecture of both (nvhpc) relies on its own implementation of OpenMPI 5.0, where we run into the same process manager issues in Slurm as we do on the AMD nodes - this issue is a work in progress.
 
+    Between all VASP versions running on a single node, the Grace-Hopper version is the most performant. VASP multi-node jobs can only be run with Intel-MPI, and the performance in that can vary according to the size of the given system. Experimentation may be necessary to run the most optimal multi-node jobs using Intel-MPI.
     
-
-
-
-
-
-
-
-
-
-
-
+  
 
 
 
