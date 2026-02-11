@@ -478,7 +478,7 @@ Sample makefiles for vasp5 (cpu version) and vasp6 (cpu and gpu versions) on Kes
     #SBATCH --job-name=vasp
     #SBATCH --nodes=1
     #SBATCH --ntasks=60
-    #SABTCH --mem=60G
+    #SBATCH --mem=60G
     #SBATCH --time=8:00:00
     #SBATCH --error=std.err
     #SBATCH --output=std.out
