@@ -493,8 +493,6 @@ Sample makefiles for vasp5 (cpu version) and vasp6 (cpu and gpu versions) on Kes
     export I_MPI_ADJUST_REDUCE=3
 
     srun -n 60 vasp_std
-
-    # If the multi-node calculations are breaking, replace the srun line with this line
     
     ```
 ??? example "Sample job script: Gila - VASP 6.4.1 CPU (GCC - OpenMPI)"
