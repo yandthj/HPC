@@ -576,7 +576,7 @@ Sample makefiles for vasp5 (cpu version) and vasp6 (cpu and gpu versions) on Kes
 
     On Gila, VASP runs more performantly on a single node. If many cores are needed for your VASP calculation, it is recommended to use a single node in the `amd` partition (60 cores/node), which provides the largest number of cores per node. Intel-MPI is required to run multi-node VASP jobs on Gila, whereas OpenMPI can only be run on single node VASP jobs.
 
-    Between the two GPU VASP versions available, the Grace Hopper version is more performant than the NVIDIA A100 version on a single GPU, but each NVIDIA A100 node has more GPUs than the Grace Hopper nodes. However, neither GPU version can be run multi-node - the underlying compilation architecture of both (nvhpc) relies on its own implementation of OpenMPI 5.0, where we run into the same process manager issues in Slurm as we do on the AMD nodes. This issue is a work in progress.
+    Between the two GPU VASP versions available, the Grace Hopper version is more performant than the NVIDIA A100 version on a single GPU, but each NVIDIA A100 node has more GPUs than the Grace Hopper nodes. However, neither GPU version can be run multi-node. The underlying compilation architecture of both (nvhpc) relies on its own implementation of OpenMPI 5.0, where we run into the same process manager issues in Slurm as we do on the AMD nodes. This issue is a work in progress.
 
     Between all VASP versions running on a single node, the Grace Hopper version is the most performant. VASP multi-node jobs can only be run with Intel-MPI, and the performance in that can vary according to the size of the given system. Experimentation may be necessary to run the most optimal multi-node jobs using Intel-MPI.
     
