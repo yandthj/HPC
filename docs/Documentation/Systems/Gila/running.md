@@ -44,6 +44,9 @@ Here are the partitions as of 2/4/2026:
 
 Gila is optimized for single-node workloads. Multi-node jobs may experience degraded performance. All MPI distribution flavors work on Gila, with noted performance from Intel-MPI. Gila is single-threaded, and applications that are compiled to make use of multiple threads will not be able to take advantage of this. 
 
+!!! tip "VASP" 
+    For performance recommendations and examples specific to VASP jobs on Gila, please see the [VASP documentation page](../../Applications/vasp.md#vasp-on-gila). 
+
 ## Example: Compiling a Program on Gila
 
 In this section we will describe how to compile an MPI based application using an Intel toolchain from the module system. Please see the [Modules page](./modules.md) for additional information on the Gila module system.
