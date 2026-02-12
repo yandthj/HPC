@@ -483,7 +483,7 @@ Sample makefiles for vasp5 (cpu version) and vasp6 (cpu and gpu versions) on Kes
     #SBATCH --error=std.err
     #SBATCH --output=std.out
     #SBATCH --partition=amd
-    #SBATCH --account=myaccount
+    #SBATCH --account=<allocation handle>
 
     ml application
     ml vasp-intel/6.4.1
@@ -507,7 +507,7 @@ Sample makefiles for vasp5 (cpu version) and vasp6 (cpu and gpu versions) on Kes
     #SBATCH --error=std.err
     #SBATCH --output=std.out
     #SBATCH --partition=amd
-    #SBATCH --account=myaccount
+    #SBATCH --account=<allocation handle>
 
     ml application
     ml vasp-gcc/6.4.1
@@ -531,7 +531,7 @@ Sample makefiles for vasp5 (cpu version) and vasp6 (cpu and gpu versions) on Kes
     #SBATCH --error=std.err
     #SBATCH --output=std.out
     #SBATCH --partition=gpu-intel-a100-80g
-    #SBATCH --account=myaccount
+    #SBATCH --account=<allocation handle>
     
     ml application
     ml vasp-gpu-a100/6.4.1
@@ -557,7 +557,7 @@ Sample makefiles for vasp5 (cpu version) and vasp6 (cpu and gpu versions) on Kes
     ##SBATCH --error=std.err
     ##SBATCH --output=std.out
     #SBATCH --partition=gh
-    #SBATCH --account=myaccount
+    #SBATCH --account=<allocation handle>
 
     export OMPI_MCA_opal_cuda_support=1
     export CUDA_VISIBLE_DEVICES=0
