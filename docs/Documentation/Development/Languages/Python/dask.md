@@ -100,7 +100,7 @@ The [`dask-jobqueue`](https://jobqueue.dask.org/en/latest/index.html#) library m
 
 For the following example, first make sure that both `dask` and `dask-jobqueue` have been installed.  Create a file named `dask_slurm_example.py` with the following contents, and replace `<project>` with your project allocation.
 
-Assuming you are on Kestrel, this example will request two jobs from the `shared` partition.
+Assuming you are on Kestrel, this example will request two jobs from the `shared` partition.  Note the interface is defined so the workers can communicate with the SLURMCluster running on the login node.
 
 ??? example "`dask_slurm_example.py`"
 
@@ -116,6 +116,7 @@ Assuming you are on Kestrel, this example will request two jobs from the `shared
        account='<allocation_handle>',
        walltime='00:30:00',
        processes=17,
+       interface='hsn0',
        queue='shared'
     )
     
