@@ -880,6 +880,26 @@ We need to  MPICH_GPU_SUPPORT_ENABLED=1 to make this work.  Depending on the cod
 Here is a plot comparing the bandwidth using Staged and Cuda aware MPI.
 ![Bandwidth comparison between Staged and Aware MPI](../../../../../assets/images/bw.png)
 
+### Alternate compilation method by explicitly linking GTL  
+
+The CUDA-aware MPI example can also be compiled using PrgEnv-gnu instead of PrgEnv-nvhpc. This approach uses `nvcc` directly and manually specifies the required MPI and CUDA library paths. The key advantage of this method is explicit control over the GPU Transport Layer (GTL) library linking, which enables GPU-aware MPI functionality. The GTL library (`libmpi_gtl_cuda`) provides the necessary support for direct GPU-to-GPU communication without staging through host memory.
+
+```bash
+module load PrgEnv-gnu/8.5.0
+module load craype-x86-milan
+module load cuda/12.3
+
+# On Cray systems with PrgEnv-gnu, get MPI paths from environment
+# Use nvcc directly for CUDA compilation
+MPI_INCLUDE="-I${CRAY_MPICH_DIR}/include"
+MPI_LINK="-L${CRAY_MPICH_DIR}/lib -lmpich"
+CUDA_LINK="-L${CUDA_HOME}/lib64 -lcudart"
+# Try to find and link GTL for GPU-aware MPI support
+GTL_LINK="-L${CRAY_MPICH_ROOTDIR}/gtl/lib -lmpi_gtl_cuda"
+
+nvcc -arch=sm_90 -x cu -std=c++17 --expt-extended-lambda \
+     $MPI_INCLUDE $MPI_LINK $CUDA_LINK $GTL_LINK ping_pong_cuda_aware.cu -o pp_cuda_aware
+```
 
 ## openacc/cray
 
@@ -1284,7 +1304,7 @@ Again we run on a cube of size 512.
 1. nbodyacc2.c - Nvidia, part of the nvhpc distribution
 1. acc_c3.c - Nvidia, part of the nvhpc distribution
 1. helloc.c, hellof.f90 - Tim Kaiser tkaiser2@nlr.gov
-1. ping\_pong\_cuda\_aware.cu, ping\_pong\_cuda\_staged.cu [https://github.com/olcf-tutorials/MPI_ping_pong]()
+1. ping\_pong\_cuda\_aware.cu, ping\_pong\_cuda\_staged.cu [https://github.com/olcf-tutorials/MPI_ping_pong](https://github.com/olcf-tutorials/MPI_ping_pong)
 1. cpu.C - Multiple sources with significant mods 
 1. cusolver\_getrf\_example.cu - https://github.com/NVIDIA/CUDALibrarySamples.git with significant mods
 1. 3d\_mgpu\_c2c\_example.cpp - https://github.com/NVIDIA/CUDALibrarySamples.git
