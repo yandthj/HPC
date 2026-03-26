@@ -26,7 +26,9 @@ If you have an existing allocation that you need to continue for the next fiscal
 
 ### Request Type
 
-If your request is for 150,000 AUs or less, check the **Pilot Request** option. Fewer fields are required for pilot requests, so be sure to select this option before filling out the rest of the form. If approved, pilots are granted 150,000 AUs on Kestrel and 10TB of /projects storage by default. Pilot projects can be granted at anytime throughout the year. 
+If your request is for 150,000 AUs or less, check the **Pilot Request** option. Fewer fields are required for pilot requests, so be sure to select this option before filling out the rest of the form. If approved, pilots are granted up to 150,000 AUs on Kestrel and 10TB of /projects storage by default. Pilot projects can be granted at anytime throughout the year. 
+
+Undergraduate and graduate students from any U.S. college or university can apply for time on Kestrel for their CMEI mission-related research project. This opportunity is only for computer time on Kestrel. No other funding is provided. Applicant does not have to be a U.S. citizen. This request type should not be used for CMEI-funded projects. A student request is a type of pilot request so that box will be checked automatically. 
 
 ![image](../../assets/images/Lex/request_type.png)
 
