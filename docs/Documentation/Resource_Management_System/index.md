@@ -26,14 +26,17 @@ If you have an existing allocation that you need to continue for the next fiscal
 
 ### Request Type
 
+#### Pilot Request
 If your request is for 150,000 AUs or less, check the **Pilot Request** option. Fewer fields are required for pilot requests, so be sure to select this option before filling out the rest of the form. If approved, pilots are granted up to 150,000 AUs on Kestrel and 10TB of /projects storage by default. Pilot projects can be granted at anytime throughout the year. 
+
+!!! info
+    Once submitted, the pilot request will automatically put the 150,000 AU request in the CPU AUs section. **Note that once awarded, these AUs can be used on CPUs and GPUs.** 
+
+#### Student Request
 
 Undergraduate and graduate students from any U.S. college or university can apply for time on Kestrel for their CMEI mission-related research project. This opportunity is only for computer time on Kestrel. No other funding is provided. Applicant does not have to be a U.S. citizen. This request type should not be used for CMEI-funded projects. A student request is a type of pilot request so that box will be checked automatically. 
 
 ![image](../../assets/images/Lex/request_type.png)
-
-!!! info
-    Once submitted, the pilot request will automatically put the 150,000 AU request in the CPU AUs section. **Note that once awarded, these AUs can be used on CPUs and GPUs.** 
 
 
 ### Project Information
@@ -50,9 +53,11 @@ The **HPC Lead** is the person with primary responsibility for the computational
 
 ### Computational Resources and Readiness
 
+#### Standard Request
+
 To calculate the AU request for the allocation, input the software that you will be using and information about the runs that will be using that software. You should add an entry for each major application that you will be running. Fractional node values are allowed and can be used if your runs don't require a full node's resources. You can assign GPU and/or CPU hours to a software record. The total AU calculation for all of the software entries is used to automatically populate the resource request for the allocation. Please see the image below for an example computational request. 
 
-
+ test test
 ![image](../../assets/images/Lex/computational_request_example.png)
 
 !!! tip
@@ -78,6 +83,10 @@ The **Use Pattern** describes how you will use your AUs throughout the year. The
     **Use in second half of FY**: 5% in Q1 and Q2, and 45% in Q3 and Q4. Designed for projects with mid-year star dates or late milestones.
 
 The **Computational Approach** should be a high-level HPC-centric abstract of the computational method that the project will use, including what software and what types of calculations you will be doing. 
+
+#### Pilot Request
+
+#### Student Request
 
 ### Submitting your Request
 
