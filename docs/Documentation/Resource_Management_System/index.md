@@ -96,7 +96,8 @@ Select the size that best matches your expected AU usage for the year. This will
 !!! tip "Important"
     The initial AU assignment for a pilot can be increased up to 150,000 AUs during the year, so please select the size that best reflects your expected usage. Accurate estimates help us better plan expected system utilization.
 
-Pilot allocations will automatically be assigned a 10TB quota on the /projects filesystem.
+!!! info
+    Pilot allocations will automatically be assigned a 10TB quota on the /projects filesystem.
 
 
 The **Computational Approach** should be a high-level HPC-centric abstract of the computational method that the project will use, including what software and what types of calculations you will be doing. 
